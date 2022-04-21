@@ -1,17 +1,20 @@
-import '../styles/main.css';
+import '../styles/main.css'
 
-import SimpleImageSlider from "react-simple-image-slider";
+import SimpleImageSlider from "react-simple-image-slider"
 
 const images = [
-   require("../images/6.jpg"),
- require("../images/7.jpg"),
- require("../images/8.jpg"),
+  require("../images/slider/1.jpeg"),
+  require("../images/slider/2.jpg"),
+  require("../images/slider/3.jpg"),
+  require("../images/slider/4.jpg"),
+  require("../images/slider/5.jpg"),
+  require("../images/slider/6.jpg"),
+  require("../images/slider/7.jpg"),
 ];
 
 function Main() {
   return (
     <div className="Main">
-      <body>
         {/* Главная часть */}
         <div>
           {/* header */}
@@ -26,10 +29,10 @@ function Main() {
         </div>
 
         {/* Таймлайн */}
-        <div className="timeline">
+        <div className="felx-block">
 
           <div className="ryad">
-          <div className="model"></div>
+            <div className="model"></div>
           </div>
 
           <div className="time">
@@ -84,13 +87,14 @@ function Main() {
         </div>
 
         {/* Слайдер */}
-        <div>
-          <SimpleImageSlider width={'100%'} height={750} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
+        <div className='felx-block'>
+          <div className="slider">
+            <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
+          </div>     
         </div>
 
-      </body>
     </div>
-  );
+  )
 }
 
-export default Main;
+export default Main
