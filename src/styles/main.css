@@ -1,5 +1,8 @@
 .Main {
   text-align: center;
+  background-color: #ffffff;
+  width: 100%;
+  height: 4221px;
 }
 
 .Main-header {
@@ -11,4 +14,153 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  height: 1190px;
+  width: 100%;
+  background-color: #393853;
+}
+
+.model{
+  z-index: 0;
+  background-image: url("../../src/images/model.png");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.ryad{
+  height: 80%;
+  width: 60%;
+}
+
+.time{
+  display: flex;
+  width: 40%;
+  height: 90%;
+}
+
+.foto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 22%;
+}
+
+.foto1{
+  background-image: url("../../src/images/Спаса_1.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 100%;
+  width: 20%;
+  margin-bottom: 16%;
+}
+.foto2{
+  background-image: url("../../src/images/Гостиный двор.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 100%;
+  width: 20%;
+  margin-bottom: 16%;
+}
+.foto3{
+  /*background-image: url("../../src/images/1.png");*/
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 100%;
+  width: 20%;
+  margin-bottom: 16%;
+}
+.foto4{
+  background-image: url("../../src/images/Гостиный двор.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 100%;
+  width: 20%;
+  margin-bottom: 16%;
+}
+
+
+.allinfo{
+  z-index: 2;
+  right: 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  margin-left: 3%;
+}
+
+.textdate{
+  margin-left: 5%;
+  margin-top: 3%;
+  height: 85%;
+  width: 70%;
+  padding: 2px;
+  font-size: 20px; /* размер шрифта */
+  font-weight: 600;
+  color: #E5E5E5;
+  text-align: left;
+}
+
+.line{
+  position: relative;
+  z-index: 1;
+  left: 16.7%;
+  margin-left: 3%;
+  width: 2px;
+  background-color: #E5E5E5;
+}
+
+.date{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 15%;
+}
+
+hr{
+  border: none; /* Убираем границу */
+  background-color: #E5E5E5; /* Цвет линии */
+  color: #E5E5E5; /* Цвет линии для IE6-7 */
+  height: 2px; /* Толщина линии */
+}
+
+.linedate {
+  width: 5%;
+ }
+ 
+ .number{
+  width: 15%;
+  padding: 0.3%;
+  background: #a09797; /* фон рамки */
+  font-size: 20px; /* размер шрифта */
+  font-weight: 700;
+  border-radius: 10px; /*  радиус скругления углов рамки */
+  color: #E5E5E5;
+}
+
+.block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 20%;
 }
