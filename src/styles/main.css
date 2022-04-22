@@ -13,3 +13,140 @@
   color: white;
 }
 
+header{
+  display: flex;
+  z-index: 2;
+  background-color: transparent;
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -111;
+  position: absolute;
+  opacity: 1;
+  margin-top: 1%;
+}
+.ss{
+  color: #FFF;
+  font-size: 24px;
+  font-family: 'Inter';
+  font-style: normal;
+  text-decoration: none;
+}
+.flex-container{
+  display:flex;
+  z-index: 1;
+  /*flex-wrap:nowrap;*/
+} 
+.container1{
+  display:flex;
+  flex-direction: column;
+  background-color: #696969;
+  height: 100vh;
+  width: 50vw;
+}
+.container2{
+  display:flex;
+  position: relative;
+  background-color: #C0C0C0;
+  height: 100vh;
+  width: 50vw;
+}
+.torg{
+  display:flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  margin: 0px;
+}
+.torg-text{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 150px;
+  color: #FFFFFF;
+  margin: 10% 0px 0px 0px;
+}
+.ove-text{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 150px;
+  color: #338672;
+  margin: 10% 0px 0px 0px;
+}
+.del{
+  display:flex;
+  background-color: transparent;
+  justify-content: flex-start;
+  position: absolute;
+  margin: 0px;
+  width: 100%;
+  height: 50%;
+}
+.text{
+  display:flex;
+  flex-direction: raw;
+  background-color: transparent;
+  width: 100%;
+  height: 35%;
+}
+.line{
+  border-left: 3px solid #FFF;
+  height: 100%;
+}
+.line-box{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: transparent;
+  height: 230px;
+  width: 10%;
+}
+.line-text{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 28px;
+  text-align: left;
+  color: #FFFFFF;
+  padding-right: 20%;
+  padding-left: 21px;
+}
+.new{
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  height: 197px;
+  width: 689px;
+  position: relative;
+}
+.button_kart{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  height: 15%;
+}
+.button{
+  background-color: #FFF;
+  border: none;
+  color: #000;
+  border-radius: 70px;
+  width: 198px;
+  height: 67.83px;
+  font-family: 'Kurale';
+  font-style: normal;
+  font-size: 36px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
