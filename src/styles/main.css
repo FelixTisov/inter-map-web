@@ -1,21 +1,3 @@
-.Main {
-  display: flex;
-  flex-direction: column;
-  background-color: #393853;
-  width: 100%;
-}
-
-
-.Main-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 header{
   display: flex;
@@ -37,32 +19,21 @@ nav{
   opacity: 1;
   margin-top: 1%;
 }
-.ss{
+
+.container {
+ background-image: url('../images/bg.png') ;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.nav-item{
   color: #FFF;
   font-size: 24px;
   font-family: 'Inter';
   font-style: normal;
   text-decoration: none;
 }
-.flex-container{
-  display:flex;
-  z-index: 1;
-  /*flex-wrap:nowrap;*/
-} 
-.container1{
-  display:flex;
-  flex-direction: column;
-  background-color: #696969;
-  height: 100vh;
-  width: 50vw;
-}
-.container2{
-  display:flex;
-  position: relative;
-  background-color: #C0C0C0;
-  height: 100vh;
-  width: 50vw;
-}
+
 .torg{
   display:flex;
   justify-content: flex-end;
@@ -175,10 +146,10 @@ nav{
 
 .ryad{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 60%;
+  height: 100vh;
+  width: 50%;
 }
 
 .time{
