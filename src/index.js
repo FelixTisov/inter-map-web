@@ -16,7 +16,7 @@ if (/iPhone/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent))
 } else {
   root.render(
     <React.StrictMode>
-      <Main />
+      <Main/>
     </React.StrictMode>
   )
 }
