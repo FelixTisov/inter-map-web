@@ -1,5 +1,5 @@
 .mainMobile{
-    width: 390px;
+    width: 100%;
     height: 1688px;
 
 }
@@ -33,7 +33,7 @@
 .model_mobile{
     height: 40%;
     background-color: #ffff;
-    background-image: url("../../src/images/model.png");
+    background-image: url("../../src/images/IMG_1745.png");
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;

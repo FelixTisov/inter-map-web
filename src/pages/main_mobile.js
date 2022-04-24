@@ -81,7 +81,7 @@ function MainMobile() {
             {/* Слайдер */}
             <div className='cont'>
                 <div className="slider">
-                    <SimpleImageSlider width={'390px'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
+                    <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
                 </div>
             </div>
 
