@@ -19,3 +19,11 @@
 #cont2 {
     background-color: #393853;
 }
+
+.slider{
+	height: auto;
+  	width: 100%;
+	align-items: center;
+    justify-content: center;
+    background-color: red;
+}

@@ -1,5 +1,4 @@
 import '../styles/main.css'
-
 import SimpleImageSlider from "react-simple-image-slider"
 
 const images = [
@@ -10,7 +9,7 @@ const images = [
   require("../images/slider/5.jpg"),
   require("../images/slider/6.jpg"),
   require("../images/slider/7.jpg"),
-];
+]
 
 function Main() {
   return (
