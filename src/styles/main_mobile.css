@@ -1,0 +1,21 @@
+.mainMobile{
+    width: 390px;
+    height: 1688px;
+
+}
+
+.cont {
+    height: 844px;
+    width: 100%;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cont1 {
+    background-image: url('../images/bg_mobile.jpg');
+}
+
+#cont2 {
+    background-color: #393853;
+}
