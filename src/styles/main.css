@@ -263,13 +263,14 @@ hr{
  }
  
  .number{
-  width: 15%;
+  width: 20%;
   padding: 0.3%;
   background: #a09797; /* фон рамки */
   font-size: 20px; /* размер шрифта */
   font-weight: 700;
   border-radius: 10px; /*  радиус скругления углов рамки */
   color: #E5E5E5;
+  text-align: center;
 }
 
 .block{
