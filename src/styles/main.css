@@ -141,7 +141,7 @@ nav{
   max-height: 650px;
   width: 100%;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
 }
 
 .ryad{
@@ -228,10 +228,9 @@ nav{
   margin-top: 3%;
   height: 85%;
   width: 70%;
-  padding: 2px;
   font-size: 20px; /* размер шрифта */
   font-weight: 600;
-  color: #E5E5E5;
+  color: #FFFFFF;
   text-align: left;
 }
 
@@ -241,7 +240,20 @@ nav{
   left: 16.7%;
   margin-left: 3%;
   width: 2px;
-  background-color: #E5E5E5;
+  background-color: #FFFFFF;
+  height: 90%;
+  top: 7%;
+}
+
+.dot{
+  position: relative;
+  z-index: 1;
+  left: 33.64%;
+  width: 10px;
+  background-color: #FFFFFF;
+  height: 2%;
+  top: 9.5%;
+  border-radius: 50%;
 }
 
 .date{
@@ -253,8 +265,8 @@ nav{
 
 hr{
   border: none; /* Убираем границу */
-  background-color: #E5E5E5; /* Цвет линии */
-  color: #E5E5E5; /* Цвет линии для IE6-7 */
+  background-color: #FFFFFF; /* Цвет линии */
+  color: #FFFFFF; /* Цвет линии для IE6-7 */
   height: 2px; /* Толщина линии */
 }
 
@@ -263,14 +275,14 @@ hr{
  }
  
  .number{
-  width: 20%;
-  padding: 0.3%;
-  background: #a09797; /* фон рамки */
+  width: auto;
+  padding-left: 1%;
+  padding-right: 1%;
+  background: rgb(255, 255, 255, 0.5); /* фон рамки */
   font-size: 20px; /* размер шрифта */
   font-weight: 700;
-  border-radius: 10px; /*  радиус скругления углов рамки */
-  color: #E5E5E5;
-  text-align: center;
+  border-radius: 5px; /*  радиус скругления углов рамки */
+  color: #FFFFFF;
 }
 
 .block{
@@ -284,8 +296,8 @@ hr{
 .slider{
 	min-height: 768px;
 	height: auto;
-  	width: 100%;
+  width: 100%;
 	align-items: center;
-    justify-content: center;
+  justify-content: center;
 }
 
