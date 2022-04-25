@@ -57,8 +57,8 @@ function Main() {
 
           <div className="time">
             
-            <div className="line">
-            </div>
+            <div className="line"></div>
+            <div className="dot"></div>
 
             <div className="allinfo">
               <div className="block">
