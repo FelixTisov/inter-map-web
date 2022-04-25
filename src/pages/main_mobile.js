@@ -33,7 +33,7 @@ function MainMobile() {
 
                         <div className="allinfo_mobile">
                             <div className="block_mobile">
-                                <div className="foto1_mobile"></div>
+                                <div className="foto_mobile" id='ph1'></div>
                                 <div className="info_mobile">
                                     <div className="date_mobile">
                                         <div className="linedate_mobile"><hr></hr></div>
@@ -43,7 +43,7 @@ function MainMobile() {
                                 </div>
                             </div>
                             <div className="block_mobile">
-                                <div className="foto2_mobile"></div>
+                                <div className="foto_mobile" id='ph2'></div>
                                 <div className="info_mobile">
                                 <div className="date_mobile">
                                     <div className="linedate_mobile"><hr></hr></div>
@@ -53,7 +53,7 @@ function MainMobile() {
                                 </div>
                             </div>
                             <div className="block_mobile">
-                                <div className="foto3_mobile"></div>
+                                <div className="foto_mobile"></div>
                                 <div className="info_mobile">
                                 <div className="date_mobile">
                                     <div className="linedate_mobile"><hr></hr></div>
@@ -63,13 +63,13 @@ function MainMobile() {
                                 </div>
                             </div>
                             <div className="block_mobile">
-                                <div className="foto4_mobile"></div>
+                                <div className="foto_mobile" id='ph4'></div>
                                 <div className="info_mobile">
                                 <div className="date_mobile">
                                     <div className="linedate_mobile"><hr></hr></div>
                                     <div className="number_mobile">1820-e</div>
                                 </div>
-                                <div className="textdate_mobile">К дворовой галерее Гостинного двора сделаны пристройки Рукавичного и Холщового рядов</div>
+                                <div className="textdate_mobile">К дворовой галерее Гостинного двора сделаны пристройки Рукавичного и Холщового</div>
                                 </div>
                             </div>
                         </div>
@@ -79,10 +79,16 @@ function MainMobile() {
             </div>
 
             {/* Слайдер */}
-            <div className='cont'>
-                <div className="slider">
-                    <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
-                </div>
+            <div className='cont' id='slider'>
+
+                <SimpleImageSlider width={'100%'} height={'100vh'} images={images} showBullets={true} showNavs={true} autoPlay={true}/> 
+
+            </div>
+
+            <div className='cont' id='slider1'>
+
+                    {/* <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/> */}
+
             </div>
 
         </div>

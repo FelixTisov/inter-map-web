@@ -1,182 +1,161 @@
 .mainMobile{
-    width: 100%;
-    height: 1688px;
-
+  width: 100%;
+  height: auto;
+  display: flexbox;
 }
 
 .cont {
-    height: 844px;
-    width: 100%;
-    
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #393853;
 }
 
 #cont1 {
-    background-image: url('../images/bg_mobile.jpg');
+  background-image: url('../images/bg_mobile.jpg');
 }
 
 #cont2 {
-    display: flex;
-    background-color: #fff;
-    flex-direction: column;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
 }
 
-.slider{
-	height: auto;
-  	width: 100%;
-	align-items: center;
-    justify-content: center;
-    background-color: red;
+#slider{
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
 }
 
 .model_mobile{
-    height: 34%;
-    background-color: #ffff;
-    background-image: url("../../src/images/IMG_1745.png");
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
+  height: 42%;
+  background-color: #ffff;
+  background-image: url("../../src/images/IMG_1745.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .time_mobile{
-    height: 66%;
+  height: 66%;
 }
 .time_mobile_radius{
-    display: flex;
-    height: 100%;
-    background-color: #393853;
-    border-top-left-radius: 7%;
-    border-top-right-radius:  7%;
+  display: flex;
+  height: 100%;
+  background-color: #393853;
+  border-top-left-radius: 7%;
+  border-top-right-radius:  7%;
 }
 
-.foto1_mobile{
-    background-image: url("../../src/images/Спаса_1.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-    height: 100%;
-    width: 20%;
-    margin-bottom: 21%;
-    margin-left: 15%;
-  }
-.foto2_mobile{
-    background-image: url("../../src/images/Гостиный двор.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-    height: 100%;
-    width: 20%;
-    margin-bottom: 21%;
-    margin-left: 15%;
-  }
-.foto3_mobile{
-    /*background-image: url("../../src/images/1.png");*/
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-    height: 100%;
-    width: 20%;
-    margin-bottom: 21%;
-    margin-left: 15%;
-  }
-.foto4_mobile{
-    background-image: url("../../src/images/Гостиный двор.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-    height: 100%;
-    width: 20%;
-    margin-bottom: 21%;
-    margin-left: 15%;
-  }
+.foto_mobile {
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 100%;
+  width: 20%;
+  margin-bottom: 21%;
+  margin-left: 15%;
+}
+
+#ph1{
+  background-image: url("../../src/images/Спаса_1.png");
+}
+#ph2 {
+  background-image: url("../../src/images/Гостиный двор.png");
+}
+#ph4 {
+  background-image: url("../../src/images/Гостиный двор.png");
+}
+
 
 .allinfo_mobile{
-    z-index: 2;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
-    top: 5%;
-  }
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  top: 3%;
+}
   
 .info_mobile{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 80%;
-    margin-left: 3%;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  margin-left: 3%;
+}
   
 .textdate_mobile{
-    margin-left: 5%;
-    margin-top: 5%;
-    height: 85%;
-    width: 70%;
-    font-size: 12px; /* размер шрифта */
-    font-weight: 600;
-    color: #FFFFFF;
-    text-align: left;
-  }
+  margin-left: 5%;
+  margin-top: 5%;
+  height: 85%;
+  width: 70%;
+  font-size: 12px; /* размер шрифта */
+  font-weight: 600;
+  color: #FFFFFF;
+  text-align: left;
+}
   
 .line_mobile{
-    position: relative;
-    z-index: 1;
-    left: 35%;
-    margin-left: 3%;
-    width: 1px;
-    background-color: #FFFFFF;
-    height: 93%;
-    top: 7%;
-  }
+  position: relative;
+  z-index: 1;
+  left: 35%;
+  margin-left: 3%;
+  width: 1px;
+  background-color: #FFFFFF;
+  height: 93%;
+  top: 7%;
+}
   
 .dot_mobile{
-    position: relative;
-    z-index: 1;
-    left: 33.64%;
-    width: 10px;
-    background-color: #FFFFFF;
-    height: 2%;
-    top: 9.5%;
-    border-radius: 50%;
-  }
+  position: relative;
+  z-index: 1;
+  left: 33.64%;
+  width: 10px;
+  background-color: #FFFFFF;
+  height: 2%;
+  top: 7.5%;
+  border-radius: 50%;
+}
   
 .date_mobile{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 15%;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 15%;
+}
   
 hr{
-    border: none; /* Убираем границу */
-    background-color: #FFFFFF; /* Цвет линии */
-    color: #FFFFFF; /* Цвет линии для IE6-7 */
-    height: 0.7px; /* Толщина линии */
-  }
+  border: none; /* Убираем границу */
+  background-color: #FFFFFF; /* Цвет линии */
+  color: #FFFFFF; /* Цвет линии для IE6-7 */
+  height: 0.7px; /* Толщина линии */
+}
   
 .linedate_mobile{
-    width: 5%;
-   }
-   
+  width: 5%;
+}
+  
 .number_mobile{
-    width: 24%;
-    padding: 0.5%;
-    background: rgb(255, 255, 255, 0.5); /* фон рамки */
-    font-size: 15px; /* размер шрифта */
-    font-weight: 500;
-    border-radius: 5px; /*  радиус скругления углов рамки */
-    color: #FFFFFF;
-    text-align: center;
-  }
+  width: 24%;
+  padding: 0.5%;
+  background: rgb(255, 255, 255, 0.5); /* фон рамки */
+  font-size: 15px; /* размер шрифта */
+  font-weight: 500;
+  border-radius: 5px; /*  радиус скругления углов рамки */
+  color: #FFFFFF;
+  text-align: center;
+}
   
 .block_mobile{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 20%;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
