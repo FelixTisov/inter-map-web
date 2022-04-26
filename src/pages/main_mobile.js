@@ -17,8 +17,23 @@ function MainMobile() {
 
             {/* Титульная часть */}
             <div className='cont' id='cont1' >
-                <div>
-
+                <div class = "ob" style={{display: 'flex', zIndex: 1}}>
+                <div class ="ryad_mobile" >
+                    <div className='kartinka' id="ph5"></div>
+                </div>
+                <div class = "torg_mobile">
+                    <p className = 'torg-text_mobile'><font color="#FFFFFF">ТОРГ</font><font color="#338672">ОВЫЕ<br/>РЯДЫ</font></p>
+                </div>
+                <div class = "text_mobile">
+                    <div class = "line-box_mobile"><p class="line_mobile"></p></div>
+                    <div class = "new_mobile"><p class="line-text_mobile">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
+                </div>
+                <div class = "button_kart_mobile">
+                    <button onclick="document.location='pages/map.js'" class="button_mobile">КАРТА</button>
+                </div>
+                <div class = "button_kart_mobile">
+                    <div className='strelka'></div>        
+                </div>
                 </div>
             </div>
 
