@@ -68,6 +68,9 @@
 #ph4 {
   background-image: url("../../src/images/Гостиный двор.png");
 }
+#ph5{
+  background-image: url("../../src/images/menu.png");
+}
 
 
 .allinfo_mobile{
@@ -159,3 +162,114 @@ hr{
   width: 100%;
   height: 20%;
 }
+.ryad_mobile{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 10%;
+  width: 100%;
+}
+
+.torg_mobile{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 20%;
+  margin: 0px;
+}
+.torg-text_mobile{
+  font-family: 'Inter';
+  text-align: right;
+  font-style: normal;
+  font-size: 50px;
+  margin: 20px 20px 0px 0px;
+}
+
+.text_mobile{
+  display:flex;
+  z-index: 5;
+  flex-direction: raw;
+  background-color: transparent;
+  padding-top: 20%;
+  width: 100vw;
+  height: 50%;
+}
+.line_mobile{
+  border-left: 4px solid #FFF;
+  height: 100%;
+  margin: 0px;
+}
+.line-box_mobile{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: transparent;
+  height: 240px;
+  width: 8%;
+}
+.line-text_mobile{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 20px;
+  text-align: left;
+  color: #FFFFFF;
+  padding-right: 10%;
+  padding-left: 21px;
+}
+.new_mobile{
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  width: 300px;
+  position: relative;
+}
+.button_kart_mobile{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 100vw;
+  height: 10%;
+}
+.button_mobile{
+  background-color: #FFF;
+  border: none;
+  color: #000;
+  border-radius: 70px;
+  width: 132px;
+  height: 45.22px;
+  font-family: 'Kurale';
+  font-style: normal;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ob{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.kartinka{
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  margin-top: 60px;
+  margin-left: 20px;   
+}
+.strelka{
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  background-image: url("../../src/images/стрелка.png");
+}
+

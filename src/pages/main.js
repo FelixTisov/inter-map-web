@@ -36,7 +36,7 @@ function Main() {
                   <div class = "new"><p class="line-text">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
                 <div class = "button_kart">
-                  <button onclick="document.location='pages/map.js'" class="button kart">КАРТА</button>
+                  <button onclick="document.location='pages/map.js'" class="button">КАРТА</button>
                 </div>
               </div>
               <div class="ryad" style={{ position: 'relative'}}>
