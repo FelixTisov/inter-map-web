@@ -100,10 +100,14 @@ function MainMobile() {
 
             </div>
 
-            <div className='cont' id='slider1'>
-
-                    {/* <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/> */}
-
+            {/* Подвал */}
+            <div className='block_mobile' style={{flexDirection: 'column'}}>
+                <p className='pod_mobile' style={{letterSpacing: '0.05em', fontWeight: 600, marginTop: '15%',}}>При поддержке</p>
+                <p className='pod_mobile' style={{fontWeight: 400, paddingLeft: '12%', paddingRight: '12%'}}>Костромского государственного историко-архитектурного и художественного музея-заповедника</p>
+                <div className='block_mobile' style={{marginBottom: '15%'}}>
+                    <div className='metka_mobile'></div>
+                    <p className='pod_mobile' style={{fontWeight: 400, fontSize: '14px'}}>г. Кострома, проспект Мира, д. 7</p>
+                </div>
             </div>
 
         </div>
