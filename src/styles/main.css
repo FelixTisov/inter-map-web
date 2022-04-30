@@ -129,6 +129,7 @@ nav{
   align-items: center;
   justify-content: center;
   min-height: 768px;
+  position: relative;
   height: auto;
   width: 100%;
   background-color: #393853;
@@ -299,5 +300,29 @@ hr{
   width: 100%;
 	align-items: center;
   justify-content: center;
+}
+.block_new{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  background-color: #393853;
+}
+.pod{
+  font-family: 'Inter';
+  font-style: normal;
+  text-align: center;
+  font-size: 38px; 
+  color: #FFFFFF;
+}
+.metka{
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  margin-right: 20px;
+  height: 40px;
+  width: 40px;
+  background-image: url("../../src/images/Метка.png");
 }
 
