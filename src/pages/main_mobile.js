@@ -25,7 +25,7 @@ function MainMobile() {
                     <p className = 'torg-text_mobile'><font color="#FFFFFF">ТОРГ</font><font color="#338672">ОВЫЕ<br/>РЯДЫ</font></p>
                 </div>
                 <div class = "text_mobile">
-                    <div class = "line-box_mobile"><p class="line_mobile"></p></div>
+                    <div class = "line-box_mobile"><p class="line_mobile" id='lineText'></p></div>
                     <div class = "new_mobile"><p class="line-text_mobile">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
                 <div class = "button_kart_mobile">
@@ -96,13 +96,13 @@ function MainMobile() {
             {/* Слайдер */}
             <div className='cont' id='slider'>
 
-                <SimpleImageSlider width={'100%'} height={'100vh'} images={images} showBullets={true} showNavs={true} autoPlay={true}/> 
+                <SimpleImageSlider width={'100%'} height={'100vh'} images={images} showBullets={true} showNavs={true} autoPlay={true} /> 
 
             </div>
 
             <div className='cont' id='slider1'>
 
-                    {/* <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/> */}
+                {/* <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/> */}
 
             </div>
 

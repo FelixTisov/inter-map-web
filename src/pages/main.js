@@ -1,5 +1,7 @@
 import '../styles/main.css'
 import SimpleImageSlider from "react-simple-image-slider"
+import {useNavigate} from "react-router-dom";
+
 
 const images = [
   require("../images/slider/1.jpeg"),
@@ -12,9 +14,10 @@ const images = [
 ]
 
 function Main() {
+  const navigate = useNavigate()
   return (
     <div >
-
+    
         {/* Титульная часть */}
         <div className='container'>
           <div className='flex-block'>
@@ -36,7 +39,7 @@ function Main() {
                   <div class = "new"><p class="line-text">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
                 <div class = "button_kart">
-                  <button onclick="document.location='pages/map.js'" class="button">КАРТА</button>
+                  <button onClick={()=>{navigate('/map')}} class="button">КАРТА</button>
                 </div>
               </div>
               <div class="ryad" style={{ position: 'relative'}}>
@@ -114,6 +117,7 @@ function Main() {
         </div>
 
     </div>
+
   )
 }
 

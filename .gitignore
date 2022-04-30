@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# local trash
+/other
+
 # testing
 /coverage
 

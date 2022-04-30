@@ -1,7 +1,14 @@
+html,body{
+  margin:0;
+  background-color: transparent;
+}
+
+
 .mainMobile{
   width: 100%;
   height: auto;
   display: flexbox;
+  
 }
 
 .cont {
@@ -106,13 +113,18 @@
   
 .line_mobile{
   position: relative;
-  z-index: 1;
-  left: 35%;
-  margin-left: 3%;
-  width: 1px;
-  background-color: #FFFFFF;
-  height: 93%;
-  top: 7%;
+    z-index: 1;
+    left: 35%;
+    margin-left: 3%;
+    width: 1px;
+    background-color: #FFFFFF;
+    height: 93%;
+    top: 7%;
+}
+
+#lineText{
+  height: 100%;
+  top: 2%;
 }
   
 .dot_mobile{
@@ -193,15 +205,15 @@ hr{
   z-index: 5;
   flex-direction: raw;
   background-color: transparent;
-  padding-top: 20%;
+  padding-top: 10%;
   width: 100vw;
   height: 50%;
 }
-.line_mobile{
+/* .line_mobile{
   border-left: 4px solid #FFF;
   height: 100%;
   margin: 0px;
-}
+} */
 .line-box_mobile{
   display: flex;
   justify-content: flex-end;
@@ -234,6 +246,7 @@ hr{
   background-color: transparent;
   width: 100vw;
   height: 10%;
+  margin-bottom: 3%;
 }
 .button_mobile{
   background-color: #FFF;
@@ -261,7 +274,7 @@ hr{
   background-position: center;
   height: 40px;
   width: 40px;
-  margin-top: 60px;
+  margin-top: 20px;
   margin-left: 20px;   
 }
 .strelka{
