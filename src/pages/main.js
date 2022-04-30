@@ -117,16 +117,24 @@ function Main() {
         </div>
 
         {/* Подвал */}
-        <div className='block_new' style={{flexDirection: 'column'}}>
-          <p className='pod' style={{letterSpacing: '0.05em', fontWeight: 600,  marginTop: '10%'}}>При поддержке</p>
-          <p className='pod' style={{fontWeight: 400, paddingLeft: '10%', paddingRight: '10%'}}>Костромского государственного историко-архитектурного и художественного музея-заповедника</p>
-          <div className='block_new' style={{marginBottom: '10%'}}>
-            <div className='metka'></div>
-            <p className='pod' style={{fontWeight: 400, fontSize: '32px'}}>г. Кострома, проспект Мира, д. 7</p>
+        <div className='felx-block'>
+          <div className='text-block'>
+            
+            <div className='text-column'>
+              <h1 >При поддержке</h1>
+              <h2>Костромского государственного историко-архитектурного</h2>
+              <br/><h2>и художественного музея-заповедника</h2>
+            </div>
+            
+            <div className='text-row' >
+              <div id='metka'></div>
+              <h3 className='text-column'>г. Кострома, проспект Мира, д. 7</h3>
+            </div>
+
           </div>
         </div>
-    </div>
 
+    </div>
   )
 }
 
