@@ -113,6 +113,15 @@ function Main() {
           </div>     
         </div>
 
+        {/* Подвал */}
+        <div className='block_new' style={{flexDirection: 'column'}}>
+          <p className='pod' style={{letterSpacing: '0.05em', fontWeight: 600,  marginTop: '10%'}}>При поддержке</p>
+          <p className='pod' style={{fontWeight: 400, paddingLeft: '10%', paddingRight: '10%'}}>Костромского государственного историко-архитектурного и художественного музея-заповедника</p>
+          <div className='block_new' style={{marginBottom: '10%'}}>
+            <div className='metka'></div>
+            <p className='pod' style={{fontWeight: 400, fontSize: '32px'}}>г. Кострома, проспект Мира, д. 7</p>
+          </div>
+        </div>
     </div>
   )
 }
