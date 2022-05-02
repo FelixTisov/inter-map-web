@@ -2,7 +2,6 @@ import '../styles/main.css'
 import SimpleImageSlider from "react-simple-image-slider"
 import {useNavigate} from "react-router-dom";
 
-
 const images = [
   require("../images/slider/1.jpeg"),
   require("../images/slider/2.jpg"),
@@ -12,6 +11,8 @@ const images = [
   require("../images/slider/6.jpg"),
   require("../images/slider/7.jpg"),
 ]
+
+const items = [...Array(100)].map((val, i) => `Item ${i}`);
 
 function Main() {
   const navigate = useNavigate()
@@ -29,14 +30,14 @@ function Main() {
               </nav>
             </header>
 
-            <div style={{display: 'flex', zIndex: 1}}>
+            <div style={{display: 'flex', zIndex: 1, height: '100vh'}}>
               <div class ="ryad" >
                 <div class = "torg">
                   <p class = "torg-text">ТОРГ</p>
                 </div>
                 <div class = "text">
                   <div class = "line-box"><p class="line"></p></div>
-                  <div class = "new"><p class="line-text">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
+                  <div class = "description"><p class="line-text">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
                 <div class = "button_kart">
                   <button onClick={()=>{navigate('/map')}} class="button">КАРТА</button>
@@ -52,20 +53,24 @@ function Main() {
         </div>
 
         {/* Таймлайн */}
-        <div className="felx-block">
+        <div className="felx-block" >
 
-          <div className="ryad" style={{width: '60%', justifyContent: 'center'}}>
+          <div className="ryad" style={{width: '65%'}}>
             <div className="model"></div>
           </div>
 
-          <div className="time">
-            
-            <div className="line"></div>
-            <div className="dot"></div>
-
-            <div className="allinfo">
+          {/* Скролл-блок */}
+          <div className="center-col">
+          
               <div className="block">
-                <div className="foto1"></div>
+                  <div className="dot"/>         
+              </div>
+              
+              <div className="block">
+                <div className='img-box'>
+                  <div className="foto1"/>
+                </div>
+                <div className="line"/>
                 <div className="info">
                   <div className="date">
                     <div className="linedate"><hr></hr></div>
@@ -74,8 +79,12 @@ function Main() {
                   <div className="textdate">Церковь Спаса на средства костромского купца С.С.Белова</div>
                 </div>
               </div>
+
               <div className="block">
-                <div className="foto2"></div>
+                <div className='img-box'>
+                  <div className="foto1"/>
+                </div>
+                <div className="line"/>
                 <div className="info">
                   <div className="date">
                     <div className="linedate"><hr></hr></div>
@@ -84,8 +93,12 @@ function Main() {
                   <div className="textdate">Начало строительства дворовой галереи гостинного двора у церкви под руководством зодчего С.А.Воротилова</div>
                 </div>
               </div>
+
               <div className="block">
-                <div className="foto3"></div>
+                <div className='img-box'>
+                  <div className="foto1"/>
+                </div>
+                <div className="line"/>
                 <div className="info">
                   <div className="date">
                     <div className="linedate"><hr></hr></div>
@@ -94,8 +107,12 @@ function Main() {
                   <div className="textdate">Завершение строительства под руководством губернского архитектора И.Гове</div>
                 </div>
               </div>
+
               <div className="block">
-                <div className="foto4"></div>
+                <div className='img-box'>
+                  <div className="foto1"/>
+                </div>
+                <div className="line"/>
                 <div className="info">
                   <div className="date">
                     <div className="linedate"><hr></hr></div>
@@ -104,9 +121,36 @@ function Main() {
                   <div className="textdate">К дворовой галерее Гостинного двора сделаны пристройки Рукавичного и Холщового рядов</div>
                 </div>
               </div>
-            </div> 
-          </div>
 
+              <div className="block">
+                <div className='img-box'>
+                  <div className="foto1"/>
+                </div>
+                <div className="line"/>
+                <div className="info">
+                  <div className="date">
+                    <div className="linedate"><hr></hr></div>
+                    <div className="number">1820-e</div>
+                  </div>
+                  <div className="textdate">К дворовой галерее Гостинного двора сделаны пристройки Рукавичного и Холщового рядов</div>
+                </div>
+              </div>
+
+              <div className="block">
+                <div className='img-box'>
+                  <div className="foto1"/>
+                </div>
+                <div className="line"/>
+                <div className="info">
+                  <div className="date">
+                    <div className="linedate"><hr></hr></div>
+                    <div className="number">1820-e</div>
+                  </div>
+                  <div className="textdate">К дворовой галерее Гостинного двора сделаны пристройки Рукавичного и Холщового рядов</div>
+                </div>
+              </div>
+             
+          </div>
         </div>
 
         {/* Слайдер */}

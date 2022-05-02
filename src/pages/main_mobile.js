@@ -1,5 +1,6 @@
 import '../styles/main_mobile.css'
 import SimpleImageSlider from "react-simple-image-slider"
+import {useNavigate} from "react-router-dom";
 
 const images = [
     require("../images/slider/1.jpeg"),
@@ -12,6 +13,7 @@ const images = [
   ]
 
 function MainMobile() {
+    const navigate = useNavigate()
     return(
         <div className='mainMobile'>
 
@@ -29,7 +31,7 @@ function MainMobile() {
                     <div class = "new_mobile"><p class="line-text_mobile">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
                 <div class = "button_kart_mobile">
-                    <button onclick="document.location='pages/map.js'" class="button_mobile">КАРТА</button>
+                    <button onClick={()=>{navigate('/map')}} class="button_mobile">КАРТА</button>
                 </div>
                 <div class = "button_kart_mobile">
                     <div className='strelka'></div>        

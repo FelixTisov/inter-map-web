@@ -1,21 +1,20 @@
-import '../styles/main.css'
-import SimpleImageSlider from "react-simple-image-slider"
-
-const images = [
-    require("../images/slider/1.jpeg"),
-    require("../images/slider/2.jpg"),
-    require("../images/slider/3.jpg"),
-    require("../images/slider/4.jpg"),
-    require("../images/slider/5.jpg"),
-    require("../images/slider/6.jpg"),
-    require("../images/slider/7.jpg"),
-  ]
+import '../styles/map.css'
+import React, { Suspense, useRef, useState } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import Car from '../models/Car'
+import Testmodel from '../models/Testmodel'
+import { OrbitControls } from '@react-three/drei'
 
 function Map() {
     return (
         <div className='felx-block'>
-            <div className="slider">
-                <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
+            <div className='map-cont'>
+                <Canvas  camera={{position: [-5, 2, 5], zoom: 2}}>
+                    <OrbitControls/>
+                    <ambientLight />
+                    <pointLight position={[10, 10, 10]} />
+                    <Testmodel/>                
+                </Canvas>
             </div>     
         </div> 
     )

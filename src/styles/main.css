@@ -14,7 +14,7 @@ nav{
   width: 50%;
   height: 100%;
   background-color: transparent;
-  z-index: -111;
+  z-index: -1;
   position: absolute;
   opacity: 1;
   margin-top: 1%;
@@ -68,13 +68,13 @@ nav{
 }
 .text{
   display:flex;
-  flex-direction: raw;
+  flex-direction: row;
   background-color: transparent;
   width: 100%;
   height: 35%;
 }
 .line{
-  border-left: 3px solid #FFF;
+  border-left: 1px solid #FFF;
   height: 100%;
 }
 .line-box{
@@ -94,7 +94,7 @@ nav{
   padding-right: 20%;
   padding-left: 21px;
 }
-.new{
+.description{
   background-color: transparent;
   display: flex;
   justify-content: flex-start;
@@ -130,35 +130,44 @@ nav{
   justify-content: center;
   min-height: 768px;
   position: relative;
-  height: auto;
+  height: 100vh;
   width: 100%;
   background-color: #393853;
 }
 
+.center-col {
+  flex: 1;
+  height: 100%;
+  background: #393853;
+  overflow-y: scroll;
+  width: 35%;
+}
 
+.center-col::-webkit-scrollbar {
+  display: none;
+}
 
 .model{
-  z-index: 0;
+  flex: 1;
   background-image: url("../../src/images/IMG_1745.png");
-  min-height: 500px;
-  max-height: 650px;
+  height: 100%;
   width: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .ryad{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 50%;
 }
 
 .time{
   display: flex;
-  width: 40%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 .foto{
@@ -169,53 +178,22 @@ nav{
   width: 22%;
 }
 
+.img-box {
+  display: flex;
+  height: 100%;
+  width: 20%;
+  justify-content: center;
+  /* background-color: red; */
+  margin-top: -10%;
+
+}
+
 .foto1{
   background-image: url("../../src/images/Спаса_1.png");
   background-repeat: no-repeat;
   background-size:contain;
-  background-position: center;
   height: 100%;
-  width: 20%;
-  margin-bottom: 16%;
-}
-.foto2{
-  background-image: url("../../src/images/Гостиный двор.png");
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-  height: 100%;
-  width: 20%;
-  margin-bottom: 16%;
-}
-.foto3{
-  /*background-image: url("../../src/images/1.png");*/
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-  height: 100%;
-  width: 20%;
-  margin-bottom: 16%;
-}
-.foto4{
-  background-image: url("../../src/images/Гостиный двор.png");
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-  height: 100%;
-  width: 20%;
-  margin-bottom: 16%;
-}
-
-
-.allinfo{
-  z-index: 2;
-  right: 5%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  width: 100%;
+  width: 80%;
 }
 
 .info{
@@ -223,7 +201,17 @@ nav{
   flex-direction: column;
   height: 100%;
   width: 80%;
-  margin-left: 3%;
+  /* background-color: blue; */
+}
+
+.block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 20%;
+  margin-left: 10%;
+  /* background-color: green; */
 }
 
 .textdate{
@@ -231,38 +219,38 @@ nav{
   margin-top: 3%;
   height: 85%;
   width: 70%;
-  font-size: 20px; /* размер шрифта */
-  font-weight: 600;
+  font-size: 16px; /* размер шрифта */
+  font-weight: 400;
   color: #FFFFFF;
   text-align: left;
 }
 
 .line{
+  display: flex;
   position: relative;
   z-index: 1;
-  left: 16.7%;
-  margin-left: 3%;
-  width: 2px;
+  width: 1px;
   background-color: #FFFFFF;
-  height: 90%;
-  top: 7%;
+  height: 100%;
+  border: none;
 }
 
 .dot{
-  position: relative;
-  z-index: 1;
-  left: 33.64%;
+  position: absolute;
+  z-index: 3;
   width: 10px;
   background-color: #FFFFFF;
-  height: 2%;
-  top: 9.5%;
+  height: 10px;
   border-radius: 50%;
+  margin-top: 11.7%;
+  margin-left: 6%;
 }
 
 .date{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  justify-content:flex-start;
   height: 15%;
 }
 
@@ -275,6 +263,7 @@ hr{
 
 .linedate {
   width: 5%;
+  margin-top: 1%;
  }
  
  .number{
@@ -288,13 +277,7 @@ hr{
   color: #FFFFFF;
 }
 
-.block{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 20%;
-}
+
 
 .slider{
 	min-height: 768px;
