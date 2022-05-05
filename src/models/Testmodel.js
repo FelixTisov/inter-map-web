@@ -9,9 +9,8 @@ export default function Model({ ...props }) {
   const ref = useRef()
   const [hovered, hover] = useState(false)
 
-  const { nodes, materials } = useGLTF('/testmodel/testmodel.gltf')
+  const { nodes, materials } = useGLTF('/raw/testmodel/testmodel.gltf')
   return (
-
       <mesh 
         {...props}
         ref={ref}
@@ -19,7 +18,8 @@ export default function Model({ ...props }) {
         onPointerOut={(event) => hover(false)}
 
         geometry={nodes.Cube035.geometry} 
-        material={materials.text} 
+        // material={materials.text} 
+        // material={materials['green.001']}
         position={[0, 0, 0]} 
         rotation={[0, Math.PI / 2, 0, 0]} 
         scale={[0.01, 0.27, 0.19]} >
@@ -29,4 +29,4 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('/testmodel/testmodel.gltf')
+useGLTF.preload('/raw/testmodel/testmodel.gltf')

@@ -1,0 +1,133 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cylinder",
+            "scale" : [
+                -0.12742024660110474,
+                -0.19874392449855804,
+                -0.12742024660110474
+            ],
+            "translation" : [
+                0,
+                0.19691996276378632,
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "build",
+            "pbrMetallicRoughness" : {
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cylinder.015",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2,
+                        "TEXCOORD_1" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 15658,
+            "max" : [
+                15.629794120788574,
+                1.014767050743103,
+                17.98082160949707
+            ],
+            "min" : [
+                -13.751326560974121,
+                -2.9723854064941406,
+                -17.523571014404297
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 15658,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 15658,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 15658,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 30630,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 187896,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 187896,
+            "byteOffset" : 187896
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 125264,
+            "byteOffset" : 375792
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 125264,
+            "byteOffset" : 501056
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 61260,
+            "byteOffset" : 626320
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 687580,
+            "uri" : "two.bin"
+        }
+    ]
+}

@@ -1,6 +1,8 @@
 import '../styles/main.css'
 import SimpleImageSlider from "react-simple-image-slider"
 import {useNavigate} from "react-router-dom";
+import HistoryBlock from '../components/history_block';
+import allInfo from '../components/all_info';
 
 const images = [
   require("../images/slider/1.jpeg"),
@@ -12,7 +14,9 @@ const images = [
   require("../images/slider/7.jpg"),
 ]
 
-const items = [...Array(100)].map((val, i) => `Item ${i}`);
+const ph1 = require("../../src/images/Спаса_1.png")
+let infoList = [...allInfo]
+
 
 function Main() {
   const navigate = useNavigate()
@@ -24,28 +28,28 @@ function Main() {
           <div className='flex-block'>
             <header>
               <nav>
-                <a href="#история" class = "nav-item">История</a>
-                <a href="#галерея" class = "nav-item">Галерея</a>
-                <a href="#карта" class = "nav-item">Карта</a>
+                <a href="#история" className = "nav-item">История</a>
+                <a href="#галерея" className = "nav-item">Галерея</a>
+                <a href="#карта" className = "nav-item">Карта</a>
               </nav>
             </header>
 
             <div style={{display: 'flex', zIndex: 1, height: '100vh'}}>
-              <div class ="ryad" >
-                <div class = "torg">
-                  <p class = "torg-text">ТОРГ</p>
+              <div className ="ryad" >
+                <div className = "torg">
+                  <p className = "torg-text">ТОРГ</p>
                 </div>
-                <div class = "text">
-                  <div class = "line-box"><p class="line"></p></div>
-                  <div class = "description"><p class="line-text">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
+                <div className = "text">
+                  <div className = "line-box"><p class="line"></p></div>
+                  <div className = "description"><p class="line-text">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
-                <div class = "button_kart">
+                <div className = "button_kart">
                   <button onClick={()=>{navigate('/map')}} class="button">КАРТА</button>
                 </div>
               </div>
-              <div class="ryad" style={{ position: 'relative'}}>
-                  <div class = "del">
-                    <p class ="ove-text">ОВЫЕ<br/>РЯДЫ</p>
+              <div className="ryad" style={{ position: 'relative'}}>
+                  <div className = "del">
+                    <p className ="ove-text">ОВЫЕ<br/>РЯДЫ</p>
                   </div>
               </div>
             </div>
@@ -65,90 +69,19 @@ function Main() {
               <div className="block">
                   <div className="dot"/>         
               </div>
-              
-              <div className="block">
-                <div className='img-box'>
-                  <div className="foto1"/>
-                </div>
-                <div className="line"/>
-                <div className="info">
-                  <div className="date">
-                    <div className="linedate"><hr></hr></div>
-                    <div className="number">1766</div>
-                  </div>
-                  <div className="textdate">Церковь Спаса на средства костромского купца С.С.Белова</div>
-                </div>
-              </div>
-
-              <div className="block">
-                <div className='img-box'>
-                  <div className="foto1"/>
-                </div>
-                <div className="line"/>
-                <div className="info">
-                  <div className="date">
-                    <div className="linedate"><hr></hr></div>
-                    <div className="number">1791</div>
-                  </div>
-                  <div className="textdate">Начало строительства дворовой галереи гостинного двора у церкви под руководством зодчего С.А.Воротилова</div>
-                </div>
-              </div>
-
-              <div className="block">
-                <div className='img-box'>
-                  <div className="foto1"/>
-                </div>
-                <div className="line"/>
-                <div className="info">
-                  <div className="date">
-                    <div className="linedate"><hr></hr></div>
-                    <div className="number">1796</div>
-                  </div>
-                  <div className="textdate">Завершение строительства под руководством губернского архитектора И.Гове</div>
-                </div>
-              </div>
-
-              <div className="block">
-                <div className='img-box'>
-                  <div className="foto1"/>
-                </div>
-                <div className="line"/>
-                <div className="info">
-                  <div className="date">
-                    <div className="linedate"><hr></hr></div>
-                    <div className="number">1820-e</div>
-                  </div>
-                  <div className="textdate">К дворовой галерее Гостинного двора сделаны пристройки Рукавичного и Холщового рядов</div>
-                </div>
-              </div>
-
-              <div className="block">
-                <div className='img-box'>
-                  <div className="foto1"/>
-                </div>
-                <div className="line"/>
-                <div className="info">
-                  <div className="date">
-                    <div className="linedate"><hr></hr></div>
-                    <div className="number">1820-e</div>
-                  </div>
-                  <div className="textdate">К дворовой галерее Гостинного двора сделаны пристройки Рукавичного и Холщового рядов</div>
-                </div>
-              </div>
-
-              <div className="block">
-                <div className='img-box'>
-                  <div className="foto1"/>
-                </div>
-                <div className="line"/>
-                <div className="info">
-                  <div className="date">
-                    <div className="linedate"><hr></hr></div>
-                    <div className="number">1820-e</div>
-                  </div>
-                  <div className="textdate">К дворовой галерее Гостинного двора сделаны пристройки Рукавичного и Холщового рядов</div>
-                </div>
-              </div>
+           
+              {
+                infoList.map((item, index) => {
+                  console.log(item)
+                  return (
+                    <HistoryBlock 
+                      img={item.img} 
+                      date={item.date} 
+                      text={item.text} 
+                    />
+                  )                 
+                })
+              }      
              
           </div>
         </div>

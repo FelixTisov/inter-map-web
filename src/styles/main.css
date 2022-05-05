@@ -189,7 +189,7 @@ nav{
 }
 
 .foto1{
-  background-image: url("../../src/images/Спаса_1.png");
+  /* background-image: url("../../src/images/Спаса_1.png"); */
   background-repeat: no-repeat;
   background-size:contain;
   height: 100%;

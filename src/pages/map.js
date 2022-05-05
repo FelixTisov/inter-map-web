@@ -1,19 +1,28 @@
 import '../styles/map.css'
-import React, { Suspense, useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import Car from '../models/Car'
-import Testmodel from '../models/Testmodel'
+import React, { useState } from 'react'
+import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
+
+//----МОДЕЛИ----//
+import Testmodel from '../models/Testmodel'
+import Squarecenter from '../models/Squarecenter'
+import Two from '../models/Two'
+import Five from '../models/Five'
+//-------------//
+
 
 function Map() {
     return (
-        <div className='felx-block'>
+        <div className='felx-block-map'>
             <div className='map-cont'>
-                <Canvas  camera={{position: [-5, 2, 5], zoom: 2}}>
+                <Canvas  camera={{position: [-5, 2, 5], zoom: 1, rotation: [2, Math.PI / 2, 5, 0]}}>
                     <OrbitControls/>
-                    <ambientLight />
-                    <pointLight position={[10, 10, 10]} />
-                    <Testmodel/>                
+                    <ambientLight intensity={0.22}/>
+                    <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
+                    <Two/> 
+                    <Squarecenter/>
+                    <pointLight color={'#ffde8a'} intensity={0.1} position={[-9, 5, -5]} />
+                    <Five/>
                 </Canvas>
             </div>     
         </div> 
