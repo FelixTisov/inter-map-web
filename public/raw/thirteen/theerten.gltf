@@ -1,0 +1,145 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cube.018",
+            "rotation" : [
+                0,
+                0.02530457079410553,
+                0,
+                0.9996798038482666
+            ],
+            "scale" : [
+                0.25323882699012756,
+                0.17391209304332733,
+                1.6043139696121216
+            ],
+            "translation" : [
+                0,
+                0.20827700197696686,
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Material.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.022",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2,
+                        "TEXCOORD_1" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 2378,
+            "max" : [
+                2.4888503551483154,
+                1.4934437274932861,
+                0.9792084693908691
+            ],
+            "min" : [
+                -0.20830464363098145,
+                -1.0065562725067139,
+                -1.0207915306091309
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 2378,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 2378,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 2378,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 5022,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 28536,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 28536,
+            "byteOffset" : 28536
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 19024,
+            "byteOffset" : 57072
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 19024,
+            "byteOffset" : 76096
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 10044,
+            "byteOffset" : 95120
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 105164,
+            "uri" : "theerten.bin"
+        }
+    ]
+}
