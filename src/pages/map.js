@@ -15,13 +15,16 @@ import Seven from '../models/Seven'
 import Six from '../models/Six'
 import Nine from '../models/Nine'
 import Longfield from '../models/Longfield'
-import Theerten from '../models/Theerten'
+import Thirteen from '../models/Thirteen'
 import Twelve from '../models/Twelve'
 import Twentyfour from '../models/Twentyfour'
-import Twentysixseven from '../models/Twentysixseven'
 import Trianglefield from '../models/Trianglefield'
 import Ten from '../models/Ten'
+import Twentysixtwentyseven from'../models/Twentysixtwentyseven'
+import Fourteen from '../models/Fourteen'
+import Oneone from '../models/Oneone'
 import Twentyone from '../models/Twentyone'
+import Twentyfive from '../models/Twentyfive'
 //-------------//
 
 
@@ -45,11 +48,16 @@ function Map() {
                     <Six/>
                     <Nine/>
                     <Longfield/>
-                    <Theerten/>
+                    <Thirteen/>
                     <Twelve/>
                     <Twentyfour/>
                     <Trianglefield/>
                     <Ten/>
+                    <Twentysixtwentyseven/>
+                    <Fourteen/>
+                    <Twentyone/>
+                    <Oneone/> 
+                    <Twentyfive/> 
                 </Canvas>
             </div>     
         </div> 

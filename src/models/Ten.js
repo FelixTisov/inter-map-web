@@ -18,7 +18,7 @@ export default function Model({ ...props }) {
       rotation={[0, -0.79, 0]}
       geometry={nodes.Cube017.geometry}
       material={materials['Материал.005']}
-      position={[9, 0.1, -2.5]} 
+      position={[9.2, 0.1, -2.5]} 
       scale={[0.2, 0.17, 2.15]} >
       <meshStandardMaterial color={hovered ? '#ffe74d' : '#e8e8e8'} />
     </mesh>

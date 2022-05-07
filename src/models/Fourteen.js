@@ -8,20 +8,21 @@ export default function Model({ ...props }) {
   const ref = useRef()
   const [hovered, hover] = useState(false)
 
-  const { nodes, materials } = useGLTF('/raw/twentyfour/twentyfour.gltf')
+  const { nodes, materials } = useGLTF('/raw/fourteen/fourteen.gltf')
   return (
     <mesh 
       {...props}
       ref={ref}
       onPointerOver={(event) => hover(true)}
       onPointerOut={(event) => hover(false)}
-      geometry={nodes.Cylinder002.geometry}
-      material={materials['Материал.007']}
-      position={[0, 0.15, 4.3]}
-      scale={[0.15, 0.11, 0.15]}>
+      rotation={[0, 0.05, 0]}
+      geometry={nodes.Cube015.geometry}
+      material={materials['Material.001']}
+      position={[0.3, 0.2, 8]} 
+      scale={[0.37, 0.17, 1.6]}>
       <meshStandardMaterial color={hovered ? '#ffe74d' : '#e8e8e8'} />
     </mesh>
   )
 }
 
-useGLTF.preload('/raw/twentyfour/twentyfour.gltf')
+useGLTF.preload('/raw/fourteen/fourteen.gltf')

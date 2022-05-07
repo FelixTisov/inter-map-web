@@ -18,14 +18,30 @@
             "name" : "Cube.021",
             "scale" : [
                 2.0225274562835693,
-                0.08261799812316895,
+                0.0226180087774992,
                 1.5325508117675781
             ],
             "translation" : [
                 0,
-                0.10807239264249802,
+                0.04071091115474701,
                 0
             ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Material",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.08650017529726028,
+                    0.2961382269859314,
+                    0.010329898446798325,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
         }
     ],
     "meshes" : [
@@ -38,7 +54,8 @@
                         "NORMAL" : 1,
                         "TEXCOORD_0" : 2
                     },
-                    "indices" : 3
+                    "indices" : 3,
+                    "material" : 0
                 }
             ]
         }
@@ -104,7 +121,7 @@
     "buffers" : [
         {
             "byteLength" : 2272,
-            "uri" : "twentysix twentyseven.bin"
+            "uri" : "twentysixtwentyseven.bin"
         }
     ]
 }
