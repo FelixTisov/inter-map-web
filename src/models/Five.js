@@ -17,7 +17,7 @@ export default function Model({ ...props }) {
       onPointerOver={(event) => hover(true)}
       onPointerOut={(event) => hover(false)}
       geometry={nodes.Cube032.geometry}
-      position={[-6, 0.2, 0]}
+      position={[-5.1, 0.2, 0]}
       scale={[1.85, 0.18, 0.26]} >
       <meshStandardMaterial color={hovered ? '#ffe74d' : '#e8e8e8'} />
     </mesh>

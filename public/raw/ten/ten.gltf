@@ -1,0 +1,145 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cube.017",
+            "rotation" : [
+                0,
+                -0.3834895193576813,
+                0,
+                0.923545241355896
+            ],
+            "scale" : [
+                0.20121245086193085,
+                0.17391209304332733,
+                2.150590181350708
+            ],
+            "translation" : [
+                0,
+                0.11093202233314514,
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Material",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.7525760531425476,
+                    0.8000000715255737,
+                    0.7068337798118591,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.4000000059604645
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.021",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2,
+                        "TEXCOORD_1" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 3687,
+            "max" : [
+                3.366424560546875,
+                2.505126953125,
+                1.2661153078079224
+            ],
+            "min" : [
+                -0.9092979431152344,
+                -0.621673583984375,
+                -0.7338837385177612
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 3687,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 3687,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 3687,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 7254,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 44244,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 44244,
+            "byteOffset" : 44244
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 29496,
+            "byteOffset" : 88488
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 29496,
+            "byteOffset" : 117984
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 14508,
+            "byteOffset" : 147480
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 161988,
+            "uri" : "ten.bin"
+        }
+    ]
+}

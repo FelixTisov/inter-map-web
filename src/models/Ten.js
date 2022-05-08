@@ -5,23 +5,24 @@ import React, { useRef, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
-
   const ref = useRef()
   const [hovered, hover] = useState(false)
 
-  const { nodes, materials } = useGLTF('/raw/two/two.gltf')
+  const { nodes, materials } = useGLTF('/raw/ten/ten.gltf')
   return (
     <mesh 
       {...props}
       ref={ref}
       onPointerOver={(event) => hover(true)}
       onPointerOut={(event) => hover(false)}
-      geometry={nodes.Cylinder.geometry} 
-      position={[3.3, 0.2, 0]}
-      scale={[-0.13, -0.2, -0.13]} >
+      rotation={[0, -0.79, 0]}
+      geometry={nodes.Cube017.geometry}
+      material={materials['Материал.005']}
+      position={[9.2, 0.1, -2.5]} 
+      scale={[0.2, 0.17, 2.15]} >
       <meshStandardMaterial color={hovered ? '#ffe74d' : '#e8e8e8'} />
     </mesh>
   )
 }
 
-useGLTF.preload('/raw/two/two.gltf')
+useGLTF.preload('/raw/ten/ten.gltf')
