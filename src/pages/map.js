@@ -59,6 +59,7 @@ function Map() {
                 </nav>
               </header>
 
+                {/* Масштабирование */}
                 <div id='zoomCont'>
                     <div id='zoomTools'>
                         <div className='tool' onClick={()=>{
@@ -82,6 +83,26 @@ function Map() {
                         }}>
                             <p>-</p>
                         </div>
+                    </div>
+                </div>
+
+                {/* Помощь */}
+                <div id='help'>
+                    <p>?</p>
+                </div>
+                
+                {/* Инфо блок */}
+                <div id='infoCont'>
+                    <div id='imgCont'>
+                        
+                    </div>
+
+                    <div id='name'>
+                        
+                    </div>
+
+                    <div id='about'>
+                        
                     </div>
                 </div>
 
