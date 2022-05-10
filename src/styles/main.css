@@ -1,5 +1,17 @@
 
- 
+ #upButton{
+  height: 45px;
+  width: 45px;
+  background-color: rgba( 212, 212, 212, 0.7);
+  position:fixed;
+  border-radius: 45px;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin-bottom: 1%;
+  margin-right: 0.5%;
+  cursor: pointer;
+ }
 
 /* Стили титульной части */
 .ryad{

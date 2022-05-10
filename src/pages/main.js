@@ -3,7 +3,7 @@ import SimpleImageSlider from "react-simple-image-slider"
 import {useNavigate} from "react-router-dom";
 import HistoryBlock from '../components/history_block';
 import allInfo from '../components/all_info';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 
 const images = [
   require("../images/slider/1.jpeg"),
@@ -23,12 +23,15 @@ function Main() {
   const scrollToHistory= () => historyRef.current.scrollIntoView({behavior: 'smooth'});
   const sliderRef = useRef(null);
   const scrollToSlider = () => sliderRef.current.scrollIntoView({behavior: 'smooth'});
+  const mainRef = useRef(null);
+  const scrollToMain = () => mainRef.current.scrollIntoView({behavior: 'smooth'});
 
   return (
     <div >
-    
+        <div id='upButton' onClick={scrollToMain}/>
+
         {/* Титульная часть */}
-        <div className='container'>
+        <div className='container' ref={mainRef}>
           <div className='flex-block'>
             <header>
               <nav>
@@ -124,8 +127,9 @@ function Main() {
 
           </div>
         </div>
-
+        
     </div>
+
   )
 }
 

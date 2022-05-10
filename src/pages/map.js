@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { NavHashLink } from 'react-router-hash-link'
+import * as THREE from "three";
 
 //----МОДЕЛИ----//
 import Squarecenter from '../models/Squarecenter'
@@ -28,6 +29,13 @@ import Twentyone from '../models/Twentyone'
 import Twentyfive from '../models/Twentyfive'
 //-------------//
 
+let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000 );
+
+camera.position.x = -7 //вокруг центра по плоскости
+camera.position.y = 7 //по вертикали
+camera.position.z = -7
+
+let zoom = 45
 
 function Map() {
     return (
@@ -51,9 +59,36 @@ function Map() {
                 </nav>
               </header>
 
+                <div id='zoomCont'>
+                    <div id='zoomTools'>
+                        <div className='tool' onClick={()=>{
+                            if(camera.fov > 20) {
+                                camera.fov -=5;
+                                camera.updateProjectionMatrix();
+                            }
+                        }}>
+                            <p>+</p>                           
+                        </div>
+
+                        <div id='toolLine'/>
+
+                        <div className='tool' 
+                            style={{marginBottom: '10px'}} 
+                            onClick={()=>{
+                                if(camera.fov < 70) {
+                                    camera.fov +=5;
+                                    camera.updateProjectionMatrix();
+                                }                       
+                        }}>
+                            <p>-</p>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Карта */}
                 <div className='map-cont'>
-                    <Canvas  camera={{position: [-5, 2, 5], zoom: 1}}>
+                    
+                    <Canvas  camera={camera}>
                         <OrbitControls/>
                         <ambientLight intensity={0.22}/>
                         <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
