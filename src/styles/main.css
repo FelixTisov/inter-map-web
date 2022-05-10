@@ -11,7 +11,19 @@
   margin-bottom: 1%;
   margin-right: 0.5%;
   cursor: pointer;
- }
+}
+.strel_top{
+  flex: 1;
+  margin-top: 13%;
+  margin-left: 13%;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 70%;
+  background-image: url("../../src/images/стрелка_вверх.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* Стили титульной части */
 .ryad{
