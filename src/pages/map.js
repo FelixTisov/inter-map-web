@@ -14,6 +14,14 @@ import Four from '../models/Four'
 function Map() {
     return (
         <div className='felx-block-map'>
+            <header>
+              <nav>
+                <a href="#история" className = "nav-item">История</a>
+                <a href="#галерея" className = "nav-item">Галерея</a>
+                <a href="" className = "nav-item">Карта</a>
+              </nav>
+            </header>
+            
             <div className='map-cont'>
                 <Canvas  camera={{position: [-5, 2, 5], zoom: 1}}>
                     <OrbitControls/>

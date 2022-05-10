@@ -28,9 +28,9 @@ function Main() {
           <div className='flex-block'>
             <header>
               <nav>
-                <a href="#история" className = "nav-item">История</a>
-                <a href="#галерея" className = "nav-item">Галерея</a>
-                <a href="#карта" className = "nav-item">Карта</a>
+                <a href="#" className = "nav-item">История</a>
+                <a href="#" className = "nav-item">Галерея</a>
+                <a href="/map" className = "nav-item">Карта</a>
               </nav>
             </header>
 
