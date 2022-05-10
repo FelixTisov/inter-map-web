@@ -3,6 +3,7 @@ import SimpleImageSlider from "react-simple-image-slider"
 import {useNavigate} from "react-router-dom";
 import HistoryBlock from '../components/history_block';
 import allInfo from '../components/all_info';
+import { useRef } from 'react';
 
 const images = [
   require("../images/slider/1.jpeg"),
@@ -13,13 +14,16 @@ const images = [
   require("../images/slider/6.jpg"),
   require("../images/slider/7.jpg"),
 ]
-
-const ph1 = require("../../src/images/Спаса_1.png")
-let infoList = [...allInfo]
-
+const infoList = [...allInfo]
 
 function Main() {
+
   const navigate = useNavigate()
+  const historyRef = useRef(null);
+  const scrollToHistory= () => historyRef.current.scrollIntoView({behavior: 'smooth'});
+  const sliderRef = useRef(null);
+  const scrollToSlider = () => sliderRef.current.scrollIntoView({behavior: 'smooth'});
+
   return (
     <div >
     
@@ -28,9 +32,15 @@ function Main() {
           <div className='flex-block'>
             <header>
               <nav>
-                <a href="#" className = "nav-item">История</a>
-                <a href="#" className = "nav-item">Галерея</a>
-                <a href="/map" className = "nav-item">Карта</a>
+                <div className = "nav-item">
+                  <a  onClick={scrollToHistory}>История</a>
+                </div>
+                <div className = "nav-item">
+                  <a  onClick={scrollToSlider}>Галерея</a>
+                </div>
+                <div className = "nav-item">
+                  <a href="/map">Карта</a>
+                </div>                                           
               </nav>
             </header>
 
@@ -57,7 +67,7 @@ function Main() {
         </div>
 
         {/* Таймлайн */}
-        <div className="felx-block" >
+        <div className="felx-block" ref={historyRef} >
 
           <div className="ryad" style={{width: '65%'}}>
             <div className="model"></div>
@@ -81,13 +91,17 @@ function Main() {
                     />
                   )                 
                 })
-              }      
+              }    
+
+              <div className="block"/>
+              <div className="block"/>
+              <div className="block"/>
              
           </div>
         </div>
 
         {/* Слайдер */}
-        <div className='felx-block'>
+        <div className='felx-block' ref={sliderRef}>
           <div className="slider">
             <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
           </div>     

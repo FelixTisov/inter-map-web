@@ -5,27 +5,21 @@
     width: auto;
     height: 20%;
     margin-left: 10%;
-    /* background-color: green; */
 }
-
 .img-box {
     display: flex;
     height: 100%;
     width: 20%;
     justify-content: center;
-    /* background-color: red; */
     margin-top: -10%;
 
 }
-
-.foto1{
-    /* background-image: url("../../src/images/Спаса_1.png"); */
+.foto{
     background-repeat: no-repeat;
     background-size:contain;
     height: 100%;
     width: 80%;
 }
-
 .line{
     display: flex;
     position: relative;
@@ -35,15 +29,12 @@
     height: 100%;
     border: none;
 }
-
 .info{
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 80%;
-    /* background-color: blue; */
 }
-
 .date{
     display: flex;
     flex-direction: row;
@@ -51,30 +42,26 @@
     justify-content:flex-start;
     height: 15%;
 }
-
 .linedate {
     width: 5%;
     margin-top: 1%;
 }
-
 .number{
     width: auto;
     padding-left: 1%;
     padding-right: 1%;
-    background: rgb(255, 255, 255, 0.5); /* фон рамки */
-    font-size: 20px; /* размер шрифта */
+    background: rgb(255, 255, 255, 0.5);
+    font-size: 20px; 
     font-weight: 700;
-    border-radius: 5px; /*  радиус скругления углов рамки */
+    border-radius: 5px; 
     color: #FFFFFF;
 }
-  
-
 .textdate{
     margin-left: 5%;
     margin-top: 3%;
     height: 85%;
     width: 70%;
-    font-size: 16px; /* размер шрифта */
+    font-size: 16px;
     font-weight: 400;
     color: #FFFFFF;
     text-align: left;

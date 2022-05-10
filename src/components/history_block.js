@@ -5,7 +5,7 @@ function HistoryBlock({img, date, text}) {
     return (
         <div className="block">
             <div className='img-box'>
-                <div className="foto1" style={{backgroundImage: `url(${img})`}} />
+                <div className="foto" style={{backgroundImage: `url(${img})`}} />
             </div>
             <div className="line"/>
             <div className="info">

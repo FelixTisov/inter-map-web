@@ -30,45 +30,55 @@ import Twentyfive from '../models/Twentyfive'
 
 function Map() {
     return (
-        <div className='felx-block-map'>
-            <header>
-              <nav>
-                <a href="#история" className = "nav-item">История</a>
-                <a href="#галерея" className = "nav-item">Галерея</a>
-                <a href="" className = "nav-item">Карта</a>
-              </nav>
-            </header>
-            
-            <div className='map-cont'>
-                <Canvas  camera={{position: [-5, 2, 5], zoom: 1}}>
-                    <OrbitControls/>
-                    <ambientLight intensity={0.22}/>
-                    <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
-                    <Two/> 
-                    <Squarecenter/>
-                    <pointLight color={'#ffde8a'} intensity={0.1} position={[-9, 5, -5]} />
-                    <Five/>
-                    <Four/>
-                    <Three/>
-                    <Midfield/>
-                    <Eight/>
-                    <Seven/>
-                    <Six/>
-                    <Nine/>
-                    <Longfield/>
-                    <Thirteen/>
-                    <Twelve/>
-                    <Twentyfour/>
-                    <Trianglefield/>
-                    <Ten/>
-                    <Twentysixtwentyseven/>
-                    <Fourteen/>
-                    <Twentyone/>
-                    <Oneone/> 
-                    <Twentyfive/> 
-                </Canvas>
-            </div>     
-        </div> 
+        <div className='container'>
+            <div className='felx-block-map'>
+              <header>
+                <nav>
+                  <div className = "nav-item">
+                    <a >История</a>
+                  </div>
+                  <div className = "nav-item">
+                    <a >Галерея</a>
+                  </div>
+                  <div className = "nav-item">
+                    <a href="/">Главная</a>
+                  </div>                                           
+                </nav>
+              </header>
+
+                {/* Карта */}
+                <div className='map-cont'>
+                    <Canvas  camera={{position: [-5, 2, 5], zoom: 1}}>
+                        <OrbitControls/>
+                        <ambientLight intensity={0.22}/>
+                        <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
+                        <Two/> 
+                        <Squarecenter/>
+                        <pointLight color={'#ffde8a'} intensity={0.1} position={[-9, 5, -5]} />
+                        <Five/>
+                        <Four/>
+                        <Three/>
+                        <Midfield/>
+                        <Eight/>
+                        <Seven/>
+                        <Six/>
+                        <Nine/>
+                        <Longfield/>
+                        <Thirteen/>
+                        <Twelve/>
+                        <Twentyfour/>
+                        <Trianglefield/>
+                        <Ten/>
+                        <Twentysixtwentyseven/>
+                        <Fourteen/>
+                        <Twentyone/>
+                        <Oneone/> 
+                        <Twentyfive/> 
+                    </Canvas>
+                </div>                
+            </div>
+
+        </div>    
     )
 }
 

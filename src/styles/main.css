@@ -1,39 +1,14 @@
 
-header{
+ 
+
+/* Стили титульной части */
+.ryad{
   display: flex;
-  z-index: 2;
-  background-color: transparent;
-  width: 100%;
-  height: 20%;
-  position: relative;
-}
-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 50%;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
-  background-color: transparent;
-  z-index: -1;
-  position: absolute;
-  opacity: 1;
-  margin-top: 1%;
+  width: 50%;
 }
-
-.container {
- background-image: url('../images/bg.png') ;
- background-repeat: no-repeat;
- background-size: cover;
-}
-
-.nav-item{
-  color: #FFF;
-  font-size: 24px;
-  font-family: 'Inter';
-  font-style: normal;
-  text-decoration: none;
-}
-
 .torg{
   display:flex;
   justify-content: flex-end;
@@ -50,32 +25,12 @@ nav{
   color: #FFFFFF;
   margin: 8% 0px 0px 0px;
 }
-.ove-text{
-  font-family: 'Inter';
-  font-style: normal;
-  font-size: 150px;
-  color: #338672;
-  margin: 8% 0px 0px 0px;
-}
-.del{
-  display:flex;
-  background-color: transparent;
-  justify-content: flex-start;
-  position: absolute;
-  margin: 0px;
-  width: 100%;
-  height: 50%;
-}
 .text{
   display:flex;
   flex-direction: row;
   background-color: transparent;
   width: 100%;
   height: 35%;
-}
-.line{
-  border-left: 1px solid #FFF;
-  height: 100%;
 }
 .line-box{
   display: flex;
@@ -85,14 +40,9 @@ nav{
   height: 230px;
   width: 10%;
 }
-.line-text{
-  font-family: 'Inter';
-  font-style: normal;
-  font-size: 28px;
-  text-align: left;
-  color: #FFFFFF;
-  padding-right: 20%;
-  padding-left: 21px;
+.line{
+  border-left: 1px solid #FFF;
+  height: 100%;
 }
 .description{
   background-color: transparent;
@@ -101,6 +51,15 @@ nav{
   height: 197px;
   width: 689px;
   position: relative;
+}
+.line-text{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 28px;
+  text-align: left;
+  color: #FFFFFF;
+  padding-right: 20%;
+  padding-left: 21px;
 }
 .button_kart{
   display:flex;
@@ -123,30 +82,25 @@ nav{
   text-align: center;
   cursor: pointer;
 }
-
-.felx-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 768px;
-  position: relative;
-  height: 100vh;
+.del{
+  display:flex;
+  background-color: transparent;
+  justify-content: flex-start;
+  position: absolute;
+  margin: 0px;
   width: 100%;
-  background-color: #393853;
+  height: 50%;
+}
+.ove-text{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 150px;
+  color: #338672;
+  margin: 8% 0px 0px 0px;
 }
 
-.center-col {
-  flex: 1;
-  height: 100%;
-  background: #393853;
-  overflow-y: scroll;
-  width: 35%;
-}
 
-.center-col::-webkit-scrollbar {
-  display: none;
-}
-
+/* Стили таймлайна */
 .model{
   flex: 1;
   background-image: url("../../src/images/IMG_1745.png");
@@ -155,55 +109,16 @@ nav{
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.ryad{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.center-col {
+  flex: 1;
   height: 100%;
-  width: 50%;
+  background: #393853;
+  overflow-y: scroll;
+  width: 35%;
 }
-
-.time{
-  display: flex;
-  width: 100%;
-  height: 100%;
+.center-col::-webkit-scrollbar {
+  display: none;
 }
-
-.foto{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 22%;
-}
-
-.img-box {
-  display: flex;
-  height: 100%;
-  width: 20%;
-  justify-content: center;
-  /* background-color: red; */
-  margin-top: -10%;
-
-}
-
-.foto1{
-  /* background-image: url("../../src/images/Спаса_1.png"); */
-  background-repeat: no-repeat;
-  background-size:contain;
-  height: 100%;
-  width: 80%;
-}
-
-.info{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 80%;
-  /* background-color: blue; */
-}
-
 .block{
   display: flex;
   flex-direction: row;
@@ -211,30 +126,7 @@ nav{
   width: auto;
   height: 20%;
   margin-left: 10%;
-  /* background-color: green; */
 }
-
-.textdate{
-  margin-left: 5%;
-  margin-top: 3%;
-  height: 85%;
-  width: 70%;
-  font-size: 16px; /* размер шрифта */
-  font-weight: 400;
-  color: #FFFFFF;
-  text-align: left;
-}
-
-.line{
-  display: flex;
-  position: relative;
-  z-index: 1;
-  width: 1px;
-  background-color: #FFFFFF;
-  height: 100%;
-  border: none;
-}
-
 .dot{
   position: absolute;
   z-index: 3;
@@ -246,39 +138,8 @@ nav{
   margin-left: 6%;
 }
 
-.date{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content:flex-start;
-  height: 15%;
-}
 
-hr{
-  border: none; /* Убираем границу */
-  background-color: #FFFFFF; /* Цвет линии */
-  color: #FFFFFF; /* Цвет линии для IE6-7 */
-  height: 2px; /* Толщина линии */
-}
-
-.linedate {
-  width: 5%;
-  margin-top: 1%;
- }
- 
- .number{
-  width: auto;
-  padding-left: 1%;
-  padding-right: 1%;
-  background: rgb(255, 255, 255, 0.5); /* фон рамки */
-  font-size: 20px; /* размер шрифта */
-  font-weight: 700;
-  border-radius: 5px; /*  радиус скругления углов рамки */
-  color: #FFFFFF;
-}
-
-
-
+/* Стили слайдера */
 .slider{
 	min-height: 768px;
 	height: auto;
@@ -286,20 +147,9 @@ hr{
 	align-items: center;
   justify-content: center;
 }
-.text-row{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-}
-.text-column{
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  text-align: center;
-}
 
+
+/* Стили подвала */
 .text-block{
   display: flex;
   flex-direction: column;
@@ -308,10 +158,21 @@ hr{
   text-align: center;
   position: absolute;
   height: 100%;
-  width: 100%;
-  
+  width: 100%; 
 }
-
+.text-column{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  text-align: center;
+}
+.text-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
 #metka{
   background-repeat: no-repeat;
   background-size:contain;
@@ -320,7 +181,6 @@ hr{
   width: 20px;
   background-image: url("../../src/images/Метка.png");
 }
-
 h1{
   letter-spacing:0.05em;
   font-size: 38px;
@@ -330,7 +190,6 @@ h1{
   font-style: normal;
   color: #FFFFFF;
 }
-
 h2 {
   font-size: 26px;
   font-weight: 300;
@@ -339,7 +198,6 @@ h2 {
   font-style: normal;
   color: #FFFFFF;
 }
-
 h3{
   font-size: 16px;
   font-weight: 200;

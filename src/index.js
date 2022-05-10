@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.css'
+import './styles/common.css'
 import Main from './pages/main';
 import MainMobile from './pages/main_mobile'
 import reportWebVitals from './reportWebVitals'
