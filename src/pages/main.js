@@ -67,7 +67,7 @@ function Main() {
         </div>
 
         {/* Таймлайн */}
-        <div className="felx-block" ref={historyRef} >
+        <div className="felx-block" id='timeline' ref={historyRef} >
 
           <div className="ryad" style={{width: '65%'}}>
             <div className="model"></div>
@@ -101,7 +101,7 @@ function Main() {
         </div>
 
         {/* Слайдер */}
-        <div className='felx-block' ref={sliderRef}>
+        <div className='felx-block' id='gallery' ref={sliderRef}>
           <div className="slider">
             <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
           </div>     

@@ -2,6 +2,7 @@ import '../styles/map.css'
 import React, { useState } from 'react'
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
+import { NavHashLink } from 'react-router-hash-link'
 
 //----МОДЕЛИ----//
 import Squarecenter from '../models/Squarecenter'
@@ -35,10 +36,14 @@ function Map() {
               <header>
                 <nav>
                   <div className = "nav-item">
-                    <a >История</a>
+                    <NavHashLink smooth to="/#timeline">
+                        <a >История</a>
+                    </NavHashLink>
                   </div>
                   <div className = "nav-item">
-                    <a >Галерея</a>
+                    <NavHashLink smooth to="/#gallery">
+                        <a >Галерея</a>
+                    </NavHashLink>
                   </div>
                   <div className = "nav-item">
                     <a href="/">Главная</a>
