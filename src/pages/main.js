@@ -30,7 +30,7 @@ function Main() {
     <div >
         <div id='upButton' onClick={scrollToMain}>
           {/* Сюда стрелку */}
-          <image />
+          <div className='strel_top'></div>
         </div>
 
         {/* Титульная часть */}
