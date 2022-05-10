@@ -28,7 +28,10 @@ function Main() {
 
   return (
     <div >
-        <div id='upButton' onClick={scrollToMain}/>
+        <div id='upButton' onClick={scrollToMain}>
+          {/* Сюда стрелку */}
+          <image/>
+        </div>
 
         {/* Титульная часть */}
         <div className='container' ref={mainRef}>
