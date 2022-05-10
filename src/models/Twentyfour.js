@@ -17,8 +17,8 @@ export default function Model({ ...props }) {
       onPointerOut={(event) => hover(false)}
       geometry={nodes.Cylinder002.geometry}
       material={materials['Материал.007']}
-      position={[0, 0.15, 4.3]}
-      scale={[0.15, 0.11, 0.15]}>
+      position={[0, 0.15, 4.5]}
+      scale={[0.225, 0.165, 0.225]}>
       <meshStandardMaterial color={hovered ? '#ffe74d' : '#e8e8e8'} />
     </mesh>
   )
