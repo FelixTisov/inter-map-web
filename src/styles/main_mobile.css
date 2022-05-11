@@ -37,7 +37,7 @@ html,body{
 }
 
 .model_mobile{
-  height: 42%;
+  height: 35%;
   background-color: #ffff;
   background-image: url("../../src/images/IMG_1745.png");
   width: 100%;
@@ -45,6 +45,35 @@ html,body{
   background-size: contain;
 }
 
+.center-col_mobile {
+  flex: 1;
+  height: 100%;
+  background: #393853;
+  overflow-y: scroll;
+  width: 100%;
+}
+.center-col_mobile::-webkit-scrollbar {
+  display: none;
+}
+.blocknew_mobile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 25%;
+  margin-left: 10%;
+}
+.dot_mobile{
+  position: relative;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  top: 48%;
+  left: 18.75%;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+/*
 .time_mobile{
   height: 66%;
 }
@@ -75,11 +104,12 @@ html,body{
 #ph4 {
   background-image: url("../../src/images/Гостиный двор.png");
 }
+*/
 #ph5{
   background-image: url("../../src/images/menu.png");
 }
 
-
+/*
 .allinfo_mobile{
   z-index: 2;
   position: relative;
@@ -105,7 +135,7 @@ html,body{
   margin-top: 5%;
   height: 85%;
   width: 70%;
-  font-size: 12px; /* размер шрифта */
+  font-size: 12px; 
   font-weight: 600;
   color: #FFFFFF;
   text-align: left;
@@ -126,7 +156,7 @@ html,body{
   height: 100%;
   top: 2%;
 }
-  
+
 .dot_mobile{
   position: relative;
   z-index: 1;
@@ -144,17 +174,18 @@ html,body{
   align-items: center;
   height: 15%;
 }
-  
+ */ 
 hr{
   border: none; /* Убираем границу */
   background-color: #FFFFFF; /* Цвет линии */
   color: #FFFFFF; /* Цвет линии для IE6-7 */
   height: 0.7px; /* Толщина линии */
 }
-  
+ 
+/*
 .linedate_mobile{
   width: 5%;
-}
+}*/
   
 .number_mobile{
   width: 24%;

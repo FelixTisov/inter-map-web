@@ -1,6 +1,9 @@
 import '../styles/main_mobile.css'
 import SimpleImageSlider from "react-simple-image-slider"
 import {useNavigate} from "react-router-dom";
+import HistoryBlock from '../components/history_block_mobile';
+import allInfo from '../components/all_info';
+import React, { useRef } from 'react';
 
 const images = [
     require("../images/slider/1.jpeg"),
@@ -10,10 +13,18 @@ const images = [
     require("../images/slider/5.jpg"),
     require("../images/slider/6.jpg"),
     require("../images/slider/7.jpg"),
-  ]
+]
+
+const infoList = [...allInfo]
 
 function MainMobile() {
     const navigate = useNavigate()
+    const historyRef = useRef(null);
+    const scrollToHistory= () => historyRef.current.scrollIntoView({behavior: 'smooth'});
+    const sliderRef = useRef(null);
+    const scrollToSlider = () => sliderRef.current.scrollIntoView({behavior: 'smooth'});
+    const mainRef = useRef(null);
+    const scrollToMain = () => mainRef.current.scrollIntoView({behavior: 'smooth'});
     return(
         <div className='mainMobile'>
 
@@ -42,57 +53,31 @@ function MainMobile() {
             {/* Таймлайн */}
             <div className='cont' id='cont2'>
                 <div className="model_mobile"></div>
-                <div className="time_mobile">
-                    <div className="time_mobile_radius">
-
-                        <div className="line_mobile"></div>
-                        <div className="dot_mobile"></div>
-
-                        <div className="allinfo_mobile">
-                            <div className="block_mobile">
-                                <div className="foto_mobile" id='ph1'></div>
-                                <div className="info_mobile">
-                                    <div className="date_mobile">
-                                        <div className="linedate_mobile"><hr></hr></div>
-                                        <div className="number_mobile">1766</div>
-                                    </div>
-                                    <div className="textdate_mobile">Церковь Спаса на средства костромского купца С.С.Белова</div>
-                                </div>
-                            </div>
-                            <div className="block_mobile">
-                                <div className="foto_mobile" id='ph2'></div>
-                                <div className="info_mobile">
-                                <div className="date_mobile">
-                                    <div className="linedate_mobile"><hr></hr></div>
-                                    <div className="number_mobile">1791</div>
-                                </div>
-                                <div className="textdate_mobile">Начало строительства дворовой галереи гостинного двора у церкви под руководством зодчего С.А.Воротилова</div>
-                                </div>
-                            </div>
-                            <div className="block_mobile">
-                                <div className="foto_mobile"></div>
-                                <div className="info_mobile">
-                                <div className="date_mobile">
-                                    <div className="linedate_mobile"><hr></hr></div>
-                                    <div className="number_mobile">1796</div>
-                                </div>
-                                <div className="textdate_mobile">Завершение строительства под руководством губернского архитектора И.Гове</div>
-                                </div>
-                            </div>
-                            <div className="block_mobile">
-                                <div className="foto_mobile" id='ph4'></div>
-                                <div className="info_mobile">
-                                <div className="date_mobile">
-                                    <div className="linedate_mobile"><hr></hr></div>
-                                    <div className="number_mobile">1820-e</div>
-                                </div>
-                                <div className="textdate_mobile">К дворовой галерее Гостинного двора сделаны пристройки Рукавичного и Холщового</div>
-                                </div>
-                            </div>
+                 {/* Скролл-блок */}
+                 <div className="center-col_mobile">
+                        
+                        <div className="blocknew_mobile">
+                            <div className="dot_mobile"/>         
                         </div>
+                    
+                        {
+                            infoList.map((item, index) => {
+                            console.log(item)
+                            return (
+                                <HistoryBlock style={{height:'25%'}}
+                                img={item.img} 
+                                date={item.date} 
+                                text={item.text} 
+                                />
+                            )                 
+                            })
+                        }    
 
+                        <div className="blocknew_mobile"/>
+                        <div className="blocknew_mobile"/>
+                        <div className="blocknew_mobile"/>
+                        
                     </div>
-                </div>
             </div>
 
             {/* Слайдер */}
