@@ -1,5 +1,5 @@
 import '../styles/map.css'
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { NavHashLink } from 'react-router-hash-link'
@@ -37,6 +37,15 @@ camera.position.y = 7 //по вертикали
 camera.position.z = -7
 
 function Map() {
+
+    const [click, setClick] = useState('hidden')
+
+    const handleClick = (value) => {
+        setClick(value)
+        console.log(click)
+        
+    }
+
     return (
         <div className='container'>
             <div className='felx-block-map'>
@@ -109,7 +118,7 @@ function Map() {
                         <Midfield/>
                         <Eight/>
                         <Seven/>
-                        <Six/>
+                        <Six onClick={handleClick}/>
                         <Nine/>
                         <Longfield/>
                         <Thirteen/>

@@ -3,7 +3,7 @@ import SimpleImageSlider from "react-simple-image-slider"
 import {useNavigate} from "react-router-dom";
 import HistoryBlock from '../components/history_block';
 import allInfo from '../components/all_info';
-import React, { useRef } from 'react';
+import React, { useRef,} from 'react';
 
 const images = [
   require("../images/slider/1.jpeg"),
@@ -17,6 +17,8 @@ const images = [
 const infoList = [...allInfo]
 
 function Main() {
+
+  
 
   const navigate = useNavigate()
   const historyRef = useRef(null);
