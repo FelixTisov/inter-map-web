@@ -75,7 +75,6 @@ function MainMobile() {
 
                         <div className="blocknew_mobile"/>
                         <div className="blocknew_mobile"/>
-                        <div className="blocknew_mobile"/>
                         
                     </div>
             </div>
@@ -84,9 +83,6 @@ function MainMobile() {
             <div className='cont' id='slider'>
                 <SimpleImageSlider width={'100%'} height={'100vh'} images={images} showBullets={true} showNavs={true} autoPlay={true} /> 
             </div>
-
-            {/* <div className='cont' id='slider1'>
-            </div> */}
 
             {/* Подвал */}
             <div className='block_mobile' style={{flexDirection: 'column'}}>

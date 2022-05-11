@@ -1,19 +1,19 @@
-import '../styles/history_block.css'
+import '../styles/historyBlockMobile.css'
 import React, { useState } from 'react'
 
 function HistoryBlock({img, date, text}) {
     return (
-        <div className="block" style={{height:'25%'}}>
-            <div className='img-box'>
-                <div className="foto" style={{backgroundImage: `url(${img})`}} />
+        <div className="block-mobile" style={{height:'25%'}}>
+            <div className='img-box-mobile'>
+                <div className="foto-mobile" style={{backgroundImage: `url(${img})`}} />
             </div>
-            <div className="line"/>
-            <div className="info">
-                <div className="date">
-                <div className="linedate"><hr></hr></div>
-                <div className="number">{date}</div>
+            <div className="line-mobile"/>
+            <div className="info-mobile">
+                <div className="date-mobile">
+                <div className="linedate-mobile"><hr></hr></div>
+                <div className="number-mobile">{date}</div>
                 </div>
-                <div className="textdate" style={{width:'85%'}}>{text}</div>
+                <div className="textdate-mobile" style={{width:'90%'}}>{text}</div>
             </div>
         </div>
     )

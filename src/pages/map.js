@@ -4,6 +4,7 @@ import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { NavHashLink } from 'react-router-hash-link'
 import * as THREE from "three";
+import BuildingAbout from '../components/building_about'
 
 //----МОДЕЛИ----//
 import Squarecenter from '../models/Squarecenter'
@@ -35,8 +36,6 @@ let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHei
 camera.position.x = -7 //вокруг центра по плоскости
 camera.position.y = 7 //по вертикали
 camera.position.z = -7
-
-let zoom = 45
 
 function Map() {
     return (
@@ -93,25 +92,13 @@ function Map() {
                 </div>
                 
                 {/* Инфо блок */}
-                <div id='infoCont'>
-                    <div id='imgCont'>
-                        
-                    </div>
-
-                    <div id='name'>
-                        
-                    </div>
-
-                    <div id='about'>
-                        
-                    </div>
-                </div>
+                {/* <BuildingAbout/> */}
 
                 {/* Карта */}
                 <div className='map-cont'>
                     
                     <Canvas  camera={camera}>
-                        <OrbitControls/>
+                        <OrbitControls enabled={false} maxDistance={25} minDistance={5}/>
                         <ambientLight intensity={0.22}/>
                         <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
                         <Two/> 
