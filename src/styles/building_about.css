@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: column;
     width: 392px;
-    height: 551px;
+    height: 538px;
     position: absolute;
     background-color: #FFFFFF;
     z-index: 6;
-    bottom: 0;
-    margin-bottom: 3.5%;
+    margin-top: 5%;
+    top: 0;
     margin-left: 2%;
     border-radius: 49px;
   }

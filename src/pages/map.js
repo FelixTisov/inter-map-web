@@ -40,11 +40,7 @@ function Map() {
 
     const [click, setClick] = useState('hidden')
 
-    const handleClick = (value) => {
-        setClick(value)
-        console.log(click)
-        
-    }
+    const [visibility, setVisibility] = useState(true)
 
     return (
         <div className='container'>
@@ -95,12 +91,12 @@ function Map() {
                 </div>
 
                 {/* Помощь */}
-                <div id='help'>
+                {/* <div id='help'>
                     <p>?</p>
-                </div>
+                </div> */}
                 
                 {/* Инфо блок */}
-                {/* <BuildingAbout/> */}
+                <BuildingAbout isVisible={click}/>
 
                 {/* Карта */}
                 <div className='map-cont'>
@@ -118,7 +114,11 @@ function Map() {
                         <Midfield/>
                         <Eight/>
                         <Seven/>
-                        <Six onClick={handleClick}/>
+                        <Six onClick={()=>{
+                                setVisibility(!visibility)
+                                if(visibility) setClick('visible')
+                                else setClick('hidden')
+                            }}/>
                         <Nine/>
                         <Longfield/>
                         <Thirteen/>
