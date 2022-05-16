@@ -1,12 +1,6 @@
 import '../styles/building_about.css'
 
-function BuildingAbout({isVisible='visible', img=null, thename='', date='', icon=null, text=''}) {
-    img = require('../images/infoImages/pryanichnye.jpg')
-    thename = 'Пряничные ряды'
-    date = 'Конец XVIII - начало XIX века'
-    icon = require('../images/icons/krendel.png')
-    text='Построены в стиле классицизма. Они сооружены на средства местных купцов на рубеже XVIII-XIX вв. (1800е) Кирпичный корпус расположен между Гостиным двором и Рыбными рядами. Внутреннюю структуру определяют поперечные капитальные стены, которые делят пространство на одинаковые ячейки – лавки.'
-
+function BuildingAbout({isVisible='hidden', img=null, thename='', date='', icon=null, text=''}) {
     return(
         <div className='infoCont' style={{visibility: `${isVisible}`}}>
             <div className='imgCont' style={{backgroundImage: `url(${img})`}}/>

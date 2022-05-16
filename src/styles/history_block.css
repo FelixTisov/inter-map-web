@@ -34,6 +34,7 @@
     flex-direction: column;
     height: 100%;
     width: 80%;
+    margin-top: -5%;
 }
 .date{
     display: flex;
@@ -44,21 +45,21 @@
 }
 .linedate {
     width: 5%;
-    margin-top: 1%;
+    margin-top: 0.5%;
 }
 .number{
     width: auto;
     padding-left: 1%;
     padding-right: 1%;
     background: rgb(255, 255, 255, 0.5);
-    font-size: 20px; 
-    font-weight: 700;
+    font-size: 17px; 
+    font-weight: 650;
     border-radius: 5px; 
     color: #FFFFFF;
 }
 .textdate{
     margin-left: 5%;
-    margin-top: 3%;
+    margin-top: -10%;
     height: 85%;
     width: 70%;
     font-size: 16px;

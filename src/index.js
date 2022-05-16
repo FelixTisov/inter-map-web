@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.css'
 import './styles/common.css'
@@ -7,30 +7,9 @@ import MainMobile from './pages/main_mobile'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Map from './pages/map'
-import aboutData from './context';
+import MapMobile from './pages/map_mobile'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-
-// function MyApp() {
-//   const [data, setData] = useState(['hidden',null,'','',null,''])
-//   return(
-//     <React.StrictMode>
-//       <aboutData.Provider value={{data, setData}}>
-//       <BrowserRouter>
-//         <Routes>
-//           <Route exact path='/' element={<Main/>}/>
-//           <Route exact path='/map' element={<Map/>}/>
-//         </Routes>
-//       </BrowserRouter>
-//       </aboutData.Provider>
-//     </React.StrictMode>
-//   )
-// }
-
-// root.render(
-//  <MyApp/>
-// )
-
 
 if (/iPhone/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent)) 
 {
@@ -39,7 +18,7 @@ if (/iPhone/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent))
         <BrowserRouter>
           <Routes>
             <Route exact path='/' element={<MainMobile/>}/>
-            <Route exact path='/map' element={<Map/>}/>
+            <Route exact path='/map_mobile' element={<MapMobile/>}/>
           </Routes> 
         </BrowserRouter>
       </React.StrictMode>

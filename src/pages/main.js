@@ -5,6 +5,7 @@ import HistoryBlock from '../components/history_block';
 import allInfo from '../components/all_info';
 import React, { useRef,} from 'react';
 
+
 const images = [
   require("../images/slider/1.jpeg"),
   require("../images/slider/2.jpg"),
@@ -31,7 +32,6 @@ function Main() {
   return (
     <div >
         <div id='upButton' onClick={scrollToMain}>
-          {/* Сюда стрелку */}
           <div className='strel_top'></div>
         </div>
 
@@ -58,7 +58,7 @@ function Main() {
                   <p className = "torg-text">ТОРГ</p>
                 </div>
                 <div className = "text">
-                  <div className = "line-box"><p class="line"></p></div>
+                  <div className = "line-box"><p class="side-line"></p></div>
                   <div className = "description"><p class="line-text">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
                 <div className = "button_kart">

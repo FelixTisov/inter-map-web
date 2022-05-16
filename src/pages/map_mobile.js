@@ -1,10 +1,8 @@
 import '../styles/map.css'
-import React, { useState, useContext } from 'react'
+import React from 'react'
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { NavHashLink } from 'react-router-hash-link'
 import * as THREE from "three";
-import BuildingAbout from '../components/building_about'
 
 //----МОДЕЛИ----//
 import Squarecenter from '../models/Squarecenter'
@@ -30,56 +28,17 @@ import Twentyone from '../models/Twentyone'
 import Twentyfive from '../models/Twentyfive'
 //-------------//
 
-import Data from '../components/buildings_data'
-const dataList = [...Data] //массив с данным о постройках для карточки
-
 let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000 );
+
 camera.position.x = -7 //вокруг центра по плоскости
 camera.position.y = 7 //по вертикали
 camera.position.z = -7
 
-const Map = () => {
-
-    const defaultData = ['hidden', null, '', '', null, '']
-    const [click, setClick] = useState(defaultData) //информация выводимая на карточку
-    const [visibility, setVisibility] = useState(true) //отображения блока с карточкой
-
-    /* Загрузить данные для карточки */
-    function LoadData(data) {
-        setVisibility(!visibility)
-        if(visibility) 
-            setClick([
-                data.visibility,
-                data.mainImage,
-                data.buildingName,
-                data.date,
-                data.icon,
-                data.description
-            ])
-        else 
-            setClick(defaultData)
-    }
+function MapMobile() {
 
     return (
         <div className='container'>
             <div className='felx-block-map'>
-              <header>
-                <nav>
-                  <div className = "nav-item">
-                    <NavHashLink smooth to="/#timeline">
-                        <a >История</a>
-                    </NavHashLink>
-                  </div>
-                  <div className = "nav-item">
-                    <NavHashLink smooth to="/#gallery">
-                        <a >Галерея</a>
-                    </NavHashLink>
-                  </div>
-                  <div className = "nav-item">
-                    <a href="/">Главная</a>
-                  </div>                                           
-                </nav>
-              </header>
 
                 {/* Масштабирование */}
                 <div id='zoomCont'>
@@ -107,50 +66,39 @@ const Map = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Помощь */}
-                <div id='help'>
-                    <p>?</p>
-                </div>
                 
                 {/* Инфо блок */}
-                <BuildingAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/>
+                {/* <BuildingAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/> */}
 
                 {/* Карта */}
                 <div className='map-cont'>
                     
                     <Canvas  camera={camera}>
-                        {/* Настройки сцены */}
                         <OrbitControls enabled={true} maxDistance={25} minDistance={5}/>
                         <ambientLight intensity={0.22}/>
                         <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
-                        <pointLight color={'#ffde8a'} intensity={0.1} position={[-9, 5, -5]} />
-                        
-                        {/* Площади */}
+                        <Two/> 
                         <Squarecenter/>
-                        <Midfield/>
-                        <Longfield/>
-                        <Trianglefield/>
-
-                        {/* Здания */}
-                        <Two onClick={()=>LoadData(dataList[0])}/> 
-                        <Five onClick={()=>LoadData(dataList[1])}/>
-                        <Eight onClick={()=>LoadData(dataList[2])}/>
-                        <Six onClick={()=>LoadData(dataList[3])}/>
+                        <pointLight color={'#ffde8a'} intensity={0.1} position={[-9, 5, -5]} />
+                        <Five/>
                         <Four/>
-                        <Three/>                    
-                        <Seven/>       
-                        <Nine/>               
+                        <Three/>
+                        <Midfield/>
+                        <Eight/>
+                        <Seven/>
+                        <Six />
+                        <Nine/>
+                        <Longfield/>
                         <Thirteen/>
                         <Twelve/>
-                        <Twentyfour/>                  
+                        <Twentyfour/>
+                        <Trianglefield/>
                         <Ten/>
                         <Twentysixtwentyseven/>
                         <Fourteen/>
                         <Twentyone/>
                         <Oneone/> 
                         <Twentyfive/> 
-
                     </Canvas>
                 </div>                
             </div>
@@ -159,4 +107,4 @@ const Map = () => {
     )
 }
 
-export default Map
+export default MapMobile

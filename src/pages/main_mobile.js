@@ -42,7 +42,7 @@ function MainMobile() {
                     <div class = "new_mobile"><p class="line-text_mobile">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
                 <div class = "button_kart_mobile">
-                    <button onClick={()=>{navigate('/map')}} class="button_mobile">КАРТА</button>
+                    <button onClick={()=>{navigate('/map_mobile')}} class="button_mobile">КАРТА</button>
                 </div>
                 <div class = "button_kart_mobile">
                     <div className='strelka'></div>        
