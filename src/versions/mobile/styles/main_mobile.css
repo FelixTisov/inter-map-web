@@ -20,7 +20,7 @@ html,body{
 }
 
 #cont1 {
-  background-image: url('../images/bg_mobile.jpg');
+  background-image: url('../../../images/bg_mobile.jpg');
 }
 
 #cont2 {
@@ -39,7 +39,7 @@ html,body{
 .model_mobile{
   height: 35%;
   background-color: #ffff;
-  background-image: url("../../src/images/IMG_1745.png");
+  background-image: url("../../../images/IMG_1745.png");
   width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -106,7 +106,7 @@ html,body{
 }
 */
 #ph5{
-  background-image: url("../../src/images/menu.png");
+  background-image: url("../../../images/menu.png");
 }
 
 /*
@@ -314,7 +314,7 @@ hr{
   background-position: center;
   height: 40px;
   width: 40px;
-  background-image: url("../../src/images/стрелка.png");
+  background-image: url("../../../images/стрелка.png");
 }
 .pod_mobile{
   font-family: 'Inter';
@@ -330,7 +330,7 @@ hr{
   margin-right: 10px;
   height: 20px;
   width: 20px;
-  background-image: url("../../src/images/Метка.png");
+  background-image: url("../../../images/Метка.png");
 }
 .block_mobile{
   display: flex;

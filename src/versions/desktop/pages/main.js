@@ -1,33 +1,33 @@
 import '../styles/main.css'
 import SimpleImageSlider from "react-simple-image-slider"
-import {useNavigate} from "react-router-dom";
-import HistoryBlock from '../components/history_block';
-import allInfo from '../components/all_info';
-import React, { useRef,} from 'react';
+import {useNavigate} from "react-router-dom"
+import HistoryBlock from '../components/history_block'
+import React, { useRef,} from 'react'
 
-
-const images = [
-  require("../images/slider/1.jpeg"),
-  require("../images/slider/2.jpg"),
-  require("../images/slider/3.jpg"),
-  require("../images/slider/4.jpg"),
-  require("../images/slider/5.jpg"),
-  require("../images/slider/6.jpg"),
-  require("../images/slider/7.jpg"),
-]
+/* Информация для таймлайна */ 
+import allInfo from '../../common-data/all_info'
 const infoList = [...allInfo]
+
+/* Фотографии для слайдера */
+const images = [
+  require("../../../images/slider/1.jpeg"),
+  require("../../../images/slider/2.jpg"),
+  require("../../../images/slider/3.jpg"),
+  require("../../../images/slider/4.jpg"),
+  require("../../../images/slider/5.jpg"),
+  require("../../../images/slider/6.jpg"),
+  require("../../../images/slider/7.jpg"),
+]
 
 function Main() {
 
-  
-
   const navigate = useNavigate()
-  const historyRef = useRef(null);
-  const scrollToHistory= () => historyRef.current.scrollIntoView({behavior: 'smooth'});
-  const sliderRef = useRef(null);
-  const scrollToSlider = () => sliderRef.current.scrollIntoView({behavior: 'smooth'});
-  const mainRef = useRef(null);
-  const scrollToMain = () => mainRef.current.scrollIntoView({behavior: 'smooth'});
+  const historyRef = useRef(null)
+  const scrollToHistory= () => historyRef.current.scrollIntoView({behavior: 'smooth'})
+  const sliderRef = useRef(null)
+  const scrollToSlider = () => sliderRef.current.scrollIntoView({behavior: 'smooth'})
+  const mainRef = useRef(null)
+  const scrollToMain = () => mainRef.current.scrollIntoView({behavior: 'smooth'})
 
   return (
     <div >
@@ -89,7 +89,7 @@ function Main() {
               </div>
            
               {
-                infoList.map((item, index) => {
+                infoList.map((item) => {
                   console.log(item)
                   return (
                     <HistoryBlock 
@@ -103,7 +103,7 @@ function Main() {
 
               <div className="block"/>
               <div className="block"/>
-              <div className="block"/>
+              <div className="block" style={{height: '12%'}}/>
              
           </div>
         </div>

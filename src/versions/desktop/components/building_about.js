@@ -1,6 +1,7 @@
+/* Карточка зданий */ 
 import '../styles/building_about.css'
 
-function BuildingAbout({isVisible='hidden', img=null, thename='', date='', icon=null, text=''}) {
+function BuildingAbout({isVisible='hidden', img=null, buildingName='', date='', icon=null, text=''}) {
     return(
         <div className='infoCont' style={{visibility: `${isVisible}`}}>
             <div className='imgCont' style={{backgroundImage: `url(${img})`}}/>
@@ -8,7 +9,7 @@ function BuildingAbout({isVisible='hidden', img=null, thename='', date='', icon=
             <div className='head'>
                 <div className='mainInfo'>
                     <div className='name'>
-                        <p>{thename}</p>
+                        <p>{buildingName}</p>
                     </div>
                     <div className='date'>
                         <p>{date}</p>

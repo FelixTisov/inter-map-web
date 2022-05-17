@@ -1,37 +1,37 @@
 import '../styles/map.css'
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { NavHashLink } from 'react-router-hash-link'
-import * as THREE from "three";
+import * as THREE from 'three'
 import BuildingAbout from '../components/building_about'
 
-//----МОДЕЛИ----//
-import Squarecenter from '../models/Squarecenter'
-import Two from '../models/Two'
-import Five from '../models/Five'
-import Four from '../models/Four'
-import Three from '../models/Three'
-import Midfield from '../models/Midfield'
-import Eight from '../models/Eight'
-import Seven from '../models/Seven'
-import Six from '../models/Six'
-import Nine from '../models/Nine'
-import Longfield from '../models/Longfield'
-import Thirteen from '../models/Thirteen'
-import Twelve from '../models/Twelve'
-import Twentyfour from '../models/Twentyfour'
-import Trianglefield from '../models/Trianglefield'
-import Ten from '../models/Ten'
-import Twentysixtwentyseven from'../models/Twentysixtwentyseven'
-import Fourteen from '../models/Fourteen'
-import Oneone from '../models/Oneone'
-import Twentyone from '../models/Twentyone'
-import Twentyfive from '../models/Twentyfive'
-//-------------//
+/* Модели */
+import Squarecenter from '../../../models/Squarecenter'
+import Two from '../../../models/Two'
+import Five from '../../../models/Five'
+import Four from '../../../models/Four'
+import Three from '../../../models/Three'
+import Midfield from '../../../models/Midfield'
+import Eight from '../../../models/Eight'
+import Seven from '../../../models/Seven'
+import Six from '../../../models/Six'
+import Nine from '../../../models/Nine'
+import Longfield from '../../../models/Longfield'
+import Thirteen from '../../../models/Thirteen'
+import Twelve from '../../../models/Twelve'
+import Twentyfour from '../../../models/Twentyfour'
+import Trianglefield from '../../../models/Trianglefield'
+import Ten from '../../../models/Ten'
+import Twentysixtwentyseven from '../../../models/Twentysixtwentyseven'
+import Fourteen from '../../../models/Fourteen'
+import Oneone from '../../../models/Oneone'
+import Twentyone from '../../../models/Twentyone'
+import Twentyfive from '../../../models/Twentyfive'
 
-import Data from '../components/buildings_data'
-const dataList = [...Data] //массив с данным о постройках для карточки
+/* Информация о постройках для карточек */ 
+import Data from '../../common-data/buildings_data'
+const dataList = [...Data]
 
 let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000 );
 camera.position.x = -7 //вокруг центра по плоскости
@@ -42,18 +42,18 @@ const Map = () => {
 
     const defaultData = ['hidden', null, '', '', null, '']
     const [click, setClick] = useState(defaultData) //информация выводимая на карточку
-    const [visibility, setVisibility] = useState(true) //отображения блока с карточкой
+    const [visibility, setVisibility] = useState(true) //отображение блока с карточкой
 
     /* Загрузить данные для карточки */
     function LoadData(data) {
         setVisibility(!visibility)
         if(visibility) 
             setClick([
-                data.visibility,
+                'visible',
                 data.mainImage,
                 data.buildingName,
                 data.date,
-                data.icon,
+                null, //пока нет готовых иконок
                 data.description
             ])
         else 
@@ -92,9 +92,7 @@ const Map = () => {
                         }}>
                             <p>+</p>                           
                         </div>
-
                         <div id='toolLine'/>
-
                         <div className='tool' 
                             style={{marginBottom: '10px'}} 
                             onClick={()=>{
@@ -121,7 +119,7 @@ const Map = () => {
                     
                     <Canvas  camera={camera}>
                         {/* Настройки сцены */}
-                        <OrbitControls enabled={true} maxDistance={25} minDistance={5}/>
+                        <OrbitControls enabled={false} maxDistance={25} minDistance={5}/>
                         <ambientLight intensity={0.22}/>
                         <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
                         <pointLight color={'#ffde8a'} intensity={0.1} position={[-9, 5, -5]} />

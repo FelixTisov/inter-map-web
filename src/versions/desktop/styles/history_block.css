@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     width: auto;
-    height: 20%;
+    height: 22%;
     margin-left: 10%;
 }
 .img-box {
@@ -11,21 +11,21 @@
     height: 100%;
     width: 20%;
     justify-content: center;
-    margin-top: -10%;
+    margin-top: -14%;
 
 }
 .foto{
     background-repeat: no-repeat;
     background-size:contain;
-    height: 100%;
-    width: 80%;
+    height: 95%;
+    width: 75%;
 }
 .line{
     display: flex;
     position: relative;
     z-index: 1;
     width: 1px;
-    background-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.2);
     height: 100%;
     border: none;
 }
@@ -47,13 +47,17 @@
     width: 5%;
     margin-top: 0.5%;
 }
+.linedate hr{
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 1px;
+}
 .number{
     width: auto;
     padding-left: 1%;
     padding-right: 1%;
-    background: rgb(255, 255, 255, 0.5);
-    font-size: 17px; 
-    font-weight: 650;
+    background: rgb(255, 255, 255, 0.4);
+    font-size: 1.15vw; 
+    font-weight: 600;
     border-radius: 5px; 
     color: #FFFFFF;
 }
@@ -62,8 +66,8 @@
     margin-top: -10%;
     height: 85%;
     width: 70%;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 1.1vw;
+    font-weight: 350;
     color: #FFFFFF;
     text-align: left;
 }

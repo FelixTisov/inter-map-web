@@ -1,7 +1,7 @@
-
+/* Кнопка вверх */
  #upButton{
-  height: 45px;
-  width: 45px;
+  height: 3vw;
+  width: 3vw;
   background-color: rgba( 212, 212, 212, 0.7);
   position:fixed;
   border-radius: 45px;
@@ -20,12 +20,17 @@
   align-items: center;
   height: 70%;
   width: 70%;
-  background-image: url("../../src/images/стрелка_вверх.png");
+  background-image: url("../../../images/стрелка_вверх.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Стили титульной части */
+.container {
+  background-image: url('../../../images/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
 .ryad{
   display: flex;
   flex-direction: column;
@@ -127,11 +132,10 @@
 }
 
 
-
 /* Стили таймлайна */
 .model{
   flex: 1;
-  background-image: url("../../src/images/IMG_1745.png");
+  background-image: url("../../../images/IMG_1745.png");
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -152,7 +156,7 @@
   flex-direction: row;
   align-items: center;
   width: auto;
-  height: 20%;
+  height: 22%;
   margin-left: 10%;
 }
 .dot{
@@ -162,7 +166,7 @@
   background-color: #FFFFFF;
   height: 10px;
   border-radius: 50%;
-  margin-top: 10%;
+  margin-top: 11%;
   margin-left: 5.95%;
 }
 
@@ -206,19 +210,20 @@
   background-position: center;
   height: 20px;
   width: 20px;
-  background-image: url("../../src/images/Метка.png");
+  background-image: url("../../../images/Метка.png");
 }
 h1{
   letter-spacing:0.05em;
-  font-size: 28px;
+  font-size: 1.7vw;
   font-weight: 600;
   margin-top: 0%;
+  margin-bottom: 5%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
   color: #FFFFFF;
 }
 h2 {
-  font-size: 18px;
+  font-size: 1.2vw;
   font-weight: 300;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -226,11 +231,12 @@ h2 {
   color: #FFFFFF;
 }
 h3{
-  font-size: 14px;
+  font-size: 1vw;
   font-weight: 200;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
   color: #FFFFFF;
 }
 
+/* Шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');

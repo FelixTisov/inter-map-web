@@ -38,12 +38,7 @@ header{
   
   
   /* Основные блоки */
-  .container {
-    background-image: url('../images/bg.png') ;
-    background-repeat: no-repeat;
-    background-size: cover;
-   }
-   .felx-block {
+  .felx-block {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,5 +1,6 @@
+/* Блок таймлайна мобильной версии */ 
 import '../styles/historyBlockMobile.css'
-import React, { useState } from 'react'
+import React from 'react'
 
 function HistoryBlock({img, date, text}) {
     return (
