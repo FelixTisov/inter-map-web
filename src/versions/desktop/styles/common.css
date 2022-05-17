@@ -30,6 +30,8 @@ header{
     font-family: 'Inter';
     font-style: normal;
     text-decoration: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    user-select: none;   /* Chrome/Safari/Opera */
   }
   a:hover{
     font-size: 1.4vw;
@@ -38,6 +40,13 @@ header{
   
   
   /* Основные блоки */
+  .container {
+    background-image: url('../../../images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+   }
   .felx-block {
     display: flex;
     align-items: center;

@@ -2,44 +2,58 @@
 .infoCont{
     display: flex;
     flex-direction: column;
-    width: 392px;
-    height: 538px;
-    position: absolute;
+    width: 28vw;
+    height: 78vh;
+    position: fixed;
     background-color: #dbdbdb;
     z-index: 6;
-    margin-top: 5%;
+    margin-top: 7%;
     top: 0;
     margin-left: 2%;
     border-radius: 49px;
   }
-  .imgCont{
+  .imgCont {
     display: flex;
     width: 100%;
-    height: 145px ;
+    height: 26%;
+  }
+  .headCont{
+    display: flex;
+    width: 100%;
+    height: 18%;
+  }
+  .aboutCont{
+    display: flex;
+    width: 100%;
+    height: 56%;
+  }
+  .img{
+    display: flex;
+    width: 100%;
+    height: inherit;
     top: 0;
     border-radius: 46px;
     position: absolute;
     background-repeat: no-repeat;
     background-size:cover;
   }
+  .head{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
   .about{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 312px;
-    bottom: 0;
+    height: inherit;
     border-radius: 46px;
     background-color: #393853;
     position: absolute;
   }
-  .head{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 94px;
-    margin-top: 145px;
-  }
+  
   .mainText{
     display: flex;
     width: 100%;
@@ -51,7 +65,7 @@
   .mainText p{
       color: #FFFFFF;
       font-weight: 350;
-      font-size: 18px;
+      font-size: 1.2vw;
   }
   .mainInfo{
       display: flex;
@@ -74,10 +88,10 @@
 }
 .name p{
     margin-top: 5%;
-    margin-left: 14%;
+    margin-left: 11%;
     color: #000000;
     font-weight: 450;
-    font-size: 22px;
+    font-size: 1.65vw;
 }
 .date{
     display: flex;
@@ -89,7 +103,7 @@
     margin-left: 14%;
     color: #000000;
     font-weight: 350;
-    font-size: 14px;
+    font-size: 1.2vw;
 }
 
 .icon{

@@ -38,33 +38,6 @@ function MapMobile() {
     return (
         <div className='container'>
             <div className='felx-block-map'>
-
-                {/* Масштабирование */}
-                <div id='zoomCont'>
-                    <div id='zoomTools'>
-                        <div className='tool' onClick={()=>{
-                            if(camera.fov > 20) {
-                                camera.fov -=5;
-                                camera.updateProjectionMatrix();
-                            }
-                        }}>
-                            <p>+</p>                           
-                        </div>
-
-                        <div id='toolLine'/>
-
-                        <div className='tool' 
-                            style={{marginBottom: '10px'}} 
-                            onClick={()=>{
-                                if(camera.fov < 70) {
-                                    camera.fov +=5;
-                                    camera.updateProjectionMatrix();
-                                }                       
-                        }}>
-                            <p>-</p>
-                        </div>
-                    </div>
-                </div>
                 
                 {/* Инфо блок */}
                 {/* <BuildingAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/> */}

@@ -2,15 +2,15 @@
 .map-cont{
   height: 100vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
+
 }
 .felx-block-map {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  min-height: 768px;
-  position: relative;
-  height: 100vh;
+  position: fixed;
+  height: 100%;
   width: 100%;
   background-color: #CBC7FF;
 }
@@ -18,12 +18,12 @@
 /* Масштабирование */
 #zoomCont {
   display: flex;
-  width: 38px;
-  height: 92px;
+  width: calc(14vh / 2.8);
+  height: 14vh;
   right: 0;
   margin-right: 1.5%;
-  margin-top: 2%;
-  position: absolute;
+  margin-top: 3%;
+  position: fixed;
   z-index: 5;
   
 }
@@ -34,7 +34,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 .tool {
@@ -47,7 +47,7 @@
   cursor: pointer;
 }
 .tool p{
-  font-size: 38px;
+  font-size: 2.7vw;
   color: #4E4E4E;
   font-weight: 400;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -64,11 +64,13 @@
 /* Помощь */
 #help {
   display: flex;
-  height: 45px;
-  width: 45px;
+  height: 3.1vw;
+  min-height: 30px;
+  width: 3.1vw;
+  min-width: 30px;
   background-color: rgba( 255, 255, 255, 0.7);
   position:fixed;
-  border-radius: 45px;
+  border-radius: 100%;
   right: 0;
   bottom: 0;
   z-index: 10;
@@ -80,7 +82,7 @@
 }
 
 #help p{
-  font-size: 26px;
+  font-size: 2.1vw;
   font-family: Arial, Helvetica, sans-serif;
   color: #4E4E4E;
   font-weight: 500;

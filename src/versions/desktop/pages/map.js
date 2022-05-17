@@ -61,99 +61,96 @@ const Map = () => {
     }
 
     return (
-        <div className='container'>
-            <div className='felx-block-map'>
-              <header>
-                <nav>
-                  <div className = "nav-item">
-                    <NavHashLink smooth to="/#timeline">
-                        <a >История</a>
-                    </NavHashLink>
-                  </div>
-                  <div className = "nav-item">
-                    <NavHashLink smooth to="/#gallery">
-                        <a >Галерея</a>
-                    </NavHashLink>
-                  </div>
-                  <div className = "nav-item">
-                    <a href="/">Главная</a>
-                  </div>                                           
-                </nav>
-              </header>
+        <div className='felx-block-map'>
+            <header style={{position: 'fixed'}}>
+            <nav>
+                <div className = "nav-item">
+                <NavHashLink smooth to="/#timeline">
+                    <a >История</a>
+                </NavHashLink>
+                </div>
+                <div className = "nav-item">
+                <NavHashLink smooth to="/#gallery">
+                    <a >Галерея</a>
+                </NavHashLink>
+                </div>
+                <div className = "nav-item">
+                <a href="/">Главная</a>
+                </div>                                           
+            </nav>
+            </header>
 
-                {/* Масштабирование */}
-                <div id='zoomCont'>
-                    <div id='zoomTools'>
-                        <div className='tool' onClick={()=>{
-                            if(camera.fov > 20) {
-                                camera.fov -=5;
+            {/* Масштабирование */}
+            <div id='zoomCont'>
+                <div id='zoomTools'>
+                    <div className='tool' onClick={()=>{
+                        if(camera.fov > 20) {
+                            camera.fov -=5;
+                            camera.updateProjectionMatrix();
+                        }
+                    }}>
+                        <p>+</p>                           
+                    </div>
+                    <div id='toolLine'/>
+                    <div className='tool' 
+                        style={{marginBottom: '10px'}} 
+                        onClick={()=>{
+                            if(camera.fov < 70) {
+                                camera.fov +=5;
                                 camera.updateProjectionMatrix();
-                            }
-                        }}>
-                            <p>+</p>                           
-                        </div>
-                        <div id='toolLine'/>
-                        <div className='tool' 
-                            style={{marginBottom: '10px'}} 
-                            onClick={()=>{
-                                if(camera.fov < 70) {
-                                    camera.fov +=5;
-                                    camera.updateProjectionMatrix();
-                                }                       
-                        }}>
-                            <p>-</p>
-                        </div>
+                            }                       
+                    }}>
+                        <p>-</p>
                     </div>
                 </div>
-
-                {/* Помощь */}
-                <div id='help'>
-                    <p>?</p>
-                </div>
-                
-                {/* Инфо блок */}
-                <BuildingAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/>
-
-                {/* Карта */}
-                <div className='map-cont'>
-                    
-                    <Canvas  camera={camera}>
-                        {/* Настройки сцены */}
-                        <OrbitControls enabled={false} maxDistance={25} minDistance={5}/>
-                        <ambientLight intensity={0.22}/>
-                        <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
-                        <pointLight color={'#ffde8a'} intensity={0.1} position={[-9, 5, -5]} />
-                        
-                        {/* Площади */}
-                        <Squarecenter/>
-                        <Midfield/>
-                        <Longfield/>
-                        <Trianglefield/>
-
-                        {/* Здания */}
-                        <Two onClick={()=>LoadData(dataList[0])}/> 
-                        <Five onClick={()=>LoadData(dataList[1])}/>
-                        <Eight onClick={()=>LoadData(dataList[2])}/>
-                        <Six onClick={()=>LoadData(dataList[3])}/>
-                        <Four/>
-                        <Three/>                    
-                        <Seven/>       
-                        <Nine/>               
-                        <Thirteen/>
-                        <Twelve/>
-                        <Twentyfour/>                  
-                        <Ten/>
-                        <Twentysixtwentyseven/>
-                        <Fourteen/>
-                        <Twentyone/>
-                        <Oneone/> 
-                        <Twentyfive/> 
-
-                    </Canvas>
-                </div>                
             </div>
 
-        </div>    
+            {/* Помощь */}
+            <div id='help'>
+                <p>?</p>
+            </div>
+            
+            {/* Инфо блок */}
+            <BuildingAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/>
+
+            {/* Карта */}
+            <div className='map-cont'>
+                
+                <Canvas style={{position: 'fixed'}}  camera={camera}>
+                    {/* Настройки сцены */}
+                    <OrbitControls enabled={false} maxDistance={25} minDistance={5}/>
+                    <ambientLight intensity={0.22}/>
+                    <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
+                    <pointLight color={'#ffde8a'} intensity={0.1} position={[-9, 5, -5]} />
+                    
+                    {/* Площади */}
+                    <Squarecenter/>
+                    <Midfield/>
+                    <Longfield/>
+                    <Trianglefield/>
+
+                    {/* Здания */}
+                    <Two onClick={()=>LoadData(dataList[0])}/> 
+                    <Five onClick={()=>LoadData(dataList[1])}/>
+                    <Eight onClick={()=>LoadData(dataList[2])}/>
+                    <Six onClick={()=>LoadData(dataList[3])}/>
+                    <Four/>
+                    <Three/>                    
+                    <Seven/>       
+                    <Nine/>               
+                    <Thirteen/>
+                    <Twelve/>
+                    <Twentyfour/>                  
+                    <Ten/>
+                    <Twentysixtwentyseven/>
+                    <Fourteen/>
+                    <Twentyone/>
+                    <Oneone/> 
+                    <Twentyfive/> 
+
+                </Canvas>
+            </div>                
+        </div>
     )
 }
 

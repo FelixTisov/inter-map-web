@@ -26,11 +26,6 @@
 }
 
 /* Стили титульной части */
-.container {
-  background-image: url('../../../images/bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
- }
 .ryad{
   display: flex;
   flex-direction: column;
