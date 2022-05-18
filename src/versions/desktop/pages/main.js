@@ -1,6 +1,6 @@
 import '../styles/main.css'
 import SimpleImageSlider from "react-simple-image-slider"
-import {useNavigate} from "react-router-dom"
+import {useNavigate, Link} from "react-router-dom"
 import HistoryBlock from '../components/history_block'
 import React, { useRef,} from 'react'
 
@@ -30,15 +30,17 @@ function Main() {
   const scrollToMain = () => mainRef.current.scrollIntoView({behavior: 'smooth'})
 
   return (
+    
     <div className='wrapper'>
-
+    
         {/* Кнопка вверх */}
         <div id='upButton' onClick={scrollToMain}>
           <div className='strel_top'></div>
         </div>
 
         {/* Титульная часть */}
-        <div className='flex-block'>
+        <div className='flex-block' id='main' ref={mainRef}>
+
           <div className='container'>
 
             <header>
@@ -50,7 +52,7 @@ function Main() {
                   <a  onClick={scrollToSlider}>Галерея</a>
                 </div>
                 <div className = "nav-item">
-                  <a href="/map">Карта</a>
+                  <Link to="/map"><a>Карта</a></Link>
                 </div>                                           
               </nav>
             </header>
@@ -76,6 +78,7 @@ function Main() {
             </div>
 
           </div>
+
         </div>
 
         {/* Таймлайн */}
@@ -133,10 +136,12 @@ function Main() {
 
           </div>
         </div>
-        
-    </div>
 
+    </div>
   )
 }
 
 export default Main
+
+
+        

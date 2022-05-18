@@ -35,7 +35,7 @@ if (/iPhone/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent))
           <Route exact path='/' element={<Main/>}/>
           <Route exact path='/map' element={<Map/>}/>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter>   
     </React.StrictMode>
   )
 }

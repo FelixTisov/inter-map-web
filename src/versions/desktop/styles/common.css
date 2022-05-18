@@ -57,6 +57,5 @@ a:hover{
   background-color: #393853;
   scroll-snap-align: start;
 }
-
  /* Шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');

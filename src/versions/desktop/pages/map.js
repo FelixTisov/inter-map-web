@@ -1,5 +1,6 @@
 import '../styles/map.css'
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { NavHashLink } from 'react-router-hash-link'
@@ -75,7 +76,7 @@ const Map = () => {
                     </NavHashLink>
                     </div>
                     <div className = "nav-item">
-                    <a href="/">Главная</a>
+                    <Link to="/"><a>Главная</a></Link>
                     </div>                                           
                 </nav>
             </header>
