@@ -83,11 +83,9 @@ function Main() {
 
           {/* Скролл-блок */}
           <div className="center-col">
-          
               <div className="block">
                   <div className="dot"/>         
               </div>
-           
               {
                 infoList.map((item) => {
                   console.log(item)
@@ -100,12 +98,11 @@ function Main() {
                   )                 
                 })
               }    
-
               <div className="block"/>
               <div className="block"/>
               <div className="block" style={{height: '12%'}}/>
-             
           </div>
+          
         </div>
 
         {/* Слайдер */}

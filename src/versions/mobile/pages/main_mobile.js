@@ -1,9 +1,9 @@
 import '../styles/main_mobile.css'
-import SimpleImageSlider from "react-simple-image-slider"
-import {useNavigate} from "react-router-dom";
-import HistoryBlock from '../components/history_block_mobile';
-import allInfo from '../../common-data/all_info';
-import React, { useRef } from 'react';
+import SimpleImageSlider from 'react-simple-image-slider'
+import {useNavigate} from 'react-router-dom'
+import HistoryBlock from '../components/history_block_mobile'
+import allInfo from '../../common-data/all_info'
+import React, { useRef } from 'react'
 
 /* Фотографии для слайдера */
 const images = [
@@ -23,40 +23,40 @@ function MainMobile() {
     const navigate = useNavigate()
     
     return(
-        <div className='mainMobile'>
+        <div >
 
             {/* Титульная часть */}
-            <div className='cont' id='cont1' >
-                <div class = "ob" style={{display: 'flex', zIndex: 1}}>
+            <div className='cont' id='main' >
                 <div class ="ryad_mobile" >
-                    <div className='kartinka' id="ph5"></div>
+                    <div className='menu'></div>
                 </div>
                 <div class = "torg_mobile">
-                    <p className = 'torg-text_mobile'><font color="#FFFFFF">ТОРГ</font><font color="#338672">ОВЫЕ<br/>РЯДЫ</font></p>
+                    <p className = 'torg-text_mobile'>
+                        <font color="#FFFFFF">ТОРГ</font>
+                        <font color="#338672">ОВЫЕ<br/>РЯДЫ</font>
+                    </p>
                 </div>
                 <div class = "text_mobile">
-                    <div class = "line-box_mobile"><p class="line_mobile" id='lineText'></p></div>
-                    <div class = "new_mobile"><p class="line-text_mobile">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
+                    <div class = "line-box_mobile"><p class="side-line_mobile"/></div>
+                    <div class = "desc_mobile"><p class="desc-text_mobile">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
-                <div class = "button_kart_mobile">
-                    <button onClick={()=>{navigate('/map_mobile')}} class="button_mobile">КАРТА</button>
+                <div class = "button_mobile">
+                    <button onClick={()=>{navigate('/map_mobile')}} class="but-map_mobile">КАРТА</button>
                 </div>
-                <div class = "button_kart_mobile">
+                <div class = "button_mobile">
                     <div className='strelka'></div>        
-                </div>
-                </div>
+                </div>   
             </div>
 
             {/* Таймлайн */}
-            <div className='cont' id='cont2'>
-                <div className="model_mobile"></div>
-                 {/* Скролл-блок */}
-                 <div className="center-col_mobile">
-                        
-                        <div className="blocknew_mobile">
+            <div className='cont'>
+                <div className="timeline_mobile"></div>
+
+                    {/* Скролл-блок */}
+                    <div className="center-col_mobile">
+                        <div className="block-new_mobile">
                             <div className="dot_mobile"/>         
                         </div>
-                    
                         {
                             infoList.map((item, index) => {
                             console.log(item)
@@ -69,11 +69,10 @@ function MainMobile() {
                             )                 
                             })
                         }    
-
-                        <div className="blocknew_mobile"/>
-                        <div className="blocknew_mobile"/>
-                        
+                        <div className="block-new_mobile"/>
+                        <div className="block-new_mobile"/>
                     </div>
+
             </div>
 
             {/* Слайдер */}
@@ -82,10 +81,10 @@ function MainMobile() {
             </div>
 
             {/* Подвал */}
-            <div className='block_mobile' style={{flexDirection: 'column'}}>
+            <div className='footer'>
                 <p className='pod_mobile' style={{letterSpacing: '0.05em', fontWeight: 600, marginTop: '15%',}}>При поддержке</p>
                 <p className='pod_mobile' style={{fontWeight: 400, paddingLeft: '12%', paddingRight: '12%'}}>Костромского государственного историко-архитектурного и художественного музея-заповедника</p>
-                <div className='block_mobile' style={{marginBottom: '15%'}}>
+                <div className='block_mobile'>
                     <div className='metka_mobile'></div>
                     <p className='pod_mobile' style={{fontWeight: 400, fontSize: '14px'}}>г. Кострома, проспект Мира, д. 7</p>
                 </div>

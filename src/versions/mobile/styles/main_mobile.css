@@ -1,17 +1,7 @@
-html,body{
-  margin:0;
-  background-color: transparent;
-}
-
-
-.mainMobile{
-  width: 100%;
-  height: auto;
-  display: flexbox;
-  
-}
-
+/* Основной блок */
 .cont {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -19,191 +9,9 @@ html,body{
   background-color: #393853;
 }
 
-#cont1 {
+/* Стили титульной части */
+#main {
   background-image: url('../../../images/bg_mobile.jpg');
-}
-
-#cont2 {
-  display: flex;
-  background-color: #fff;
-  flex-direction: column;
-}
-
-#slider{
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-
-.model_mobile{
-  height: 35%;
-  background-color: #ffff;
-  background-image: url("../../../images/IMG_1745.png");
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.center-col_mobile {
-  flex: 1;
-  height: 100%;
-  background: #393853;
-  overflow-y: scroll;
-  width: 100%;
-}
-.center-col_mobile::-webkit-scrollbar {
-  display: none;
-}
-.blocknew_mobile{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: auto;
-  height: 25%;
-  margin-left: 10%;
-}
-.dot_mobile{
-  position: absolute;
-  z-index: 1;
-  width: 10px;
-  height: 10px;
-  margin-top: 31%;
-  margin-left: 16.7%;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-}
-/*
-.time_mobile{
-  height: 66%;
-}
-.time_mobile_radius{
-  display: flex;
-  height: 100%;
-  background-color: #393853;
-  border-top-left-radius: 7%;
-  border-top-right-radius:  7%;
-}
-
-.foto_mobile {
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-  height: 100%;
-  width: 20%;
-  margin-bottom: 21%;
-  margin-left: 15%;
-}
-
-#ph1{
-  background-image: url("../../src/images/Спаса_1.png");
-}
-#ph2 {
-  background-image: url("../../src/images/Гостиный двор.png");
-}
-#ph4 {
-  background-image: url("../../src/images/Гостиный двор.png");
-}
-*/
-#ph5{
-  background-image: url("../../../images/menu.png");
-}
-
-/*
-.allinfo_mobile{
-  z-index: 2;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  top: 3%;
-}
-  
-.info_mobile{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 80%;
-  margin-left: 3%;
-}
-  
-.textdate_mobile{
-  margin-left: 5%;
-  margin-top: 5%;
-  height: 85%;
-  width: 70%;
-  font-size: 12px; 
-  font-weight: 600;
-  color: #FFFFFF;
-  text-align: left;
-}
-  
-.line_mobile{
-  position: relative;
-    z-index: 1;
-    left: 35%;
-    margin-left: 3%;
-    width: 1px;
-    background-color: #FFFFFF;
-    height: 93%;
-    top: 7%;
-}
-
-#lineText{
-  height: 100%;
-  top: 2%;
-}
-
-.dot_mobile{
-  position: relative;
-  z-index: 1;
-  left: 33.64%;
-  width: 10px;
-  background-color: #FFFFFF;
-  height: 2%;
-  top: 7.5%;
-  border-radius: 50%;
-}
-  
-.date_mobile{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 15%;
-}
- */ 
-hr{
-  border: none; /* Убираем границу */
-  background-color: #FFFFFF; /* Цвет линии */
-  color: #FFFFFF; /* Цвет линии для IE6-7 */
-  height: 0.7px; /* Толщина линии */
-}
- 
-/*
-.linedate_mobile{
-  width: 5%;
-}*/
-  
-.number_mobile{
-  width: 24%;
-  padding: 0.5%;
-  background: rgb(255, 255, 255, 0.5); /* фон рамки */
-  font-size: 15px; /* размер шрифта */
-  font-weight: 500;
-  border-radius: 5px; /*  радиус скругления углов рамки */
-  color: #FFFFFF;
-  text-align: center;
-}
-  
-.block_mobile{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 20%;
 }
 .ryad_mobile{
   display: flex;
@@ -212,7 +20,16 @@ hr{
   height: 10%;
   width: 100%;
 }
-
+.menu{
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  margin-top: 20px;
+  margin-left: 20px;   
+  background-image: url("../../../images/menu.png");
+}
 .torg_mobile{
   display:flex;
   flex-direction: row;
@@ -230,21 +47,13 @@ hr{
   font-size: 50px;
   margin: 20px 20px 0px 0px;
 }
-
 .text_mobile{
   display:flex;
-  z-index: 5;
   flex-direction: raw;
-  background-color: transparent;
-  padding-top: 10%;
   width: 100vw;
-  height: 50%;
+  height: 48%;
+  margin-top: 5%;
 }
-/* .line_mobile{
-  border-left: 4px solid #FFF;
-  height: 100%;
-  margin: 0px;
-} */
 .line-box_mobile{
   display: flex;
   justify-content: flex-end;
@@ -253,24 +62,35 @@ hr{
   height: 240px;
   width: 8%;
 }
-.line-text_mobile{
+.line-box_mobile{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 8%;
+}
+.side-line_mobile{
+  border-left: 1px solid #FFF;
+  height: 60%;
+}
+.desc_mobile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.desc-text_mobile{
   font-family: 'Inter';
   font-style: normal;
-  font-size: 20px;
+  font-size: 16px;
   text-align: left;
   color: #FFFFFF;
   padding-right: 10%;
   padding-left: 21px;
 }
-.new_mobile{
-  background-color: transparent;
-  display: flex;
-  justify-content: flex-start;
-  height: 100%;
-  width: 300px;
-  position: relative;
-}
-.button_kart_mobile{
+.button_mobile{
   display:flex;
   justify-content: center;
   align-items: center;
@@ -279,7 +99,7 @@ hr{
   height: 10%;
   margin-bottom: 3%;
 }
-.button_mobile{
+.but-map_mobile{
   background-color: #FFF;
   border: none;
   color: #000;
@@ -292,22 +112,6 @@ hr{
   text-align: center;
   cursor: pointer;
 }
-
-.ob{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
-.kartinka{
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-  height: 40px;
-  width: 40px;
-  margin-top: 20px;
-  margin-left: 20px;   
-}
 .strelka{
   background-repeat: no-repeat;
   background-size:contain;
@@ -315,6 +119,71 @@ hr{
   height: 40px;
   width: 40px;
   background-image: url("../../../images/стрелка.png");
+}
+
+/* Стили таймлайна */
+.timeline_mobile{
+  height: 35%;
+  background-color: #ffff;
+  background-image: url("../../../images/IMG_1745.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.center-col_mobile {
+  flex: 1;
+  height: 100%;
+  background: #393853;
+  overflow-y: scroll;
+  width: 100%;
+}
+.center-col_mobile::-webkit-scrollbar {
+  display: none;
+}
+.block-new_mobile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 25%;
+  margin-left: 10%;
+}
+.dot_mobile{
+  position: absolute;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  margin-top: 31%;
+  margin-left: 16.7%;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+/* Стили слайдера */
+#slider{
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+/* Стили подвала */
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #393853;
+}
+.block_mobile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  margin-top: 2%;
 }
 .pod_mobile{
   font-family: 'Inter';
@@ -331,12 +200,4 @@ hr{
   height: 20px;
   width: 20px;
   background-image: url("../../../images/Метка.png");
-}
-.block_mobile{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-  background-color: #393853;
 }
