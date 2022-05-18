@@ -128,6 +128,12 @@
   text-align: center;
   cursor: pointer;
 }
+.button:hover{
+  width: 19.95%;
+  height: 47.25%;
+  font-size: 1.785vw;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);;
+}
 .del{
   display:flex;
   background-color: transparent;
