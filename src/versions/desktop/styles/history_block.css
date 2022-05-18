@@ -43,13 +43,16 @@
     justify-content:flex-start;
     height: 15%;
 }
-.linedate {
+.line-date-cont{
     width: 5%;
-    margin-top: 0.5%;
+    margin-top: 3%;
 }
-.linedate hr{
+.line-date{
     background-color: rgba(255, 255, 255, 0.2);
-    height: 1px;
+    height: 1.5px;
+    display: flex;
+    position: relative;
+    width: 100%;
 }
 .number{
     width: auto;

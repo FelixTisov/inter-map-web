@@ -30,14 +30,17 @@ function Main() {
   const scrollToMain = () => mainRef.current.scrollIntoView({behavior: 'smooth'})
 
   return (
-    <div >
+    <div className='wrapper'>
+
+        {/* Кнопка вверх */}
         <div id='upButton' onClick={scrollToMain}>
           <div className='strel_top'></div>
         </div>
 
         {/* Титульная часть */}
-        <div className='container' ref={mainRef}>
-          <div className='flex-block'>
+        <div className='flex-block'>
+          <div className='container'>
+
             <header>
               <nav>
                 <div className = "nav-item">
@@ -52,7 +55,7 @@ function Main() {
               </nav>
             </header>
 
-            <div style={{display: 'flex', zIndex: 1, height: '100vh'}}>
+            <div className='main-box'>
               <div className ="ryad" >
                 <div className = "torg">
                   <p className = "torg-text">ТОРГ</p>
@@ -71,6 +74,7 @@ function Main() {
                   </div>
               </div>
             </div>
+
           </div>
         </div>
 

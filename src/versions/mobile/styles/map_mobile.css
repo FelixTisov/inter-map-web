@@ -1,10 +1,11 @@
 /* Основные блоки */
-.map-cont{
+.map-cont_mob{
   height: 100vh;
   width: 100%;
   position: absolute;
+  overflow-y: hidden;
 }
-.felx-block-map {
+.felx-block-map_mob {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -13,6 +14,7 @@
   height: 100vh;
   width: 100%;
   background-color: #CBC7FF;
+  overflow-y: hidden;
 }
 
 /* Помощь */

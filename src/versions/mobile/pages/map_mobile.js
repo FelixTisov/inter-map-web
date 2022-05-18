@@ -37,13 +37,13 @@ function MapMobile() {
 
     return (
         <div className='container'>
-            <div className='felx-block-map'>
+            <div className='felx-block-map_mob'>
                 
                 {/* Инфо блок */}
                 {/* <BuildingAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/> */}
 
                 {/* Карта */}
-                <div className='map-cont'>
+                <div className='map-cont_mob'>
                     
                     <Canvas  camera={camera}>
                         <OrbitControls enabled={true} maxDistance={25} minDistance={5}/>

@@ -63,21 +63,21 @@ const Map = () => {
     return (
         <div className='felx-block-map'>
             <header style={{position: 'fixed'}}>
-            <nav>
-                <div className = "nav-item">
-                <NavHashLink smooth to="/#timeline">
-                    <a >История</a>
-                </NavHashLink>
-                </div>
-                <div className = "nav-item">
-                <NavHashLink smooth to="/#gallery">
-                    <a >Галерея</a>
-                </NavHashLink>
-                </div>
-                <div className = "nav-item">
-                <a href="/">Главная</a>
-                </div>                                           
-            </nav>
+                <nav>
+                    <div className = "nav-item">
+                    <NavHashLink smooth to="/#timeline">
+                        <a >История</a>
+                    </NavHashLink>
+                    </div>
+                    <div className = "nav-item">
+                    <NavHashLink smooth to="/#gallery">
+                        <a >Галерея</a>
+                    </NavHashLink>
+                    </div>
+                    <div className = "nav-item">
+                    <a href="/">Главная</a>
+                    </div>                                           
+                </nav>
             </header>
 
             {/* Масштабирование */}
@@ -116,7 +116,7 @@ const Map = () => {
             {/* Карта */}
             <div className='map-cont'>
                 
-                <Canvas style={{position: 'fixed'}}  camera={camera}>
+                <Canvas style={{position: 'fixed', height: '100%', width: '100%', overflowY: 'hidden', msOverflowY:'hidden'}}  camera={camera}>
                     {/* Настройки сцены */}
                     <OrbitControls enabled={false} maxDistance={25} minDistance={5}/>
                     <ambientLight intensity={0.22}/>

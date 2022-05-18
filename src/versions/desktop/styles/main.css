@@ -1,3 +1,8 @@
+.wrapper{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
 /* Кнопка вверх */
  #upButton{
   height: 3vw;
@@ -9,7 +14,7 @@
   bottom: 0;
   z-index: 10;
   margin-bottom: 1%;
-  margin-right: 0.5%;
+  margin-right: 2%;
   cursor: pointer;
 }
 .strel_top{
@@ -26,6 +31,12 @@
 }
 
 /* Стили титульной части */
+.main-box{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-top: -4%;
+}
 .ryad{
   display: flex;
   flex-direction: column;
