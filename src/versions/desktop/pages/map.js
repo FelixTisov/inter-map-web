@@ -6,6 +6,7 @@ import { OrbitControls } from '@react-three/drei'
 import { NavHashLink } from 'react-router-hash-link'
 import * as THREE from 'three'
 import BuildingAbout from '../components/building_about'
+import Help from '../components/help'
 
 /* Модели */
 import Squarecenter from '../../../models/Squarecenter'
@@ -41,24 +42,27 @@ camera.position.z = -7
 
 const Map = () => {
 
-    const defaultData = ['hidden', null, '', '', null, '']
-    const [click, setClick] = useState(defaultData) //информация выводимая на карточку
-    const [visibility, setVisibility] = useState(true) //отображение блока с карточкой
+    const offData = ['hidden', null, '', '', null, ''] // когда карточка не отображается
+    const [click, setClick] = useState(offData) // информация выводимая на карточку
+    const [visibility, setVisibility] = useState(true) // отображение блока с карточкой
 
     /* Загрузить данные для карточки */
     function LoadData(data) {
         setVisibility(!visibility)
         if(visibility) 
-            setClick([
-                'visible',
-                data.mainImage,
-                data.buildingName,
-                data.date,
-                null, //пока нет готовых иконок
-                data.description
-            ])
+            if(data==null) // если дата пришла пустая, отображаем дефолтные данные
+                setClick(['visible'])
+            else
+                setClick([
+                    'visible',
+                    data.mainImage,
+                    data.buildingName,
+                    data.date,
+                    null, //пока нет готовых иконок
+                    data.description
+                ])
         else 
-            setClick(defaultData)
+            setClick(offData)
     }
 
     return (
@@ -107,9 +111,7 @@ const Map = () => {
             </div>
 
             {/* Помощь */}
-            <div id='help'>
-                <p>?</p>
-            </div>
+            <Help/>
             
             {/* Инфо блок */}
             <BuildingAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/>
@@ -135,19 +137,19 @@ const Map = () => {
                     <Five onClick={()=>LoadData(dataList[1])}/>
                     <Eight onClick={()=>LoadData(dataList[2])}/>
                     <Six onClick={()=>LoadData(dataList[3])}/>
-                    <Four/>
-                    <Three/>                    
-                    <Seven/>       
-                    <Nine/>               
-                    <Thirteen/>
-                    <Twelve/>
-                    <Twentyfour/>                  
-                    <Ten/>
-                    <Twentysixtwentyseven/>
-                    <Fourteen/>
-                    <Twentyone/>
-                    <Oneone/> 
-                    <Twentyfive/> 
+                    <Four onClick={()=>LoadData()}/>
+                    <Three onClick={()=>LoadData()}/>                    
+                    <Seven onClick={()=>LoadData()}/>       
+                    <Nine onClick={()=>LoadData()}/>               
+                    <Thirteen onClick={()=>LoadData()}/>
+                    <Twelve onClick={()=>LoadData()}/>
+                    <Twentyfour onClick={()=>LoadData()}/>                  
+                    <Ten onClick={()=>LoadData()}/>
+                    <Twentysixtwentyseven onClick={()=>LoadData()}/>
+                    <Fourteen onClick={()=>LoadData()}/>
+                    <Twentyone onClick={()=>LoadData()}/>
+                    <Oneone onClick={()=>LoadData()}/> 
+                    <Twentyfive onClick={()=>LoadData()}/> 
 
                 </Canvas>
             </div>                

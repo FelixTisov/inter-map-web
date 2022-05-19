@@ -1,4 +1,4 @@
-import '../styles/history_block.css'
+import './history_block.css'
 
 function HistoryBlock({img, date, text}) {
     return (

@@ -1,7 +1,8 @@
 /* Карточка зданий */ 
-import '../styles/building_about.css'
+import './building_about.css'
 
-function BuildingAbout({isVisible='hidden', img=null, thename='', date='', icon=null, text=''}) {
+const defaultImage = require('../../../images/infoImages/default.png')
+function BuildingAbout({isVisible='hidden', img=defaultImage, thename='Упс...', date='', icon=null, text='Это здание ещё не добавлено :('}) {
     return(
         <div className='infoCont' style={{visibility: `${isVisible}`}}>
 
