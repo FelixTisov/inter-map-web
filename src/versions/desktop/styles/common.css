@@ -4,8 +4,8 @@ header{
   z-index: 10;
   width: 100%;
   height: 7%;
-  position: relative;
   overflow-y: hidden;
+  position: relative;
 }
 nav{
   display: flex;

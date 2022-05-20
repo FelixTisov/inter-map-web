@@ -10,7 +10,7 @@
     bottom: 0;
     margin-right: 5.5%;
     margin-bottom: 5.5%;
-    background-color: #dbdbdb;
+    background-color: #e8e8e8;
   }
   .txt-cont{
       display: flex;
@@ -35,7 +35,7 @@
     min-height: 30px;
     width: 3.1vw;
     min-width: 30px;
-    background-color: rgba( 255, 255, 255, 0.7);
+    background-color: #f7f7f7;
     position: absolute;
     border-radius: 100%;
     right: 0;
@@ -50,7 +50,7 @@
   #help p{
     font-size: 2.1vw;
     font-family: Arial, Helvetica, sans-serif;
-    color: #4E4E4E;
+    color: #3b3b3b;
     font-weight: 500;
     -webkit-touch-callout: none; /* iOS Safari */
     user-select: none;   /* Chrome/Safari/Opera */

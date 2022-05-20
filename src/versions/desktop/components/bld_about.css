@@ -2,20 +2,20 @@
 .infoCont{
     display: flex;
     flex-direction: column;
-    width: 28vw;
-    height: calc(28vw * 1.4);
+    width: 22vw;
+    height: calc(25vw * 1.4);
     position: fixed;
-    background-color: #dbdbdb;
+    background-color: #e8e8e8;
     z-index: 6;
-    margin-top: 7%;
+    margin-top: 8%;
     top: 0;
     margin-left: 2%;
-    border-radius: 49px;
+    border-radius: 25px;
   }
   .imgCont {
     display: flex;
     width: 100%;
-    height: 26%;
+    height: 30%;
   }
   .headCont{
     display: flex;
@@ -25,14 +25,15 @@
   .aboutCont{
     display: flex;
     width: 100%;
-    height: 56%;
+    height: 52%;
   }
   .img{
     display: flex;
     width: 100%;
     height: inherit;
     top: 0;
-    border-radius: 46px;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
     position: absolute;
     background-repeat: no-repeat;
     background-size:cover;
@@ -49,35 +50,35 @@
     justify-content: center;
     width: 100%;
     height: inherit;
-    border-radius: 46px;
-    background-color: #393853;
     position: absolute;
   }
   
   .mainText{
+    margin-top: -7%;
     display: flex;
     width: 100%;
     height: 100%;
     padding: 10%;
-    align-items: center;
+    align-items:flex-start;
     justify-content: center;
+    text-align:start;
   }
   .mainText p{
-      color: #FFFFFF;
+      color: #000000;
       font-weight: 350;
-      font-size: 1.2vw;
+      font-size: 1vw;
   }
   .mainInfo{
       display: flex;
       flex-direction: column;
-      width: 70%;
+      width: 80%;
       height: 100%;
   }
 .iconCont{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 20%;
     height: 100%;
 
 }
@@ -88,22 +89,23 @@
 }
 .name p{
     margin-top: 5%;
-    margin-left: 11%;
+    margin-left: 13%;
     color: #000000;
-    font-weight: 450;
-    font-size: 1.65vw;
+    font-weight: 500;
+    font-size: 1.25vw;
 }
 .date{
     display: flex;
     width: 100%;
     height: 50%;
+    z-index: 2;
 }
 .date p{
   margin-top: 2%;
-    margin-left: 14%;
+    margin-left: 13%;
     color: #000000;
-    font-weight: 350;
-    font-size: 1.2vw;
+    font-weight: 300;
+    font-size: 1vw;
 }
 
 .icon{

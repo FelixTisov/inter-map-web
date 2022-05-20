@@ -5,8 +5,8 @@ import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { NavHashLink } from 'react-router-hash-link'
 import * as THREE from 'three'
-import BuildingAbout from '../components/building_about'
 import Help from '../components/help'
+import BldAbout from '../components/bld_about'
 
 /* Модели */
 import Squarecenter from '../../../models/Squarecenter'
@@ -42,28 +42,39 @@ camera.position.z = -7
 
 const Map = () => {
 
-    const offData = ['hidden', null, '', '', null, ''] // когда карточка не отображается
+    const offData = ['hidden', null, '', '', null, ''] // карточка выключена
     const [click, setClick] = useState(offData) // информация выводимая на карточку
-    const [visibility, setVisibility] = useState(true) // отображение блока с карточкой
+    const [currentBuild, setCurrentBuild] = useState('') // текущее отображаемое на карточке здание
 
     /* Загрузить данные для карточки */
-    function LoadData(data) {
-        setVisibility(!visibility)
-        if(visibility) 
-            if(data==null) // если дата пришла пустая, отображаем дефолтные данные
-                setClick(['visible'])
-            else
+    function LoadData(data, index) {
+        if(data!=null) 
+        { 
+            if (index!=currentBuild)
+            {
                 setClick([
-                    'visible',
-                    data.mainImage,
-                    data.buildingName,
-                    data.date,
-                    null, //пока нет готовых иконок
-                    data.description
+                'visible', // включаем карточку
+                data.mainImage,
+                data.buildingName,
+                data.date,
+                null, //пока нет готовых иконок
+                data.description
                 ])
-        else 
-            setClick(offData)
+                setCurrentBuild(index)
+            } 
+            else
+            {
+                setClick(offData)
+                setCurrentBuild('')
+            }
+        } 
+        else // если дата пришла пустая, отображаем дефолтные данные
+        {
+            setClick(['visible']) 
+            setCurrentBuild('')
+        }
     }
+
 
     return (
         <div className='felx-block-map'>
@@ -114,7 +125,7 @@ const Map = () => {
             <Help/>
             
             {/* Инфо блок */}
-            <BuildingAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/>
+            <BldAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/>
 
             {/* Карта */}
             <div className='map-cont'>
@@ -133,23 +144,23 @@ const Map = () => {
                     <Trianglefield/>
 
                     {/* Здания */}
-                    <Two onClick={()=>LoadData(dataList[0])}/> 
-                    <Five onClick={()=>LoadData(dataList[1])}/>
-                    <Eight onClick={()=>LoadData(dataList[2])}/>
-                    <Six onClick={()=>LoadData(dataList[3])}/>
-                    <Four onClick={()=>LoadData()}/>
-                    <Three onClick={()=>LoadData()}/>                    
-                    <Seven onClick={()=>LoadData()}/>       
-                    <Nine onClick={()=>LoadData()}/>               
-                    <Thirteen onClick={()=>LoadData()}/>
-                    <Twelve onClick={()=>LoadData()}/>
-                    <Twentyfour onClick={()=>LoadData()}/>                  
-                    <Ten onClick={()=>LoadData()}/>
-                    <Twentysixtwentyseven onClick={()=>LoadData()}/>
-                    <Fourteen onClick={()=>LoadData()}/>
-                    <Twentyone onClick={()=>LoadData()}/>
-                    <Oneone onClick={()=>LoadData()}/> 
-                    <Twentyfive onClick={()=>LoadData()}/> 
+                    <Two onClick={()=>LoadData(dataList[0], 1)}/> 
+                    <Five onClick={()=>LoadData(dataList[1], 2)}/>
+                    <Eight onClick={()=>LoadData(dataList[2], 3)}/>
+                    <Six onClick={()=>LoadData(dataList[3], 4)}/>
+                    <Four onClick={()=>LoadData([], 6)}/>
+                    <Three onClick={()=>LoadData([], 7)}/>                    
+                    <Seven onClick={()=>LoadData([], 8)}/>       
+                    <Nine onClick={()=>LoadData([], 9)}/>               
+                    <Thirteen onClick={()=>LoadData([], 10)}/>
+                    <Twelve onClick={()=>LoadData([], 11)}/>
+                    <Twentyfour onClick={()=>LoadData([], 12)}/>                  
+                    <Ten onClick={()=>LoadData([], 13)}/>
+                    <Twentysixtwentyseven onClick={()=>LoadData([], 14)}/>
+                    <Fourteen onClick={()=>LoadData([], 15)}/>
+                    <Twentyone onClick={()=>LoadData([], 16)}/>
+                    <Oneone onClick={()=>LoadData([], 17)}/> 
+                    <Twentyfive onClick={()=>LoadData([], 18)}/> 
 
                 </Canvas>
             </div>                

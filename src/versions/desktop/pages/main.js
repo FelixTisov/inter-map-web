@@ -115,7 +115,7 @@ function Main() {
         {/* Слайдер */}
         <div className='felx-block' id='gallery' ref={sliderRef}>
           <div className="slider">
-            <SimpleImageSlider width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
+            <SimpleImageSlider autoPlayDelay={5.0} width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
           </div>     
         </div>
 
