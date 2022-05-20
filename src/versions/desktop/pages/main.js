@@ -43,7 +43,7 @@ function Main() {
 
           <div className='container'>
 
-            <header>
+          <header>
               <nav>
                 <div className = "nav-item">
                   <a  onClick={scrollToHistory}>История</a>
@@ -58,7 +58,8 @@ function Main() {
             </header>
 
             <div className='main-box'>
-              <div className ="ryad" >
+            
+              <div className ="ryad" id='left'>
                 <div className = "torg">
                   <p className = "torg-text">ТОРГ</p>
                 </div>
@@ -70,11 +71,14 @@ function Main() {
                   <button onClick={()=>{navigate('/map')}} class="button">КАРТА</button>
                 </div>
               </div>
-              <div className="ryad" style={{ position: 'relative'}}>
+              <div className="ryad" id='right' style={{ position: 'relative'}}>
                   <div className = "del">
                     <p className ="ove-text">ОВЫЕ<br/>РЯДЫ</p>
                   </div>
               </div>
+
+              
+
             </div>
 
           </div>

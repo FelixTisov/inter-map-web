@@ -36,7 +36,8 @@
   display: flex;
   height: 100%;
   width: 100%;
-  margin-top: -4%;
+  margin-top: -3.45%;
+  
 }
 .ryad{
   display: flex;
@@ -44,6 +45,8 @@
   align-items: center;
   height: 100%;
   width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .torg{
   display:flex;
@@ -251,3 +254,13 @@ h3{
   color: #FFFFFF;
 }
 
+#left{
+  background-image: url('../../../images/bg1.jpg');
+  height: 100%;
+  position: relative;
+}
+#right{
+  background-image: url('../../../images/bg2.jpg');
+  height: 100%;
+  position: relative;
+}
