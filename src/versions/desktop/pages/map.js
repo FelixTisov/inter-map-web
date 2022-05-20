@@ -75,7 +75,6 @@ const Map = () => {
         }
     }
 
-
     return (
         <div className='felx-block-map'>
             <header style={{position: 'fixed'}}>
@@ -132,7 +131,7 @@ const Map = () => {
                 
                 <Canvas style={{position: 'fixed', height: '100%', width: '100%', overflowY: 'hidden', msOverflowY:'hidden'}}  camera={camera}>
                     {/* Настройки сцены */}
-                    <OrbitControls enabled={false} maxDistance={25} minDistance={5}/>
+                    <OrbitControls minPolarAngle={Math.PI/3} maxPolarAngle={Math.PI/3} enabled={true} maxDistance={25} minDistance={5}/>
                     <ambientLight intensity={0.22}/>
                     <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
                     <pointLight color={'#ffde8a'} intensity={0.1} position={[-9, 5, -5]} />
