@@ -39,7 +39,7 @@ function Main() {
         </div>
 
         {/* Титульная часть */}
-        <div className='flex-block' id='main' ref={mainRef}>
+        <div className='flex-block' ref={mainRef}>
 
           <div className='container'>
 
