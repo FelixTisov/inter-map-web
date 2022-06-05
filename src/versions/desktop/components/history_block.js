@@ -1,5 +1,4 @@
-import '../styles/history_block.css'
-import React, { useState } from 'react'
+import './history_block.css'
 
 function HistoryBlock({img, date, text}) {
     return (
@@ -10,7 +9,7 @@ function HistoryBlock({img, date, text}) {
             <div className="line"/>
             <div className="info">
                 <div className="date">
-                <div className="linedate"><hr></hr></div>
+                <div className="line-date-cont"><div className='line-date'/></div>
                 <div className="number">{date}</div>
                 </div>
                 <div className="textdate">{text}</div>

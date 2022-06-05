@@ -1,15 +1,21 @@
-
+.wrapper{
+  scroll-snap-type: y mandatory; 
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100%;
+}
+/* Кнопка вверх */
  #upButton{
-  height: 45px;
-  width: 45px;
-  background-color: rgba( 212, 212, 212, 0.7);
+  height: 3vw;
+  width: 3vw;
+  background-color: rgba( 201, 201, 201, 1);
   position:fixed;
   border-radius: 45px;
   right: 0;
   bottom: 0;
   z-index: 10;
-  margin-bottom: 1%;
-  margin-right: 0.5%;
+  margin-bottom: 2.1%;
+  margin-right: 1.6%;
   cursor: pointer;
 }
 .strel_top{
@@ -20,18 +26,27 @@
   align-items: center;
   height: 70%;
   width: 70%;
-  background-image: url("../../src/images/стрелка_вверх.png");
+  background-image: url("../../../images/стрелка_вверх.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Стили титульной части */
+.main-box{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-top: -3.45%;
+  
+}
 .ryad{
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .torg{
   display:flex;
@@ -44,10 +59,27 @@
 }
 .torg-text{
   font-family: 'Inter';
-  font-style: normal;
-  font-size: 150px;
+  font-size: 8.5vw;
   color: #FFFFFF;
   margin: 8% 0px 0px 0px;
+  margin-top: 12%;
+}
+.ove-text{
+  font-family: 'Inter';
+  font-size: 8.5vw;
+  color: #338672;
+  margin: 8% 0px 0px 0px;
+  margin-top: 12%;
+}
+.line-text{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-size: 1.3vw;
+  text-align: left;
+  color: #FFFFFF;
+  padding-right: 20%;
+  padding-left: 21px;
+  margin-top: 0;
 }
 .text{
   display:flex;
@@ -59,31 +91,24 @@
 .line-box{
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   background-color: transparent;
-  height: 230px;
+  height: 100%;
   width: 10%;
 }
-.line{
+.side-line{
   border-left: 1px solid #FFF;
-  height: 100%;
+  height: 65%;
+  margin-top: 0;
 }
 .description{
   background-color: transparent;
   display: flex;
-  justify-content: flex-start;
-  height: 197px;
-  width: 689px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
   position: relative;
-}
-.line-text{
-  font-family: 'Inter';
-  font-style: normal;
-  font-size: 28px;
-  text-align: left;
-  color: #FFFFFF;
-  padding-right: 20%;
-  padding-left: 21px;
 }
 .button_kart{
   display:flex;
@@ -94,17 +119,23 @@
   height: 15%;
 }
 .button{
-  background-color: #FFF;
+  background-color: #f7f7f7;
   border: none;
-  color: #000;
-  border-radius: 70px;
-  width: 198px;
-  height: 67.83px;
+  color: #3b3b3b;
+  border-radius: 60px;
+  width: 19%;
+  height: 45%;
   font-family: 'Kurale';
   font-style: normal;
-  font-size: 36px;
+  font-size: 1.7vw;
   text-align: center;
   cursor: pointer;
+}
+.button:hover{
+  width: 19.95%;
+  height: 47.25%;
+  font-size: 1.785vw;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);;
 }
 .del{
   display:flex;
@@ -115,19 +146,12 @@
   width: 100%;
   height: 50%;
 }
-.ove-text{
-  font-family: 'Inter';
-  font-style: normal;
-  font-size: 150px;
-  color: #338672;
-  margin: 8% 0px 0px 0px;
-}
 
 
 /* Стили таймлайна */
 .model{
   flex: 1;
-  background-image: url("../../src/images/IMG_1745.png");
+  background-image: url("../../../images/IMG_1745.png");
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -148,25 +172,24 @@
   flex-direction: row;
   align-items: center;
   width: auto;
-  height: 20%;
+  height: 22%;
   margin-left: 10%;
 }
 .dot{
   position: absolute;
   z-index: 3;
-  width: 10px;
+  width: 0.7vw;
   background-color: #FFFFFF;
-  height: 10px;
+  height: 0.7vw;
   border-radius: 50%;
-  margin-top: 11.7%;
-  margin-left: 5.95%;
+  margin-top: 22.3vh;
+  margin-left: 5.9vw;
 }
 
 
 /* Стили слайдера */
 .slider{
-	min-height: 768px;
-	height: auto;
+	height: 100%;
   width: 100%;
 	align-items: center;
   justify-content: center;
@@ -203,29 +226,41 @@
   background-position: center;
   height: 20px;
   width: 20px;
-  background-image: url("../../src/images/Метка.png");
+  background-image: url("../../../images/Метка.png");
 }
 h1{
   letter-spacing:0.05em;
-  font-size: 38px;
+  font-size: 1.7vw;
   font-weight: 600;
   margin-top: 0%;
-  font-family: 'Inter';
+  margin-bottom: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
   color: #FFFFFF;
 }
 h2 {
-  font-size: 26px;
+  font-size: 1.2vw;
   font-weight: 300;
   margin: 0;
-  font-family: 'Inter';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
   color: #FFFFFF;
 }
 h3{
-  font-size: 16px;
+  font-size: 1vw;
   font-weight: 200;
-  font-family: 'Inter';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
   color: #FFFFFF;
+}
+
+#left{
+  background-image: url('../../../images/bg1.jpg');
+  height: 100%;
+  position: relative;
+}
+#right{
+  background-image: url('../../../images/bg2.jpg');
+  height: 100%;
+  position: relative;
 }

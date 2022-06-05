@@ -1,0 +1,45 @@
+/* Основные блоки */
+.map-cont_mob{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  overflow-y: hidden;
+}
+.felx-block-map_mob {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 768px;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #CBC7FF;
+  overflow-y: hidden;
+}
+
+/* Помощь */
+#help-mob {
+  display: flex;
+  height: 45px;
+  width: 45px;
+  background-color: rgba( 255, 255, 255, 0.7);
+  position:fixed;
+  border-radius: 45px;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin-bottom: 2%;
+  margin-right: 1.5%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+#help-mob p{
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4E4E4E;
+  font-weight: 500;
+  -webkit-touch-callout: none; /* iOS Safari */
+  user-select: none;   /* Chrome/Safari/Opera */
+}

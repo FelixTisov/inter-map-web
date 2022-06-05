@@ -29,6 +29,10 @@ import Oneone from '../models/Oneone'
 import Twentyone from '../models/Twentyone'
 import Twentyfive from '../models/Twentyfive'
 import Test6 from '../models/icons/Test6'
+import Test3 from '../models/icons/Test3'
+import Test5 from '../models/icons/Test5'
+import Test9 from '../models/icons/Test9'
+import Test from '../models/icons/Test'
 //-------------//
 
 let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000 );
@@ -98,7 +102,7 @@ function Map() {
                 <div className='map-cont'>
                     
                     <Canvas  camera={camera}>
-                        <OrbitControls enabled={false} maxDistance={25} minDistance={5}/>
+                        <OrbitControls enabled={true} maxDistance={25} minDistance={5}/>
                         <ambientLight intensity={0.22}/>
                         <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
                         <Two/> 
@@ -123,7 +127,6 @@ function Map() {
                         <Twentyone/>
                         <Oneone/> 
                         <Twentyfive/> 
-                        <Test6/>
                     </Canvas>
                 </div>                
             </div>
