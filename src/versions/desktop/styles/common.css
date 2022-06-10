@@ -1,0 +1,60 @@
+/* Стили шапки */
+header{
+  display: flex;
+  z-index: 15;
+  width: 100%;
+  height: 7%;
+  overflow-y: hidden;
+  position: relative;
+  
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  width: 50%;
+  height: 20%;
+  background-color: transparent;
+  position: absolute;
+  opacity: 1;
+  margin-top: 1%;
+}
+.nav-item{
+  display: flex;
+  width: 100%;
+  align-items: flex-start ;
+  justify-content: center;
+}
+a {
+  color: #FFF;
+  font-size: 1.2vw;
+  font-family: 'Inter';
+  font-style: normal;
+  text-decoration: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  user-select: none;   /* Chrome/Safari/Opera */
+}
+a:hover{
+  font-size: 1.4vw;
+  cursor: pointer;
+}
+  
+/* Основные блоки */
+.container {
+  
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  }
+.felx-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #393853;
+  scroll-snap-align: start;
+}
+ /* Шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');

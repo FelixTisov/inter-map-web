@@ -1,0 +1,66 @@
+/* Основные блоки */
+.map-cont{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  overflow-y: hidden;
+}
+.felx-block-map {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #CBC7FF;
+  overflow-y: hidden;
+}
+
+/* Масштабирование */
+#zoomCont {
+  display: flex;
+  width: calc(14vh / 2.8);
+  height: 14vh;
+  right: 0;
+  margin-right: 1.5%;
+  margin-top: 3%;
+  position: fixed;
+  z-index: 5;
+}
+#zoomTools{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+}
+.tool {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  z-index: 6;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.tool p{
+  font-size: 2.7vw;
+  color: #3b3b3b;
+  font-weight: 400;
+  -webkit-touch-callout: none; /* iOS Safari */
+  user-select: none;   /* Chrome/Safari/Opera */
+}
+#toolLine{
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background-color: #A0A0A0;
+}
+
+
+/* Помощь */
+
+

@@ -1,0 +1,76 @@
+.block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: 22%;
+    margin-left: 10%;
+}
+.img-box {
+    display: flex;
+    height: 100%;
+    width: 20%;
+    justify-content: center;
+    margin-top: -14%;
+
+}
+.foto{
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 95%;
+    width: 75%;
+}
+.line{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    border: none;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    margin-top: -5%;
+}
+.date{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content:flex-start;
+    height: 15%;
+}
+.line-date-cont{
+    width: 5%;
+    margin-top: 3%;
+}
+.line-date{
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 1.5px;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.number{
+    width: auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    background: rgb(255, 255, 255, 0.4);
+    font-size: 1.15vw; 
+    font-weight: 600;
+    border-radius: 5px; 
+    color: #FFFFFF;
+}
+.textdate{
+    margin-left: 5%;
+    margin-top: -10%;
+    height: 85%;
+    width: 70%;
+    font-size: 1.1vw;
+    font-weight: 350;
+    color: #FFFFFF;
+    text-align: left;
+}

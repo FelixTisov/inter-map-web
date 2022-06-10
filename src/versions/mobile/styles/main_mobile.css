@@ -1,0 +1,203 @@
+/* Основной блок */
+.cont {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #393853;
+}
+
+/* Стили титульной части */
+#main {
+  background-image: url('../../../images/bg_mobile.jpg');
+}
+.ryad_mobile{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 10%;
+  width: 100%;
+}
+.menu{
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  margin-top: 20px;
+  margin-left: 20px;   
+  background-image: url("../../../images/menu.png");
+}
+.torg_mobile{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 20%;
+  margin: 0px;
+}
+.torg-text_mobile{
+  font-family: 'Inter';
+  text-align: right;
+  font-style: normal;
+  font-size: 50px;
+  margin: 20px 20px 0px 0px;
+}
+.text_mobile{
+  display:flex;
+  flex-direction: raw;
+  width: 100vw;
+  height: 48%;
+  margin-top: 5%;
+}
+.line-box_mobile{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: transparent;
+  height: 240px;
+  width: 8%;
+}
+.line-box_mobile{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 8%;
+}
+.side-line_mobile{
+  border-left: 1px solid #FFF;
+  height: 60%;
+}
+.desc_mobile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.desc-text_mobile{
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 16px;
+  text-align: left;
+  color: #FFFFFF;
+  padding-right: 10%;
+  padding-left: 21px;
+}
+.button_mobile{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 100vw;
+  height: 10%;
+  margin-bottom: 3%;
+}
+.but-map_mobile{
+  background-color: #FFF;
+  border: none;
+  color: #000;
+  border-radius: 70px;
+  width: 132px;
+  height: 45.22px;
+  font-family: 'Kurale';
+  font-style: normal;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.strelka{
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  background-image: url("../../../images/стрелка.png");
+}
+
+/* Стили таймлайна */
+.timeline_mobile{
+  height: 35%;
+  background-color: #ffff;
+  background-image: url("../../../images/IMG_1745.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.center-col_mobile {
+  flex: 1;
+  height: 100%;
+  background: #393853;
+  overflow-y: scroll;
+  width: 100%;
+}
+.center-col_mobile::-webkit-scrollbar {
+  display: none;
+}
+.block-new_mobile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 25%;
+  margin-left: 10%;
+}
+.dot_mobile{
+  position: absolute;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  margin-top: 31%;
+  margin-left: 16.7%;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+/* Стили слайдера */
+#slider{
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+/* Стили подвала */
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #393853;
+}
+.block_mobile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  margin-top: 2%;
+}
+.pod_mobile{
+  font-family: 'Inter';
+  font-style: normal;
+  text-align: center;
+  font-size: 20px; 
+  color: #FFFFFF;
+}
+.metka_mobile{
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+  background-image: url("../../../images/Метка.png");
+}
