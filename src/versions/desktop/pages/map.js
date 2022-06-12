@@ -30,6 +30,21 @@ import Fourteen from '../../../models/Fourteen'
 import Oneone from '../../../models/Oneone'
 import Twentyone from '../../../models/Twentyone'
 import Twentyfive from '../../../models/Twentyfive'
+import Muka from '../../../models/icons/Muka'
+import Tabak from '../../../models/icons/Tabak'
+import Hleb from '../../../models/icons/Hleb'
+import Bublik from '../../../models/icons/Bublik'
+import Degot from '../../../models/icons/Degot'
+import Konfeta from '../../../models/icons/Konfeta'
+import Varen from '../../../models/icons/Varen'
+import Kvas from '../../../models/icons/Kvas'
+import Maslo from '../../../models/icons/Maslo'
+import Maso from '../../../models/icons/Maso'
+import Milo from '../../../models/icons/Milo'
+import Ovochi from '../../../models/icons/Ovochi'
+import Pechene from '../../../models/icons/Pechene'
+import Riba from '../../../models/icons/Riba'
+import Sol from '../../../models/icons/Sol'
 
 /* Информация о постройках для карточек */ 
 import Data from '../../common-data/buildings_data'
@@ -160,6 +175,21 @@ const Map = () => {
                     <Twentyone onClick={()=>LoadData([], 16)}/>
                     <Oneone onClick={()=>LoadData([], 17)}/> 
                     <Twentyfive onClick={()=>LoadData([], 18)}/> 
+                    <Muka/>
+                    <Tabak/>
+                    <Hleb/>
+                    <Bublik/>
+                    <Degot/>
+                    <Konfeta/>
+                    <Varen/>
+                    <Kvas/>
+                    <Maslo/>
+                    <Maso/>
+                    <Milo/>
+                    <Ovochi/>
+                    <Pechene/>
+                    <Riba/>
+                    <Sol/>
 
                 </Canvas>
             </div>                
