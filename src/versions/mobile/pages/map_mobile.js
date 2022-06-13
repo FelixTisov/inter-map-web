@@ -46,7 +46,7 @@ function MapMobile() {
                 <div className='map-cont_mob'>
                     
                     <Canvas  camera={camera}>
-                        <OrbitControls enabled={true} maxDistance={25} minDistance={5}/>
+                        <OrbitControls minPolarAngle={Math.PI/3} maxPolarAngle={Math.PI/3} enabled={true} maxDistance={25} minDistance={5}/>
                         <ambientLight intensity={0.22}/>
                         <pointLight color={'#ffde8a'} intensity={0.5} position={[1, 5, -20]} />
                         <Two/> 

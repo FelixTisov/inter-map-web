@@ -40,6 +40,7 @@ camera.position.x = -7 //вокруг центра по плоскости
 camera.position.y = 7 //по вертикали
 camera.position.z = -7
 
+
 const Map = () => {
 
     const offData = ['hidden', null, '', '', null, ''] // карточка выключена
