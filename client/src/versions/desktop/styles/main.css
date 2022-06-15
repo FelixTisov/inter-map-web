@@ -1,3 +1,11 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory; 
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100%;
+}
 
 /* Кнопка вверх */
  #upButton{
@@ -189,7 +197,7 @@
 
 /* Стили слайдера */
 .slider{
-	height: 100%;
+	height: 100vh;
   width: 100%;
 	align-items: center;
   justify-content: center;
@@ -203,8 +211,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: absolute;
-  height: 100%;
+  position: relative;
+  height: 100vh;
   width: 100%; 
 }
 .text-column{

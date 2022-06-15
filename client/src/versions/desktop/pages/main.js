@@ -1,4 +1,5 @@
 import '../styles/main.css'
+import '../styles/common.css'
 import SimpleImageSlider from "react-simple-image-slider"
 import {useNavigate, Link} from "react-router-dom"
 import HistoryBlock from '../components/history_block'
@@ -64,11 +65,11 @@ function Main() {
                   <p className = "torg-text">ТОРГ</p>
                 </div>
                 <div className = "text">
-                  <div className = "line-box"><p class="side-line"></p></div>
-                  <div className = "description"><p class="line-text">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
+                  <div className = "line-box"><p className="side-line"></p></div>
+                  <div className = "description"><p className="line-text">Торговые ряды — торгово-складской комплекс конца XVIII—начала XIX веков, расположенный в самом центре Костромы. Это образцовый в памятник градостроительного искусства времени екатерининской городской реформы.</p></div>
                 </div>
                 <div className = "button_kart">
-                  <button onClick={()=>{navigate('/map')}} class="button">КАРТА</button>
+                  <button onClick={()=>{navigate('/map')}} className="button">КАРТА</button>
                 </div>
               </div>
               <div className="ryad" id='right' style={{ position: 'relative'}}>

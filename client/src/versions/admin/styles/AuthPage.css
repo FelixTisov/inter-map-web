@@ -1,0 +1,29 @@
+.auth-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #393853;
+}
+
+.form-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+input{
+    width: 40%;
+    height: 30px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+button{
+    height: 40px;
+    width: 20%;
+}

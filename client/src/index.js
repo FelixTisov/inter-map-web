@@ -1,15 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import './versions/desktop/styles/common.css' //общие стили для страниц десктопных версий
+ //общие стили для страниц десктопных версий
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 /* Страницы разных версий*/ 
-import Main from './versions/desktop/pages/main';
-import MainMobile from './versions/mobile/pages/main_mobile'
+import Main from './versions/desktop/pages/main'
 import Map from './versions/desktop/pages/map'
+
+import MainMobile from './versions/mobile/pages/main_mobile'
 import MapMobile from './versions/mobile/pages/map_mobile'
+
+import AdminPage from './versions/admin/pages/AdminPage'
+import AuthPage from './versions/admin/pages/AuthPage'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -34,6 +38,8 @@ if (/iPhone/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent))
         <Routes>
           <Route exact path='/' element={<Main/>}/>
           <Route exact path='/map' element={<Map/>}/>
+          <Route exact path='/auth' element={<AuthPage/>}/>
+          <Route exact path='/admin' element={<AdminPage/>}/>
         </Routes>
       </BrowserRouter>   
     </React.StrictMode>
