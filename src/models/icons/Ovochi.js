@@ -19,7 +19,7 @@ export default function Model({ ...props }) {
     <mesh 
       geometry={nodes.Куб002.geometry}
       rotation={[Math.PI / 2, 0, 0]}
-      position={[6.09, 0.9, 2.5]}
+      position={[6.3, 0.9, 1.9]}
       scale={[0.44, 0, 0.44]} >
         <meshBasicMaterial
         map={colorMap}
