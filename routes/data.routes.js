@@ -2,11 +2,14 @@
 const {Router} = require('express')
 const DataAbout = require('../models/DataAbout')
 const router = Router()
+const fs = require("fs");
+const multer = require("multer");
+const bodyParser = require("body-parser");
 
 /* '/api/data/create' - создание данных для одной карточки */ 
 router.post('/create', async (request, response) => {
     try {
-        
+
         const {buildingId, image, cardName, date, description} = request.body
         const candidate = await DataAbout.findOne({buildingId}) // Существует ли уже эта карточка
 
