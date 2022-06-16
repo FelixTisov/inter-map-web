@@ -31,6 +31,7 @@ import Fourteen from '../../../models/Fourteen'
 import Oneone from '../../../models/Oneone'
 import Twentyone from '../../../models/Twentyone'
 import Twentyfive from '../../../models/Twentyfive'
+<<<<<<< HEAD:client/src/versions/desktop/pages/map.js
 
 /* Значки */ 
 // import Muka from '../../../models/icons/Muka'
@@ -48,6 +49,25 @@ import Twentyfive from '../../../models/Twentyfive'
 // import Pechene from '../../../models/icons/Pechene'
 // import Riba from '../../../models/icons/Riba'
 // import Sol from '../../../models/icons/Sol'
+=======
+import Muka from '../../../models/icons/Muka'
+import Hleb from '../../../models/icons/Hleb'
+import Bublik from '../../../models/icons/Bublik'
+import Admin from '../../../models/icons/Admin'
+import Kvas from '../../../models/icons/Kvas'
+import Maslo from '../../../models/icons/Maslo'
+import Maso from '../../../models/icons/Maso'
+import Milo from '../../../models/icons/Milo'
+import Ovochi from '../../../models/icons/Ovochi'
+import Pechene from '../../../models/icons/Pechene'
+import Riba from '../../../models/icons/Riba'
+import Chai from '../../../models/icons/Chai'
+import Muka_mal from '../../../models/icons/Muka_mal'
+import Krest from '../../../models/icons/Krest'
+import Sum from '../../../models/icons/Sum'
+import Nit from '../../../models/icons/Nit'
+import Krest_ch from '../../../models/icons/Krest_ch'
+>>>>>>> link/dev:src/versions/desktop/pages/map.js
 
 /* Информация о постройках для карточек */ 
 import Data from '../../common-data/buildings_data'
@@ -192,6 +212,7 @@ const Map = () => {
                     <Trianglefield/>
 
                     {/* Здания */}
+<<<<<<< HEAD:client/src/versions/desktop/pages/map.js
                     <Two onClick={()=>LoadData(1, 'Two')}/> 
                     <Five onClick={()=>LoadData(2, 'Five')}/>
                     <Eight onClick={()=>LoadData(3, 'Eight')}/>
@@ -213,11 +234,28 @@ const Map = () => {
                     {/* Значки */}
                     {/* <Muka/>
                     <Tabak/>
+=======
+                    <Two onClick={()=>LoadData(dataList[0], 1)}/> 
+                    <Five onClick={()=>LoadData(dataList[1], 2)}/>
+                    <Eight onClick={()=>LoadData(dataList[2], 3)}/>
+                    <Six onClick={()=>LoadData(dataList[3], 4)}/>
+                    <Four onClick={()=>LoadData(dataList[4], 6)}/>
+                    <Three onClick={()=>LoadData(dataList[5], 7)}/>                    
+                    <Seven onClick={()=>LoadData(dataList[6], 8)}/>       
+                    <Nine onClick={()=>LoadData(dataList[7], 9)}/>               
+                    <Thirteen onClick={()=>LoadData(dataList[8], 10)}/>
+                    <Twelve onClick={()=>LoadData(dataList[9], 11)}/>
+                    <Twentyfour onClick={()=>LoadData(dataList[10], 12)}/>                  
+                    <Ten onClick={()=>LoadData(dataList[11], 13)}/>
+                    <Twentysixtwentyseven/>
+                    <Fourteen onClick={()=>LoadData(dataList[12], 15)}/>
+                    <Twentyone onClick={()=>LoadData(dataList[13], 16)}/>
+                    <Oneone onClick={()=>LoadData(dataList[14], 17)}/> 
+                    <Twentyfive onClick={()=>LoadData(dataList[15], 18)}/> 
+                    <Muka/>
+>>>>>>> link/dev:src/versions/desktop/pages/map.js
                     <Hleb/>
                     <Bublik/>
-                    <Degot/>
-                    <Konfeta/>
-                    <Varen/>
                     <Kvas/>
                     <Maslo/>
                     <Maso/>
@@ -225,8 +263,18 @@ const Map = () => {
                     <Ovochi/>
                     <Pechene/>
                     <Riba/>
+<<<<<<< HEAD:client/src/versions/desktop/pages/map.js
                     <Sol/> */}
 
+=======
+                    <Muka_mal/>
+                    <Chai/>
+                    <Admin/>
+                    <Krest/>
+                    <Sum/>
+                    <Nit/>
+                    <Krest_ch/>
+>>>>>>> link/dev:src/versions/desktop/pages/map.js
                 </Canvas>
             </div>                
         </div>
