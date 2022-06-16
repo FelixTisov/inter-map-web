@@ -206,33 +206,30 @@ const Map = () => {
                     <Twelve onClick={()=>LoadData(11, 'Twelve')}/>
                     <Twentyfour onClick={()=>LoadData(12, 'Twentyfour')}/>                  
                     <Ten onClick={()=>LoadData(13, 'Ten')}/>
-                    <Twentysixtwentyseven onClick={()=>LoadData(14, 'Twentysixtwentyseven')}/>
+                    <Twentysixtwentyseven />
                     <Fourteen onClick={()=>LoadData(15, 'Fourteen')}/>
                     <Twentyone onClick={()=>LoadData(16, 'Twentyone')}/>
                     <Oneone onClick={()=>LoadData(17, 'Oneone')}/> 
                     <Twentyfive onClick={()=>LoadData(18, 'Twentyfive')}/> 
 
                     {/* Значки */}
-                    {/* <Muka/>
-                    <Tabak/>
                     <Muka/>
-                    <Hleb/>
+                    <Hleb/>                 
                     <Bublik/>
-                    <Kvas/>
+                    <Kvas/> 
                     <Maslo/>
                     <Maso/>
                     <Milo/>
                     <Ovochi/>
                     <Pechene/>
                     <Riba/>
-                    <Sol/>
                     <Muka_mal/>
                     <Chai/>
                     <Admin/>
                     <Krest/>
                     <Sum/>
                     <Nit/>
-                    <Krest_ch/> */}
+                    <Krest_ch/> 
 
                 </Canvas>
             </div>                
