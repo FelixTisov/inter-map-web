@@ -33,7 +33,7 @@ import Twentyfive from '../../../models/Twentyfive'
 import Muka from '../../../models/icons/Muka'
 import Hleb from '../../../models/icons/Hleb'
 import Bublik from '../../../models/icons/Bublik'
-import Degot from '../../../models/icons/Degot'
+import Admin from '../../../models/icons/Admin'
 import Kvas from '../../../models/icons/Kvas'
 import Maslo from '../../../models/icons/Maslo'
 import Maso from '../../../models/icons/Maso'
@@ -41,8 +41,12 @@ import Milo from '../../../models/icons/Milo'
 import Ovochi from '../../../models/icons/Ovochi'
 import Pechene from '../../../models/icons/Pechene'
 import Riba from '../../../models/icons/Riba'
-import Sol from '../../../models/icons/Sol'
+import Chai from '../../../models/icons/Chai'
 import Muka_mal from '../../../models/icons/Muka_mal'
+import Krest from '../../../models/icons/Krest'
+import Sum from '../../../models/icons/Sum'
+import Nit from '../../../models/icons/Nit'
+import Krest_ch from '../../../models/icons/Krest_ch'
 
 /* Информация о постройках для карточек */ 
 import Data from '../../common-data/buildings_data'
@@ -184,6 +188,12 @@ const Map = () => {
                     <Pechene/>
                     <Riba/>
                     <Muka_mal/>
+                    <Chai/>
+                    <Admin/>
+                    <Krest/>
+                    <Sum/>
+                    <Nit/>
+                    <Krest_ch/>
                 </Canvas>
             </div>                
         </div>
