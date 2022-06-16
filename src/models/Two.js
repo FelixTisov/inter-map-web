@@ -5,9 +5,7 @@ import React, { useRef, useState} from 'react'
 import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
 
-
 export default function Model({ ...props }, onClick = () => {}) {
-
   const ref = useRef()
   const [hovered, hover] = useState(false)
   const { nodes, materials } = useGLTF('/raw/two/two.gltf')

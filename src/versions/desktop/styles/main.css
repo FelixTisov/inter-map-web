@@ -1,9 +1,4 @@
-.wrapper{
-  scroll-snap-type: y mandatory; 
-  overflow-y: scroll;
-  height: 100vh;
-  width: 100%;
-}
+
 /* Кнопка вверх */
  #upButton{
   height: 3vw;
@@ -32,6 +27,11 @@
 }
 
 /* Стили титульной части */
+.container {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+}
 .main-box{
   display: flex;
   height: 100%;

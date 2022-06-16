@@ -23,7 +23,7 @@ function MainMobile() {
     const navigate = useNavigate()
     
     return(
-        <div >
+        <div>
 
             {/* Титульная часть */}
             <div className='cont' id='main' >
@@ -77,7 +77,9 @@ function MainMobile() {
 
             {/* Слайдер */}
             <div className='cont' id='slider'>
-                <SimpleImageSlider width={'100%'} height={'100vh'} images={images} showBullets={true} showNavs={true} autoPlay={true} /> 
+                <div className="slider">
+                    <SimpleImageSlider autoPlayDelay={5.0} width={'100%'} height={'100%'} images={images} showBullets={true} showNavs={true} autoPlay={true}/>
+                </div> 
             </div>
 
             {/* Подвал */}
