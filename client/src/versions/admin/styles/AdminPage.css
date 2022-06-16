@@ -1,9 +1,35 @@
 .admin-wrapper{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100vh;
+    position: absolute;
+    height: 100%;
     width: 100%;
     background-color: #393853;
+}
+.half{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    height: 90%;
+    width: 50vw;
+}
+.input-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 60%;
+    width: 90%;
+}
+.input-cont input{
+    width: 80%;
+}
+.input-cont textarea {
+    height: 32%;
+    width: 80%;
+    resize: none;
 }

@@ -26,6 +26,27 @@ router.post('/create', async (request, response) => {
     }
 })
 
+/* '/api/data/delete' - удаление данных одной карточки */ 
+router.post('/delete', async (request, response) => {
+    try {
+        
+        const {buildingId, image, cardName, date, description} = request.body
+        const candidate = await DataAbout.findOne({buildingId}) // Существует ли уже эта карточка
+
+        if(!candidate) {
+            return response.status(400).json({message: 'This data does not exist'})
+        } else {
+            
+            await DataAbout.deleteOne({buildingId}) // Удаление данных
+
+            response.status(200).json({ message: 'Data has been deleted'})
+        }
+        
+    } catch (error) {
+        response.status(500).json({ message: 'Something went wrong... Try again'})
+    }
+})
+
 /* '/api/data/cards' - получение данных всех карточек */ 
 router.get('/cards', async (request, response) => {
     try {

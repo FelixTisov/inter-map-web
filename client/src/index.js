@@ -17,20 +17,20 @@ import AuthPage from './versions/admin/pages/AuthPage'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-if (/iPhone/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent)) 
-{
+// if (/iPhone/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent)) 
+// {
   /* Рендер мобильной версии */ 
-  root.render(
-      <React.StrictMode>
-        <BrowserRouter>
-          <Routes>
-            <Route exact path='/' element={<MainMobile/>}/>
-            <Route exact path='/map_mobile' element={<MapMobile/>}/>
-          </Routes> 
-        </BrowserRouter>
-      </React.StrictMode>
-  )
-} else {
+//   root.render(
+//       <React.StrictMode>
+//         <BrowserRouter>
+//           <Routes>
+//             <Route exact path='/' element={<MainMobile/>}/>
+//             <Route exact path='/map_mobile' element={<MapMobile/>}/>
+//           </Routes> 
+//         </BrowserRouter>
+//       </React.StrictMode>
+//   )
+// } else {
   /* Рендер десктопной версии */
   root.render(
     <React.StrictMode>
@@ -44,6 +44,6 @@ if (/iPhone/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent))
       </BrowserRouter>   
     </React.StrictMode>
   )
-}
+// }
 
 reportWebVitals()

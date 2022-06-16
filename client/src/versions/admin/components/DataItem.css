@@ -1,0 +1,35 @@
+.line-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 70%;
+    height: 7vh;
+    background-color: #FFF;
+}
+.line-block h3{
+    color: #000;
+    font-size: 1.3vw;
+}
+.name-cont{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    padding-left: 3%;
+    justify-content: flex-start;
+}
+.change-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+}
+.change-cont button{
+    width: fit-content;
+    margin-left: 5%;
+}

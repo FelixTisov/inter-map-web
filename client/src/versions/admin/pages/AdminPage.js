@@ -1,24 +1,29 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { useHttp } from "../../../hooks/http.hook"
+import DataItem from "../components/DataItem"
+import { Widget } from "@uploadcare/react-widget"
 import '../styles/AdminPage.css'
 
 function AdminPage() {
 
-    const [dataAbout, setDataAbout] = useState([])
+    const [dataAbout, setDataAbout] = useState([]) // Полученные с свервера данные
     const {request} = useHttp()
-    const [about, setAbout] = useState({ // Тестовые данные для создания карточки
+
+    /* Данные формы создания */ 
+    const [form, setForm] = useState({
         buildingId: 'test', 
         image: null,
-        cardName: 'testName', 
-        date: '1234', 
-        description: 'testDescription'   
+        cardName: '', 
+        date: '', 
+        description: ''   
     })
 
     /* Обработчик создания данных карточки */
     const createHandler = async () => {
         try {
-            const data = await request ('/api/data/create', 'POST', {...about}) // делаем через кастомный хук POST запрос на добавление карточки
-            console.log('Data', data)
+            // console.log(form)
+            const data = await request ('/api/data/create', 'POST', {...form}) // делаем через кастомный хук POST запрос на добавление карточки
+            //console.log('Data', data)
         } catch (error) {}
     }
 
@@ -31,15 +36,37 @@ function AdminPage() {
         } catch (error) {}
     }, [request])
 
-    // useEffect(() => {
-    //     fetchData()
-    // }, [fetchData])
+    useEffect(() => {
+        fetchDataAbout()
+    }, [])
+
+    /* Обработчик изменения формы */ 
+    const changeHandler = event => {
+        setForm({...form, [event.target.name]: event.target.value })
+    }
 
     return(
         <div className="admin-wrapper">
-            <h1>Admin Page</h1>
-            <button onClick={createHandler}>Создать</button>
-            <button onClick={fetchDataAbout}>Получить</button>
+            <div className="half">
+                {
+                    dataAbout.map((item) => {
+                    return (
+                        <DataItem form={item}/>
+                    )                 
+                    })
+                }    
+                
+            </div>
+            <div className="half">
+                <div className="input-cont">
+                    <input placeholder="Идентификатор" type='text' name='buildingId' onChange={changeHandler}/>
+                    <input placeholder="Название" type='text' name='cardName' onChange={changeHandler}/>
+                    <input placeholder="Дата" type='text' name='date' onChange={changeHandler}/>
+                    <textarea placeholder="Описание" type='text' name='description' onChange={changeHandler}/>
+                    <Widget publicKey="1cf87afbfe0335150cc6" />
+                    <button style={{marginTop: '2%'}} onClick={createHandler}>Сохранить</button>
+                </div>
+            </div>
         </div>
     )
 }

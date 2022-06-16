@@ -1,5 +1,5 @@
 import '../styles/map.css'
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from "react"
 import {Link} from 'react-router-dom'
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
@@ -7,6 +7,7 @@ import { NavHashLink } from 'react-router-hash-link'
 import * as THREE from 'three'
 import Help from '../components/help'
 import BldAbout from '../components/bld_about'
+import { useHttp } from "../../../hooks/http.hook"
 
 /* Модели */
 import Squarecenter from '../../../models/Squarecenter'
@@ -30,31 +31,33 @@ import Fourteen from '../../../models/Fourteen'
 import Oneone from '../../../models/Oneone'
 import Twentyone from '../../../models/Twentyone'
 import Twentyfive from '../../../models/Twentyfive'
-import Muka from '../../../models/icons/Muka'
-import Tabak from '../../../models/icons/Tabak'
-import Hleb from '../../../models/icons/Hleb'
-import Bublik from '../../../models/icons/Bublik'
-import Degot from '../../../models/icons/Degot'
-import Konfeta from '../../../models/icons/Konfeta'
-import Varen from '../../../models/icons/Varen'
-import Kvas from '../../../models/icons/Kvas'
-import Maslo from '../../../models/icons/Maslo'
-import Maso from '../../../models/icons/Maso'
-import Milo from '../../../models/icons/Milo'
-import Ovochi from '../../../models/icons/Ovochi'
-import Pechene from '../../../models/icons/Pechene'
-import Riba from '../../../models/icons/Riba'
-import Sol from '../../../models/icons/Sol'
+
+/* Значки */ 
+// import Muka from '../../../models/icons/Muka'
+// import Tabak from '../../../models/icons/Tabak'
+// import Hleb from '../../../models/icons/Hleb'
+// import Bublik from '../../../models/icons/Bublik'
+// import Degot from '../../../models/icons/Degot'
+// import Konfeta from '../../../models/icons/Konfeta'
+// import Varen from '../../../models/icons/Varen'
+// import Kvas from '../../../models/icons/Kvas'
+// import Maslo from '../../../models/icons/Maslo'
+// import Maso from '../../../models/icons/Maso'
+// import Milo from '../../../models/icons/Milo'
+// import Ovochi from '../../../models/icons/Ovochi'
+// import Pechene from '../../../models/icons/Pechene'
+// import Riba from '../../../models/icons/Riba'
+// import Sol from '../../../models/icons/Sol'
 
 /* Информация о постройках для карточек */ 
 import Data from '../../common-data/buildings_data'
 const dataList = [...Data]
 
+/* Настройки камеры */
 let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000 );
 camera.position.x = -7 //вокруг центра по плоскости
 camera.position.y = 7 //по вертикали
 camera.position.z = -7
-
 
 const Map = () => {
 
@@ -62,30 +65,60 @@ const Map = () => {
     const [click, setClick] = useState(offData) // информация выводимая на карточку
     const [currentBuild, setCurrentBuild] = useState('') // текущее отображаемое на карточке здание
 
-    /* Загрузить данные для карточки */
-    function LoadData(data, index) {
-        if(data!=null) 
-        { 
+    const {request} = useHttp()
+    const [dataAbout, setDataAbout] = useState([])
+
+    /* Получение данных карточек с сервера */
+    const fetchDataAbout = useCallback( async () => {
+        try {
+            const fetched = await request('/api/data/cards', 'GET', null)
+            setDataAbout(fetched)
+            console.log(dataAbout)
+        } catch (error) { console.log(error) }
+    }, [request])
+
+    /* Загрузка данных карточек при рендере страницы */
+    useEffect(() => {
+        fetchDataAbout()
+    }, [])
+
+    /* Отобразить данные для карточки при нажатии */
+    function LoadData(index, buildId) {
+        if(dataAbout!=null)
+        {
+            let dataIndex
+            /* Проверяем есть ли такое здание в БД */ 
+            for(let i = 0; i < dataAbout.length; i++) {
+                if(dataAbout[i].buildingId === buildId)
+                    dataIndex = i
+            }
+
+            /* Если нажато другое здание, изменить карточку*/ 
             if (index!=currentBuild)
             {
-                setClick([
-                'visible', // включаем карточку
-                data.mainImage,
-                data.buildingName,
-                data.date,
-                null, //пока нет готовых иконок
-                data.description
-                ])
-                setCurrentBuild(index)
+                try {
+                    setClick([
+                    'visible', // включаем карточку
+                    dataAbout[dataIndex].image, // картинка в шапке
+                    dataAbout[dataIndex].cardName, // название
+                    dataAbout[dataIndex].date, // даты
+                    null, //пока нет готовых иконок
+                    dataAbout[dataIndex].description, // описание
+                    ])
+                    setCurrentBuild(index)
+                    
+                } catch (error) {
+                    setClick(['visible']) 
+                    setCurrentBuild(index)
+                }          
             } 
-            else
+            else // Если то же самое, закрыть карточку
             {
                 setClick(offData)
                 setCurrentBuild('')
             }
-        } 
-        else // если дата пришла пустая, отображаем дефолтные данные
-        {
+
+        } else {// если дата с сервера пришла пустая, отображаем дефолтные данные
             setClick(['visible']) 
             setCurrentBuild('')
         }
@@ -159,24 +192,26 @@ const Map = () => {
                     <Trianglefield/>
 
                     {/* Здания */}
-                    <Two onClick={()=>LoadData(dataList[0], 1)}/> 
-                    <Five onClick={()=>LoadData(dataList[1], 2)}/>
-                    <Eight onClick={()=>LoadData(dataList[2], 3)}/>
-                    <Six onClick={()=>LoadData(dataList[3], 4)}/>
-                    <Four onClick={()=>LoadData([], 6)}/>
-                    <Three onClick={()=>LoadData([], 7)}/>                    
-                    <Seven onClick={()=>LoadData([], 8)}/>       
-                    <Nine onClick={()=>LoadData([], 9)}/>               
-                    <Thirteen onClick={()=>LoadData([], 10)}/>
-                    <Twelve onClick={()=>LoadData([], 11)}/>
-                    <Twentyfour onClick={()=>LoadData([], 12)}/>                  
-                    <Ten onClick={()=>LoadData([], 13)}/>
-                    <Twentysixtwentyseven onClick={()=>LoadData([], 14)}/>
-                    <Fourteen onClick={()=>LoadData([], 15)}/>
-                    <Twentyone onClick={()=>LoadData([], 16)}/>
-                    <Oneone onClick={()=>LoadData([], 17)}/> 
-                    <Twentyfive onClick={()=>LoadData([], 18)}/> 
-                    <Muka/>
+                    <Two onClick={()=>LoadData(1, 'Two')}/> 
+                    <Five onClick={()=>LoadData(2, 'Five')}/>
+                    <Eight onClick={()=>LoadData(3, 'Eight')}/>
+                    <Six onClick={()=>LoadData(4, 'Six')}/>
+                    <Four onClick={()=>LoadData(6, 'Four')}/>
+                    <Three onClick={()=>LoadData(7, 'Three')}/>                    
+                    <Seven onClick={()=>LoadData(8, 'Seven')}/>       
+                    <Nine onClick={()=>LoadData(9, 'Nine')}/>               
+                    <Thirteen onClick={()=>LoadData(10, 'Thirteen')}/>
+                    <Twelve onClick={()=>LoadData(11, 'Twelve')}/>
+                    <Twentyfour onClick={()=>LoadData(12, 'Twentyfour')}/>                  
+                    <Ten onClick={()=>LoadData(13, 'Ten')}/>
+                    <Twentysixtwentyseven onClick={()=>LoadData(14, 'Twentysixtwentyseven')}/>
+                    <Fourteen onClick={()=>LoadData(15, 'Fourteen')}/>
+                    <Twentyone onClick={()=>LoadData(16, 'Twentyone')}/>
+                    <Oneone onClick={()=>LoadData(17, 'Oneone')}/> 
+                    <Twentyfive onClick={()=>LoadData(18, 'Twentyfive')}/> 
+
+                    {/* Значки */}
+                    {/* <Muka/>
                     <Tabak/>
                     <Hleb/>
                     <Bublik/>
@@ -190,7 +225,7 @@ const Map = () => {
                     <Ovochi/>
                     <Pechene/>
                     <Riba/>
-                    <Sol/>
+                    <Sol/> */}
 
                 </Canvas>
             </div>                
