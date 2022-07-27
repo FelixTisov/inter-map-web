@@ -6,8 +6,8 @@ import '../styles/AuthPage.css'
 function AuthPage() {
 
     const navigate = useNavigate()
-    const {loading, request, error } = useHttp()
-    const [form, setForm] = useState({ // Дефолтные данные при регистрации
+    const { request } = useHttp() // Хук http запроса
+    const [form, setForm] = useState({ // Дефолтные данные авторизации
         login: 'abc', password: '123'   
     })
 

@@ -1,9 +1,9 @@
+import {useNavigate, Link} from "react-router-dom"
+import React, { useRef,} from 'react'
+import HistoryBlock from '../components/history_block'
+import SimpleImageSlider from "react-simple-image-slider"
 import '../styles/main.css'
 import '../styles/common.css'
-import SimpleImageSlider from "react-simple-image-slider"
-import {useNavigate, Link} from "react-router-dom"
-import HistoryBlock from '../components/history_block'
-import React, { useRef,} from 'react'
 
 /* Информация для таймлайна */ 
 import allInfo from '../../common-data/all_info'
@@ -22,6 +22,7 @@ const images = [
 
 function Main() {
 
+  /* Элементы быстрой навигации */ 
   const navigate = useNavigate()
   const historyRef = useRef(null)
   const scrollToHistory= () => historyRef.current.scrollIntoView({behavior: 'smooth'})
@@ -30,10 +31,9 @@ function Main() {
   const mainRef = useRef(null)
   const scrollToMain = () => mainRef.current.scrollIntoView({behavior: 'smooth'})
 
-  return (
-    
+  return (  
     <div className='wrapper'>
-    
+
         {/* Кнопка вверх */}
         <div id='upButton' onClick={scrollToMain}>
           <div className='strel_top'></div>
@@ -41,25 +41,23 @@ function Main() {
 
         {/* Титульная часть */}
         <div className='flex-block' ref={mainRef}>
-
           <div className='container'>
 
-          <header>
+            <header>
               <nav>
                 <div className = "nav-item">
-                  <a  onClick={scrollToHistory}>История</a>
+                  <p  onClick={scrollToHistory}>История</p>
                 </div>
                 <div className = "nav-item">
-                  <a  onClick={scrollToSlider}>Галерея</a>
+                  <p  onClick={scrollToSlider}>Галерея</p>
                 </div>
                 <div className = "nav-item">
-                  <Link to="/map"><a>Карта</a></Link>
+                  <Link to="/map"><p>Карта</p></Link>
                 </div>                                           
               </nav>
             </header>
 
-            <div className='main-box'>
-            
+            <div className='main-box'> 
               <div className ="ryad" id='left'>
                 <div className = "torg">
                   <p className = "torg-text">ТОРГ</p>
@@ -77,13 +75,9 @@ function Main() {
                     <p className ="ove-text">ОВЫЕ<br/>РЯДЫ</p>
                   </div>
               </div>
-
-              
-
             </div>
 
           </div>
-
         </div>
 
         {/* Таймлайн */}

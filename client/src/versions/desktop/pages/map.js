@@ -1,13 +1,14 @@
-import '../styles/map.css'
+
 import React, { useCallback, useEffect, useState } from "react"
 import {Link} from 'react-router-dom'
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { NavHashLink } from 'react-router-hash-link'
+import { useHttp } from "../../../hooks/http.hook"
 import * as THREE from 'three'
 import Help from '../components/help'
 import BldAbout from '../components/bld_about'
-import { useHttp } from "../../../hooks/http.hook"
+import '../styles/map.css'
 
 /* Модели */
 import Squarecenter from '../../../models/Squarecenter'
@@ -32,29 +33,6 @@ import Oneone from '../../../models/Oneone'
 import Twentyone from '../../../models/Twentyone'
 import Twentyfive from '../../../models/Twentyfive'
 
-/* Значки */ 
-import Muka from '../../../models/icons/Muka'
-import Hleb from '../../../models/icons/Hleb'
-import Bublik from '../../../models/icons/Bublik'
-import Admin from '../../../models/icons/Admin'
-import Kvas from '../../../models/icons/Kvas'
-import Maslo from '../../../models/icons/Maslo'
-import Maso from '../../../models/icons/Maso'
-import Milo from '../../../models/icons/Milo'
-import Ovochi from '../../../models/icons/Ovochi'
-import Pechene from '../../../models/icons/Pechene'
-import Riba from '../../../models/icons/Riba'
-import Chai from '../../../models/icons/Chai'
-import Muka_mal from '../../../models/icons/Muka_mal'
-import Krest from '../../../models/icons/Krest'
-import Sum from '../../../models/icons/Sum'
-import Nit from '../../../models/icons/Nit'
-import Krest_ch from '../../../models/icons/Krest_ch'
-
-/* Информация о постройках для карточек */ 
-import Data from '../../common-data/buildings_data'
-const dataList = [...Data]
-
 /* Настройки камеры */
 let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000 );
 camera.position.x = -7 //вокруг центра по плоскости
@@ -75,14 +53,15 @@ const Map = () => {
         try {
             const fetched = await request('/api/data/cards', 'GET', null)
             setDataAbout(fetched)
-            console.log(dataAbout)
-        } catch (error) { console.log(error) }
+        } catch (error) { 
+            console.log(error) 
+        }
     }, [request])
 
     /* Загрузка данных карточек при рендере страницы */
     useEffect(() => {
         fetchDataAbout()
-    }, [])
+    })
 
     /* Отобразить данные для карточки при нажатии */
     function LoadData(index, buildId) {
@@ -96,7 +75,7 @@ const Map = () => {
             }
 
             /* Если нажато другое здание, изменить карточку*/ 
-            if (index!=currentBuild)
+            if (index!==currentBuild)
             {
                 try {
                     setClick([
@@ -114,13 +93,13 @@ const Map = () => {
                     setCurrentBuild(index)
                 }          
             } 
-            else // Если то же самое, закрыть карточку
+            else // Если нажата та же самая, закрыть карточку
             {
                 setClick(offData)
                 setCurrentBuild('')
             }
 
-        } else {// если дата с сервера пришла пустая, отображаем дефолтные данные
+        } else {// Если дата с сервера пришла пустая, отображаем дефолтные данные
             setClick(['visible']) 
             setCurrentBuild('')
         }
@@ -132,16 +111,16 @@ const Map = () => {
                 <nav>
                     <div className = "nav-item">
                     <NavHashLink smooth to="/#timeline">
-                        <a >История</a>
+                        <p>История</p>
                     </NavHashLink>
                     </div>
                     <div className = "nav-item">
                     <NavHashLink smooth to="/#gallery">
-                        <a >Галерея</a>
+                        <p>Галерея</p>
                     </NavHashLink>
                     </div>
                     <div className = "nav-item">
-                    <Link to="/"><a>Главная</a></Link>
+                    <Link to="/"><p>Главная</p></Link>
                     </div>                                           
                 </nav>
             </header>
@@ -211,26 +190,6 @@ const Map = () => {
                     <Twentyone onClick={()=>LoadData(16, 'Twentyone')}/>
                     <Oneone onClick={()=>LoadData(17, 'Oneone')}/> 
                     <Twentyfive onClick={()=>LoadData(18, 'Twentyfive')}/> 
-
-                    {/* Значки */}
-                    <Muka/>
-                    <Hleb/>                 
-                    <Bublik/>
-                    <Kvas/> 
-                    <Maslo/>
-                    <Maso/>
-                    <Milo/>
-                    <Ovochi/>
-                    <Pechene/>
-                    <Riba/>
-                    <Muka_mal/>
-                    <Chai/>
-                    <Admin/>
-                    <Krest/>
-                    <Sum/>
-                    <Nit/>
-                    <Krest_ch/> 
-
                 </Canvas>
             </div>                
         </div>

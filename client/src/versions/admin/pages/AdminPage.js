@@ -1,27 +1,26 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { useHttp } from "../../../hooks/http.hook"
 import DataItem from "../components/DataItem"
-import { Widget } from "@uploadcare/react-widget"
-import '../styles/AdminPage.css'
 import ImageUploader from 'react-image-upload'
+import '../styles/AdminPage.css'
 import 'react-image-upload/dist/index.css'
 
 function AdminPage() {
 
     const [dataAbout, setDataAbout] = useState([]) // Полученные с свервера данные
-    const {request} = useHttp()
+    const {request} = useHttp() // Хук http запроса
 
     /* Обработчик добавления фотографии */ 
     function getImageFileObject(imageFile) {
-        setForm({...form, ['image']: imageFile.dataUrl })
+        setForm({ ...form, ['image']: imageFile.dataUrl })
     }
 
     /* Обработчик удаления фотографии */ 
-    function runAfterImageDelete(file) {
-    setForm({...form, ['image']: null })
+    function runAfterImageDelete() {
+    setForm({ ...form, ['image']: null })
     }
 
-    /* Данные формы создания */ 
+    /* Данные формы создания карточки */ 
     const [form, setForm] = useState({
         buildingId: 'test', 
         image: require('../../../images/infoImages/default.png'),
@@ -39,31 +38,33 @@ function AdminPage() {
         } catch (error) {}
     }
 
-    const fileHandler= event => { 
-        let img = event.target.files[0];        
-        setForm({...form, [event.target.name]: URL.createObjectURL(img) }) 
-    };
+    // const fileHandler= event => { 
+    //     let img = event.target.files[0];        
+    //     setForm({...form, [event.target.name]: URL.createObjectURL(img) }) 
+    // };
 
     /* Получение данных карточек */
     const fetchDataAbout = useCallback( async () => {
         try {
             const fetched = await request('/api/data/cards', 'GET', null)
             setDataAbout(fetched)
-            console.log(dataAbout)
         } catch (error) {}
     }, [request])
 
-    useEffect(() => {
-        fetchDataAbout()
-    }, [])
-
     /* Обработчик изменения формы */ 
     const changeHandler = event => {
-        setForm({...form, [event.target.name]: event.target.value })
+        setForm({ ...form, [event.target.name]: event.target.value })
     }
+
+    // Получение данных после обновления страницы
+    useEffect(() => {
+        fetchDataAbout()
+    })
 
     return(
         <div className="admin-wrapper">
+
+            {/* Отображение существующих в БД карточек */}
             <div className="half">
                 {
                     dataAbout.map((item) => {
@@ -71,9 +72,9 @@ function AdminPage() {
                         <DataItem form={item}/>
                     )                 
                     })
-                }    
-                
+                }             
             </div>
+
             <div className="half">
                 <div className="input-cont">
                     <input placeholder="Идентификатор" type='text' name='buildingId' onChange={changeHandler}/>
@@ -88,6 +89,7 @@ function AdminPage() {
                     <button style={{marginTop: '2%'}} onClick={createHandler}>Сохранить</button>
                 </div>
             </div>
+
         </div>
     )
 }
