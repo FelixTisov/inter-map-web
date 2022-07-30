@@ -1,4 +1,3 @@
-
 import React, { useCallback, useEffect, useState } from "react"
 import {Link} from 'react-router-dom'
 import { Canvas} from '@react-three/fiber'
@@ -6,8 +5,8 @@ import { OrbitControls } from '@react-three/drei'
 import { NavHashLink } from 'react-router-hash-link'
 import { useHttp } from "../../../hooks/http.hook"
 import * as THREE from 'three'
-import Help from '../components/help'
-import BldAbout from '../components/bld_about'
+import Help from '../components/help/help'
+import BldAbout from '../components/bld_about/bld_about'
 import '../styles/map.css'
 
 /* Модели */
@@ -41,8 +40,8 @@ camera.position.z = -7
 
 const Map = () => {
 
-    const offData = ['hidden', null, '', '', null, ''] // карточка выключена
-    const [click, setClick] = useState(offData) // информация выводимая на карточку
+    const cardOff = ['hidden', null, '', '', ''] // карточка выключена
+    const [click, setClick] = useState(cardOff) // информация выводимая на карточку
     const [currentBuild, setCurrentBuild] = useState('') // текущее отображаемое на карточке здание
 
     const {request} = useHttp()
@@ -61,7 +60,7 @@ const Map = () => {
     /* Загрузка данных карточек при рендере страницы */
     useEffect(() => {
         fetchDataAbout()
-    })
+    }, [])
 
     /* Отобразить данные для карточки при нажатии */
     function LoadData(index, buildId) {
@@ -79,23 +78,20 @@ const Map = () => {
             {
                 try {
                     setClick([
-                    'visible', // включаем карточку
-                    dataAbout[dataIndex].image, // картинка в шапке
-                    dataAbout[dataIndex].cardName, // название
-                    dataAbout[dataIndex].date, // даты
-                    null, //пока нет готовых иконок
-                    dataAbout[dataIndex].description, // описание
+                        'visible', // включаем карточку
+                        dataAbout[dataIndex].image, // фотография здания в карточке
+                        dataAbout[dataIndex].cardName, // название здания
+                        dataAbout[dataIndex].date, // даты постройки
+                        dataAbout[dataIndex].description, // описание здания
                     ])
-                    setCurrentBuild(index)
-                    
                 } catch (error) {
                     setClick(['visible']) 
-                    setCurrentBuild(index)
-                }          
+                }  
+                setCurrentBuild(index)        
             } 
             else // Если нажата та же самая, закрыть карточку
             {
-                setClick(offData)
+                setClick(cardOff)
                 setCurrentBuild('')
             }
 
@@ -154,7 +150,7 @@ const Map = () => {
             <Help/>
             
             {/* Инфо блок */}
-            <BldAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} icon={click[4]} text={click[5]}/>
+            <BldAbout isVisible={click[0]} img={click[1]} thename={click[2]} date={click[3]} text={click[4]}/>
 
             {/* Карта */}
             <div className='map-cont'>

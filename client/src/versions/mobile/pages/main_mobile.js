@@ -2,7 +2,7 @@ import '../styles/main_mobile.css'
 import SimpleImageSlider from 'react-simple-image-slider'
 import {useNavigate} from 'react-router-dom'
 import HistoryBlock from '../components/history_block_mobile'
-import allInfo from '../../common-data/all_info'
+import allInfo from '../../../common_data/all_info'
 import React, { useRef } from 'react'
 
 /* Фотографии для слайдера */

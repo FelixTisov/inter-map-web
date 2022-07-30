@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { useHttp } from "../../../hooks/http.hook"
-import DataItem from "../components/DataItem"
+import DataItem from "../components/DataItem/DataItem"
 import ImageUploader from 'react-image-upload'
 import '../styles/AdminPage.css'
 import 'react-image-upload/dist/index.css'

@@ -1,4 +1,3 @@
-
 /* Стили шапки */
 header{
   display: flex;
@@ -9,6 +8,7 @@ header{
   position: relative;
   
 }
+
 nav{
   display: flex;
   flex-direction: row;
@@ -20,12 +20,14 @@ nav{
   opacity: 1;
   margin-top: 1%;
 }
+
 .nav-item{
   display: flex;
   width: 100%;
-  align-items: flex-start ;
+  align-items: center ;
   justify-content: center;
 }
+
 a {
   color: #FFF;
   font-size: 1.2vw;
@@ -35,6 +37,7 @@ a {
   -webkit-touch-callout: none; /* iOS Safari */
   user-select: none;   /* Chrome/Safari/Opera */
 }
+
 a:hover{
   font-size: 1.4vw;
   cursor: pointer;
@@ -51,5 +54,6 @@ a:hover{
   background-color: #393853;
   scroll-snap-align: start;
 }
+
  /* Шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');

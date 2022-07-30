@@ -1,12 +1,12 @@
 import {useNavigate, Link} from "react-router-dom"
 import React, { useRef,} from 'react'
-import HistoryBlock from '../components/history_block'
+import HistoryBlock from '../components/history_block/history_block'
 import SimpleImageSlider from "react-simple-image-slider"
 import '../styles/main.css'
 import '../styles/common.css'
 
 /* Информация для таймлайна */ 
-import allInfo from '../../common-data/all_info'
+import allInfo from '../../../common_data/all_info'
 const infoList = [...allInfo]
 
 /* Фотографии для слайдера */
@@ -46,13 +46,13 @@ function Main() {
             <header>
               <nav>
                 <div className = "nav-item">
-                  <p  onClick={scrollToHistory}>История</p>
+                  <a onClick={scrollToHistory}>История</a>
                 </div>
                 <div className = "nav-item">
-                  <p  onClick={scrollToSlider}>Галерея</p>
+                  <a  onClick={scrollToSlider}>Галерея</a>
                 </div>
                 <div className = "nav-item">
-                  <Link to="/map"><p>Карта</p></Link>
+                  <Link to="/map"><a>Карта</a></Link>
                 </div>                                           
               </nav>
             </header>

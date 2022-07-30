@@ -1,8 +1,15 @@
 /* Карточка зданий */ 
 import './bld_about.css'
 
-const defaultImage = require('../../../images/infoImages/default.png')
-function BldAbout({isVisible='hidden', img=defaultImage, thename='Упс...', date='', icon=null, text='Это здание ещё не добавлено :('}) {
+const defaultImage = require('../../../../images/infoImages/default.png')
+
+// isVisible - состояние открыта или закрыта карточка
+// img - фотография здания в карточке
+// thename - название здания
+// date - даты постройки
+// text - описание здания
+
+function BldAbout({isVisible='hidden', img=defaultImage, thename='Упс...', date='', text='Это здание ещё не добавлено :('}) {
     return(
         <div className='infoCont' style={{visibility: `${isVisible}`}}>
 
@@ -21,7 +28,7 @@ function BldAbout({isVisible='hidden', img=defaultImage, thename='Упс...', da
                         </div>      
                     </div>
                     <div className='iconCont'>
-                        <div className="icon" style={{backgroundImage: `url(${icon})`}} />
+                        <div className="icon" />
                     </div>        
                 </div>
                 
@@ -34,9 +41,7 @@ function BldAbout({isVisible='hidden', img=defaultImage, thename='Упс...', da
                 </div>                      
             </div>
            </div>
-            
-
-            
+              
         </div>
     )
 }
