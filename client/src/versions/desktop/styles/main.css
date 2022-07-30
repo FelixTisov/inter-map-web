@@ -45,7 +45,6 @@
   height: 100%;
   width: 100%;
   margin-top: -3.45%;
-  
 }
 .ryad{
   display: flex;
@@ -155,7 +154,6 @@
   height: 50%;
 }
 
-
 /* Стили таймлайна */
 .model{
   flex: 1;
@@ -194,7 +192,6 @@
   margin-left: 5.9vw;
 }
 
-
 /* Стили слайдера */
 .slider{
 	height: 100vh;
@@ -202,7 +199,6 @@
 	align-items: center;
   justify-content: center;
 }
-
 
 /* Стили подвала */
 .text-block{
