@@ -17,7 +17,7 @@ function AdminPage() {
 
     /* Обработчик удаления фотографии */ 
     function runAfterImageDelete() {
-    setForm({ ...form, ['image']: null })
+    setForm({ ...form, ['image']: require('../../../images/infoImages/default.png') })
     }
 
     /* Данные формы создания карточки */ 

@@ -7,7 +7,6 @@ header{
   overflow-y: hidden;
   position: relative;
 }
-
 nav{
   display: flex;
   flex-direction: row;
@@ -19,14 +18,12 @@ nav{
   opacity: 1;
   margin-top: 1%;
 }
-
 .nav-item{
   display: flex;
   width: 100%;
   align-items: center ;
   justify-content: center;
 }
-
 a {
   color: #FFF;
   font-size: 1.2vw;
@@ -36,7 +33,6 @@ a {
   -webkit-touch-callout: none; /* iOS Safari */
   user-select: none;   /* Chrome/Safari/Opera */
 }
-
 a:hover{
   font-size: 1.4vw;
   cursor: pointer;
