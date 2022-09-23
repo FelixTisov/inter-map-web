@@ -16,4 +16,4 @@ which is shown to users. All the data is stored in a ```MongoDB``` database.
 
 ## Start Locally
 1. Install all the dependencies. Use: `npm install`
-2. Use `npm start` to start locally at localhost
+2. Use `npm run dev` to start locally at localhost
