@@ -3,6 +3,8 @@ It is a university project aiming to create a fullstack single-page application 
 There are 2 main pages: Main and Map. The last one is a map with 3D-models of buildings which users can interact with. Every model has its own data with historical information
 which is shown to users. All the data is stored in a ```MongoDB``` database.
 
+![ezgif-4-08aa5677b8](https://user-images.githubusercontent.com/70074892/192125190-9a8520e8-aa74-4537-acdb-39cc33431e9a.gif)
+
 ## Stack
 
 - Three.js
